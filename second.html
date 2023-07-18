@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>after2pm</title>
+    <style>
+      header {
+        width: 100%;
+        height: fit-content;
+        position: relative;
+        top: 20px;
+      }
+      .choosing_1 {
+        background-color: beige;
+        display: flex;
+        justify-content: space-evenly;
+      }
+      .choosing_1 div {
+        padding: 10px 0px;
+      }
+      .region {
+        position: absolute;
+        right: 20px;
+      }
+      .type {
+        display: flex;
+        flex-direction: column;
+        posi
+      }
+    </style>
+  </head>
+  <body>
+    <select class="region">
+      <option selected>지역</option>
+      <option value="대흥">대흥</option>
+      <option value="연남">연남</option>
+      <option value="신촌">신촌</option>
+      <option value="이대">이대</option>
+      <option value="홍대">홍대</option>
+    </select>
+
+    <header>
+      <div class="choosing_1">
+        <div id="restaurant">식당</div>
+        <div id="cafe">카페</div>
+        <div id="play">놀거리</div>
+      </div>
+    </header>
+    <div class="type">
+      <div>한식</div>
+      <div>양식</div>
+      <div>중식</div>
+      <div>일식</div>
+      <div>아시안</div>
+    </div>
+  </body>
+</html>
