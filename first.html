@@ -23,45 +23,7 @@
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
-    <style>
-      button {
-      }
-
-      .modal {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .modal .bg {
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.6);
-      }
-
-      .modalBox {
-        position: absolute;
-        background-color: #fff;
-        width: 60vw;
-        height: 40vh;
-        padding: 15px;
-      }
-
-      .modalBox button {
-        display: block;
-        width: 80px;
-        margin: 0 auto;
-      }
-
-      .hidden {
-        display: none;
-      }
-    </style>
+    <link rel="stylesheet" href="./first.css" />
   </head>
   <body>
     <h1>2시에 뭐해?</h1>
@@ -83,15 +45,15 @@
   </body>
   <script>
     const open = () => {
-      document.querySelector('.modal').classList.remove('hidden')
-    }
+      document.querySelector(".modal").classList.remove("hidden");
+    };
 
     const close = () => {
-      document.querySelector('.modal').classList.add('hidden')
-    }
+      document.querySelector(".modal").classList.add("hidden");
+    };
 
-    document.querySelector('.openBtn').addEventListener('click', open)
-    document.querySelector('#btnClose').addEventListener('click', close)
-    document.querySelector('.bg').addEventListener('click', close)
+    document.querySelector(".openBtn").addEventListener("click", open);
+    document.querySelector("#btnClose").addEventListener("click", close);
+    document.querySelector(".bg").addEventListener("click", close);
   </script>
 </html>
