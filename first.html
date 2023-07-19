@@ -24,6 +24,9 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="./first.css" />
+    <script>
+      let order = 1;
+    </script>
   </head>
   <body>
     <div class="container openBtn">
@@ -36,6 +39,7 @@
         <span>?</span>
       </h1>
     </div>
+
     <div class="modal hidden">
       <div class="bg"></div>
       <div class="modalBox">
@@ -47,13 +51,59 @@
           ✖</button
         ><br />
 
-        <div class="modal-content">
-          <p>모달창 내용 테스트</p>
+        <div class="modal_content01">
+          <!-- 지역 선택 시작-->
+          <div class="modal_content_part">
+            <label for="check01"
+              ><input type="checkbox" id="check01" name="check01" />대흥</label
+            >
+            <label for="check02"
+              ><input type="checkbox" id="check02" name="check02" />홍대</label
+            >
+            <label for="check03"
+              ><input type="checkbox" id="check03" name="check03" />연남</label
+            >
+            <label for="check04"
+              ><input type="checkbox" id="check04" name="check04" />신촌</label
+            >
+            <label for="check05"
+              ><input type="checkbox" id="check05" name="check05" />이대</label
+            >
+          </div>
         </div>
 
-        <button class="btn btn-primary" id="btnNext">다음</button>
+        <div class="modal_content02 hidden">
+          <div class="modal_content_part">
+            <label for="select_food"
+              ><input
+                type="radio"
+                id="select_food"
+                name="select_part"
+              />먹거리</label
+            >
+            <label for="select_cafe"
+              ><input
+                type="radio"
+                id="select_cafe"
+                name="select_part"
+              />카페</label
+            >
+            <label for="select_cafe"
+              ><input
+                type="radio"
+                id="select_cafe"
+                name="select_part"
+              />놀거리</label
+            >
+          </div>
+        </div>
+
+        <p>
+          <button class="btn btn-primary" id="btnNext">다음</button>
+        </p>
       </div>
     </div>
+    <!-- 첫번쨰 모달창 끝 -->
   </body>
   <script>
     const open = () => {
@@ -64,8 +114,21 @@
       document.querySelector(".modal").classList.add("hidden");
     };
 
+    const next = () => {
+      console.log("다음 클릭: " + order);
+
+      if (order == 1) {
+        document.querySelector(".modal_content01").classList.add("hidden");
+        document.querySelector(".modal_content02").classList.remove("hidden");
+        order++;
+      } else if (order == 2) {
+        // second로 넘어가게 선택된 정보가 넘어가게
+      }
+    };
+
     document.querySelector(".openBtn").addEventListener("click", open);
     document.querySelector("#btnClose").addEventListener("click", close);
+    document.querySelector("#btnNext").addEventListener("click", next);
     document.querySelector(".bg").addEventListener("click", close);
   </script>
 </html>

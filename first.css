@@ -88,14 +88,46 @@ h1 span:nth-child(8) {
   width: 60vw;
   height: 40vh;
   padding: 15px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.modalBox button {
-  display: block;
-  width: 80px;
-  margin: 0 auto;
+/* x버튼 */
+.modalBox > button {
+  position: absolute;
+  top: 10px;
+}
+
+.modalBox > p {
+  top: 80%;
+  position: absolute;
 }
 
 .hidden {
   display: none;
 }
+
+.modal_content01 {
+  width: 90%;
+}
+
+.modal_content01 > .modal_content_part > label {
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+.modal_content01 > .modal_content_part input {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+/* 모달02 */
+
+/* .modal02 .bg {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+} */
