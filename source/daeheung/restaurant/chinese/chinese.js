@@ -1,5 +1,5 @@
-let cf1 = {
-  img: (src = "./1샨샨.jpeg"),
+arr.push({
+  img: "./source/daeheung/restaurant/chinese/1샨샨.jpeg",
   name: "샨샨",
   grade: 4.44,
   tag: ["안심식당", "신선한재료"],
@@ -13,10 +13,10 @@ let cf1 = {
     "짜장면 (7,000원)",
     "짬뽕(8,500원)",
   ],
-};
+});
 
-let cf2 = {
-  img: (src = "./2신성각.png"),
+arr.push({
+  img: "./source/daeheung/restaurant/chinese/2신성각.png",
   name: "신성각",
   grade: 4,
   tag: ["수요미식회맛집", "수타면"],
@@ -28,10 +28,10 @@ let cf2 = {
     "탕수육 (17,000원)",
     "만두(4,000원)",
   ],
-};
+});
 
-let cf3 = {
-  img: (src = "./3금정.jpeg"),
+arr.push({
+  img: "./source/daeheung/restaurant/chinese/3금정.jpeg",
   name: "금정",
   grade: 4.28,
   tag: ["공덕맛집", "정겨운분위기"],
@@ -43,10 +43,10 @@ let cf3 = {
     "홍합짬뽕 (7,000원)",
     "볶음밥(6,000원)",
   ],
-};
+});
 
-let cf4 = {
-  img: (src = "./4용가.jpeg"),
+arr.push({
+  img: "./source/daeheung/restaurant/chinese/4용가.jpeg",
   name: "용가",
   grade: "-",
   tag: ["대규모수용이가능한", "냉면맛집"],
@@ -59,46 +59,46 @@ let cf4 = {
     "볶음밥 (7,000원)",
     "군만두 (5,000원)",
   ],
-};
+});
 
-let cf5 = {
-  img: (src = "./5쌍팔반점/.jpeg"),
+arr.push({
+  img: "./source/daeheung/restaurant/chinese/5쌍팔반점.jpeg",
   name: "쌍팔반점",
   grade: "-",
   tag: ["화끈한음식", "마포유명맛집"],
-};
+});
 
-let cf6 = {
-  img: (src = "./6수저가.jpeg"),
+arr.push({
+  img: "./source/daeheung/restaurant/chinese/6수저가.jpeg",
   name: "수저가",
   grade: 4.47,
   tag: ["짬뽕전문점", "가성비좋은"],
-};
+});
 
-let cf7 = {
-  img: (src = "./7공덕132.jpeg"),
+arr.push({
+  img: "./source/daeheung/restaurant/chinese/7공덕132.jpeg",
   name: "공덕132",
   grade: "-",
   tag: ["기본에충실한", "공기밥무한리필"],
-};
+});
 
-let cf8 = {
-  img: (src = "./8청명jpeg"),
+arr.push({
+  img: "./source/daeheung/restaurant/chinese/8청명.jpeg",
   name: "청명",
   grade: 4.21,
   tag: ["수타면", "주문즉시요리"],
-};
+});
 
-let cf9 = {
-  img: (src = "./9세아마라탕서강대점.jpeg"),
+arr.push({
+  img: "./source/daeheung/restaurant/chinese/9세아마라탕서강대점.jpeg",
   name: "세아마라탕서강대점",
   grade: 3.81,
   tag: ["마라맛집", "혼밥하기좋은"],
-};
+});
 
-let cf10 = {
-  img: (src = "./10옛날짜장.jpeg"),
+arr.push({
+  img: "./source/daeheung/restaurant/chinese/10옛날짜장.jpeg",
   name: "옛날짜장기계우동",
   grade: 4.51,
   tag: ["면발이일정한", "가성비좋은"],
-};
+});

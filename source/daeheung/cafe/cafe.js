@@ -1,5 +1,5 @@
-let ca1 = {
-  img: (src = "./퍼머넌트.jpeg"),
+arr.push({
+  img: "./source/daeheung/cafe/퍼머넌트.jpeg",
   name: "퍼머넌트해비텟",
   grade: 4.67,
   tag: ["대화하기 좋은", "디저트가 맛있는"],
@@ -18,10 +18,10 @@ let ca1 = {
     "호박차 (6,000원)",
     "바닐라소다 (6,000원)",
   ],
-};
+});
 
-let ca2 = {
-  img: (src = "./누아네.jpeg"),
+arr.push({
+  img: "./source/daeheung/cafe/누아네.jpeg",
   name: "누아네",
   grade: 4.46,
   tag: ["디저트가 맛있는", "아늑한"],
@@ -36,10 +36,10 @@ let ca2 = {
     "밀크티 (6,300원)",
     "수제 과일청 에이드 (5,500)원",
   ],
-};
+});
 
-let ca3 = {
-  img: (src = "./콜로라도.jpeg"),
+arr.push({
+  img: "./source/daeheung/cafe/콜로라도.jpeg",
   name: "콜로라도 프로젝트",
   grade: 4.89,
   tag: ["대화하기 좋은", "이색적인"],
@@ -54,10 +54,10 @@ let ca3 = {
     "오렌지 비앙코 (5,900원)",
     "블루 슈페너 (5,500)원",
   ],
-};
+});
 
-let ca4 = {
-  img: (src = "./파크사이드.jpeg"),
+arr.push({
+  img: "./source/daeheung/cafe/파크사이드.jpeg",
   name: "파크사이드",
   grade: 0,
   tag: ["대화하기 좋은", "넓은"],
@@ -71,46 +71,46 @@ let ca4 = {
     "딸기라떼 (5,600원)",
     "유기농 차 (5,000원)",
   ],
-};
+});
 
-let ca5 = {
-  img: (src = "./이트커피.jpeg"),
+arr.push({
+  img: "./source/daeheung/cafe/이트커피.jpeg",
   name: "이트커피",
   grade: 0,
   tag: ["커피가 맛있는", "이색적인"],
-};
+});
 
-let ca6 = {
-  img: (src = "./이바머스.jpeg"),
+arr.push({
+  img: "./source/daeheung/cafe/이바머스.jpeg",
   name: "이바머스 커피",
   grade: 4.8,
   tag: ["커피가 맛있는", "아늑한"],
-};
+});
 
-let ca7 = {
-  img: (src = "./카페대흥.jpeg"),
+arr.push({
+  img: "./source/daeheung/cafe/카페대흥.jpeg",
   name: "카페 대흥",
   grade: 4.62,
   tag: ["대화하기 좋은", "커피가 맛있는"],
-};
+});
 
-let ca8 = {
-  img: (src = "./달쏘.jpeg"),
+arr.push({
+  img: "./source/daeheung/cafe/달쏘.jpeg",
   name: "달쏘",
   grade: 4.67,
   tag: ["대화하기 좋은", "아늑한"],
-};
+});
 
-let ca9 = {
-  img: (src = "./클로드.jpeg"),
+arr.push({
+  img: "./source/daeheung/cafe/클로드.jpeg",
   name: "클로드 커피",
   grade: 0,
   tag: ["대화하기 좋은", "아늑한"],
-};
+});
 
-let ca10 = {
-  img: (src = "./이어커피.jpeg"),
+arr.push({
+  img: "./source/daeheung/cafe/이어커피.jpeg",
   name: "이어커피 로스터스",
   grade: 0,
   tag: ["대화하기 좋은", "커피가 맛있는"],
-};
+});
