@@ -1,4 +1,4 @@
-let ca1 = {
+let ca1_y = {
   img: (src = "./작당모의.jpeg"),
   name: "작당모의",
   grade: 4.39,
@@ -20,7 +20,7 @@ let ca1 = {
   ],
 };
 
-let ca2 = {
+let ca2_y = {
   img: (src = "./어썸.jpeg"),
   name: "어썸마운틴",
   grade: 4.83,
@@ -39,7 +39,7 @@ let ca2 = {
   ],
 };
 
-let ca3 = {
+let ca3_y = {
   img: (src = "./호안.jpeg"),
   name: "호안끼엠",
   grade: 4.64,
@@ -60,7 +60,7 @@ let ca3 = {
   ],
 };
 
-let ca4 = {
+let ca4_y = {
   img: (src = "./공명.jpeg"),
   name: "카페 공명",
   grade: "",
@@ -79,42 +79,42 @@ let ca4 = {
   ],
 };
 
-let ca5 = {
+let ca5_y = {
   img: (src = "./오버트.jpeg"),
   name: "오버트 연남",
   grade: 0,
   tag: ["커피가 맛있는", "이색적인"],
 };
 
-let ca6 = {
+let ca6_y = {
   img: (src = "./오르트.jpeg"),
   name: "카페 오르트",
   grade: 0,
   tag: ["대화하기 좋은", "루프탑이 있는"],
 };
 
-let ca7 = {
+let ca7_y = {
   img: (src = "./만동제과.jpeg"),
   name: "만동제과",
   grade: 4.51,
   tag: ["넓은", "디저트가 맛있는"],
 };
 
-let ca8 = {
+let ca8_y = {
   img: (src = "./앤티크.jpeg"),
   name: "앤티크커피",
   grade: 0,
   tag: ["디저트가 맛있는", "커피가 맛있는"],
 };
 
-let ca9 = {
+let ca9_y = {
   img: (src = "./오랑지.jpeg"),
   name: "오랑지",
   grade: 4.62,
   tag: ["이색적인", "대화하기 좋은"],
 };
 
-let ca10 = {
+let ca10_y = {
   img: (src = "./어니스트.jpeg"),
   name: "어니스트 팬케이크",
   grade: 4.67,
