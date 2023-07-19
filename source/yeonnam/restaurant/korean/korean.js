@@ -79,7 +79,7 @@ arr.push({
 });
 
 arr.push({
-  img: "./source/yeonnam/restaurant/korean/.jpeg",
+  img: "./source/yeonnam/restaurant/korean/월강부산돼지국밥.jpeg",
   name: "월강부산돼지국밥",
   grade: 4.43,
   tag: ["부산식돼지국밥", "부드러운고기"],
@@ -96,7 +96,7 @@ arr.push({
 });
 
 arr.push({
-  img: "./source/yeonnam/restaurant/korean/.jpeg",
+  img: "./source/yeonnam/restaurant/korean/송가네감자탕본점.jpeg",
   name: "송가네감자탕본점",
   grade: 4.18,
   tag: ["연남동한식맛집", "술2차맛집"],
@@ -110,7 +110,7 @@ arr.push({
 });
 
 arr.push({
-  img: "./source/yeonnam/restaurant/korean/.jpeg",
+  img: "./source/yeonnam/restaurant/korean/탕탕.jpeg",
   name: "탕탕",
   grade: 4.53,
   tag: ["부산식음식", "술맛집"],
