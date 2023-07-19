@@ -23,72 +23,7 @@
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
-    <style>
-      html {
-        height: 100%;
-      }
-      body {
-        min-height: 100%;
-        overflow-y: auto;
-      }
-      header {
-        width: 100%;
-        height: fit-content;
-        position: fixed;
-        z-index: 20;
-      }
-      main {
-        width: 80vw;
-        margin-left: 9vw;
-        position: relative;
-        top: 130px;
-        height: 100%;
-      }
-      p.head {
-        background-color: aquamarine;
-        width: 100%;
-        height: 50px;
-        margin: 0 0 0 0;
-      }
-      .firstCategory {
-        background-color: beige;
-        display: flex;
-        justify-content: space-evenly;
-        line-height: 70px;
-        height: 70px;
-      }
-      .region {
-        position: absolute;
-        top: 10px;
-        right: 20px;
-      }
-      table {
-        margin-top: 10px;
-        width: 100%;
-        height: 500px;
-        text-align: center;
-        border-collapse: collapse;
-        border: 1px solid black;
-        position: absolute;
-        transform: (-50%, -50%);
-      }
-      td {
-        border: 1px solid black;
-      }
-      .leftDiv {
-        display: inline-block;
-        width: 55vw;
-        height: 100vw;
-        background-color: red;
-        margin-right: 4vw;
-      }
-      .rightDiv {
-        display: inline-block;
-        width: 20vw;
-        height: 100vw;
-        background-color: blue;
-      }
-    </style>
+    <link rel="stylesheet" href="third.css" />
   </head>
   <body>
     <header>
@@ -114,17 +49,25 @@
           뒤로 가기
         </button>
       </p>
-
-      <div class="leftDiv">
-        <div>사진</div>
-        <div>소개</div>
-        <div>메뉴</div>
-        <div>리뷰</div>
-      </div>
-      <div class="rightDiv">
-        <div>태그</div>
-        <div>저장</div>
-        <div>예약창</div>
+      <div class="fullDiv">
+        <div class="leftDiv">
+          <div class="picture">사진</div>
+          <br />
+          <div class="introduce">소개</div>
+          <br />
+          <div class="menu">메뉴</div>
+          <br />
+          <div class="review">리뷰</div>
+          <br />
+        </div>
+        <div class="rightDiv">
+          <div class="tag">태그</div>
+          <br />
+          <div class="save">저장</div>
+          <br />
+          <div class="reserve">예약창</div>
+          <br />
+        </div>
       </div>
     </main>
   </body>
