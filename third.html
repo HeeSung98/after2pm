@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>after2pm</title>
+    <title>after2pm_third</title>
     <link
       rel="stylesheet"
       href="./bootstrap-5.2.3/dist/js/bootstrap.bundle.min.js"
@@ -35,71 +35,88 @@
         width: 100%;
         height: fit-content;
         position: fixed;
-        top: 50px;
+        z-index: 20;
       }
       main {
-        width: 90%;
-        margin: 0px 20px;
+        width: 80vw;
+        margin-left: 10vw;
         position: relative;
-        top: 100px;
+        top: 130px;
         height: 100%;
       }
-      .choosing_1 {
+      p.head {
+        background-color: aquamarine;
+        width: 100%;
+        height: 50px;
+        margin: 0 0 0 0;
+      }
+      .firstCategory {
         background-color: beige;
         display: flex;
         justify-content: space-evenly;
-      }
-      .choosing_1 div {
-        padding: 10px 0px;
+        line-height: 70px;
+        height: 70px;
       }
       .region {
         position: absolute;
+        top: 10px;
         right: 20px;
-      }
-      .type {
-        flex-direction: column;
-        display: flex;
-        width: 20%;
-        position: fixed;
-      }
-      .type div {
-        margin: 20px 10px 20px 0px;
-        text-align: center;
-      }
-      .tablelist {
-        display: flex;
-        flex-direction: column;
-        width: 80%;
-        margin-left: 20%;
       }
       table {
         margin-top: 10px;
         width: 100%;
         height: 500px;
         text-align: center;
+        border-collapse: collapse;
+        border: 1px solid black;
+        position: absolute;
+        transform: (-50%, -50%);
       }
-      /* .deaheung_korean_food {
-        width: 700px;
-      } */
+      td {
+        border: 1px solid black;
+      }
+      .leftDiv {
+        display: inline-block;
+        width: 50vw;
+        height: 100vw;
+        background-color: red;
+        margin-right: 9vw;
+      }
+      .rightDiv {
+        display: inline-block;
+        width: 20vw;
+        height: 100vw;
+        background-color: blue;
+      }
     </style>
   </head>
   <body>
-    <select class="region">
-      <option selected>지역</option>
-      <option value="대흥">대흥</option>
-      <option value="연남">연남</option>
-      <option value="신촌">신촌</option>
-      <option value="이대">이대</option>
-      <option value="홍대">홍대</option>
-    </select>
-
     <header>
-      <div class="choosing_1">
+      <p class="head">
+        <select class="region">
+          <option selected>지역</option>
+          <option value="대흥">대흥</option>
+          <option value="연남">연남</option>
+          <option value="신촌">신촌</option>
+          <option value="이대">이대</option>
+          <option value="홍대">홍대</option>
+        </select>
+      </p>
+      <div class="firstCategory">
         <div id="restaurant">식당</div>
         <div id="cafe">카페</div>
         <div id="play">놀거리</div>
       </div>
     </header>
-    <button class="btn btn-p"></button>
+    <main>
+      <p>
+        <button class="btn btn-primary" onclick="history.back()">
+          뒤로 가기
+        </button>
+      </p>
+
+      <div class="leftDiv"></div>
+      <div class="rightDiv"></div>
+    </main>
   </body>
 </html>
