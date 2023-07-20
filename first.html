@@ -25,7 +25,7 @@
     ></script>
     <link rel="stylesheet" href="./first.css" />
     <script>
-      let order = 1
+      let order = 1;
     </script>
   </head>
   <body>
@@ -107,28 +107,28 @@
   </body>
   <script>
     const open = () => {
-      document.querySelector('.modal').classList.remove('hidden')
-    }
+      document.querySelector(".modal").classList.remove("hidden");
+    };
 
     const close = () => {
-      document.querySelector('.modal').classList.add('hidden')
-    }
+      document.querySelector(".modal").classList.add("hidden");
+    };
 
     const next = () => {
-      console.log('다음 클릭: ' + order)
+      console.log("다음 클릭: " + order);
 
       if (order == 1) {
-        document.querySelector('.modal_content01').classList.add('hidden')
-        document.querySelector('.modal_content02').classList.remove('hidden')
-        order++
+        document.querySelector(".modal_content01").classList.add("hidden");
+        document.querySelector(".modal_content02").classList.remove("hidden");
+        order++;
       } else if (order == 2) {
         // second로 넘어가게 선택된 정보가 넘어가게
       }
-    }
+    };
 
-    document.querySelector('.openBtn').addEventListener('click', open)
-    document.querySelector('#btnClose').addEventListener('click', close)
-    document.querySelector('#btnNext').addEventListener('click', next)
-    document.querySelector('.bg').addEventListener('click', close)
+    document.querySelector(".openBtn").addEventListener("click", open);
+    document.querySelector("#btnClose").addEventListener("click", close);
+    document.querySelector("#btnNext").addEventListener("click", next);
+    document.querySelector(".bg").addEventListener("click", close);
   </script>
 </html>
