@@ -1,7 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap");
 
+@font-face {
+  font-family: "TheJamsil5Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2")
+    format("woff2");
+  font-weight: 100;
+  font-style: normal;
+}
+
 /* 디자인 */
-html {
+/* html {
   height: 100%;
 }
 body {
@@ -9,8 +17,18 @@ body {
   height: 100%;
   min-height: 100%;
   overflow-y: auto;
-}
+} */
 /* body에 height:100%을 넣어도 상관 없는가? */
+
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  margin: 0px;
+  min-height: 100%;
+  overflow-y: auto;
+}
 
 .first_page {
   width: 100%;
@@ -159,50 +177,124 @@ h1 span:nth-child(8) {
 
 /* second.html */
 
-header {
+.second_page header {
   width: 100%;
-  height: fit-content;
+  height: 120px;
   position: fixed;
-  top: 50px;
+  z-index: 20;
 }
-main {
-  width: 90%;
-  margin: 0px 20px;
+.second_page main {
+  width: 80vw;
+  margin-left: 1vw;
   position: relative;
-  top: 100px;
+  top: 200px;
   height: 100%;
 }
-.choosing_1 {
+.second_page h1 {
+  margin: 0px;
+  /* height: 100px; */
+  text-align: center;
+}
+h1 span {
+  position: relative;
+  top: 30px;
+
+  animation: bounce 0.5s ease infinite alternate;
+  font-family: "Bagel Fat One", cursive;
+
+  font-size: 30px;
+  color: #fff;
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+    0 5px 0 #ccc, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent,
+    0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.4);
+}
+
+h1 span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+h1 span:nth-child(3) {
+  animation-delay: 0.2s;
+}
+h1 span:nth-child(4) {
+  animation-delay: 0.3s;
+}
+h1 span:nth-child(5) {
+  animation-delay: 0.4s;
+}
+h1 span:nth-child(6) {
+  animation-delay: 0.5s;
+}
+h1 span:nth-child(7) {
+  animation-delay: 0.6s;
+}
+h1 span:nth-child(8) {
+  animation-delay: 0.7s;
+}
+
+.ff {
+  margin-right: 50px;
+}
+
+@keyframes bounce {
+  100% {
+    top: 20px;
+    /* text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+      0 5px 0 #ccc, 0 6px 0 #ccc, 0 7px 0 #ccc, 0 8px 0 #ccc, 0 9px 0 #ccc,
+      0 50px 25px rgba(0, 0, 0, 0.2); */
+  }
+}
+.second_page div.head {
+  background-color: #ff7777;
+
+  width: 100%;
+  height: 100px;
+  margin: 0 0 0 0;
+}
+.second_page .firstCategory {
   background-color: beige;
   display: flex;
   justify-content: space-evenly;
+  line-height: 70px;
+  height: 70px;
+  border-radius: 20px;
 }
-.choosing_1 div {
-  padding: 10px 0px;
-}
-.region {
+.second_page .region {
   position: absolute;
-  right: 20px;
+  top: 60px;
+  right: 30px;
+  padding: 5px 10px;
+  border-radius: 10px;
 }
-.type {
+.second_page .secondCategory {
   flex-direction: column;
   display: flex;
   width: 20%;
   position: fixed;
 }
-.type div {
+.second_page .secondCategory div {
   margin: 20px 10px 20px 0px;
   text-align: center;
 }
-.tablelist {
+.second_page .tablelist {
   display: flex;
   flex-direction: column;
-  width: 80%;
-  margin-left: 20%;
+  width: 70%;
+  margin-left: 30%;
 }
-table {
+.second_page .introForSecond {
+  width: 70%;
+  margin-left: 30%;
+}
+.second_page table {
   margin-top: 10px;
   width: 100%;
   height: 500px;
   text-align: center;
+}
+.hidden {
+  display: none;
+}
+.second_page img {
+  width: 100%;
+  height: 100%;
 }
