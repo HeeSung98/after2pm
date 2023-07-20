@@ -58,285 +58,287 @@
     </script>
   </head>
   <body>
-    <header>
-      <div class="head">
-        <h1>
-          <span>2</span>
-          <span>시</span>
-          <span class="ff">에</span>
-          <span>뭐</span>
-          <span>해</span>
-          <span>?</span>
-        </h1>
-      </div>
-      <div>
-        <select class="region" onchange="region(this)">
-          <option selected disabled>지역</option>
-          <option value="대흥">대흥</option>
-          <option value="연남">연남</option>
-          <option value="신촌">신촌</option>
-          <option value="이대">이대</option>
-          <option value="홍대">홍대</option>
-        </select>
-      </div>
+    <div class="second_page">
+      <header>
+        <div class="head">
+          <h1>
+            <span>2</span>
+            <span>시</span>
+            <span class="ff">에</span>
+            <span>뭐</span>
+            <span>해</span>
+            <span>?</span>
+          </h1>
+        </div>
+        <div>
+          <select class="region" onchange="region(this)">
+            <option selected disabled>지역</option>
+            <option value="대흥">대흥</option>
+            <option value="연남">연남</option>
+            <option value="신촌">신촌</option>
+            <option value="이대">이대</option>
+            <option value="홍대">홍대</option>
+          </select>
+        </div>
 
-      <div class="firstCategory">
-        <div id="restaurant">식당</div>
-        <div id="cafe">카페</div>
-        <div id="play">놀거리</div>
-      </div>
-    </header>
+        <div class="firstCategory">
+          <div id="restaurant">식당</div>
+          <div id="cafe">카페</div>
+          <div id="play">놀거리</div>
+        </div>
+      </header>
 
-    <main>
-      <div class="secondCategory" id="restaurantType">
-        <div class="btnkorean">한식</div>
-        <!-- <div>양식</div> -->
-        <div class="btnchinese">중식</div>
-        <div class="btnjapanese">일식</div>
-        <!-- <div>아시안</div> -->
-      </div>
-      <div class="secondCategory hidden" id="cafeType">
-        <div class="allview">전체보기</div>
-      </div>
-      <div class="secondCategory hidden" id="playType">
-        <div class="showbtn">전시회</div>
-        <div class="activitybtn">액티비티</div>
-        <div class="etcbtn">기타</div>
-      </div>
-      <div class="introForSecond hidden">음식 종류를 골라주세요</div>
-      <div class="tablelist hidden">
-        <table>
-          <!-- <tr>
+      <main>
+        <div class="secondCategory" id="restaurantType">
+          <div class="btnkorean">한식</div>
+          <!-- <div>양식</div> -->
+          <div class="btnchinese">중식</div>
+          <div class="btnjapanese">일식</div>
+          <!-- <div>아시안</div> -->
+        </div>
+        <div class="secondCategory hidden" id="cafeType">
+          <div class="allview">전체보기</div>
+        </div>
+        <div class="secondCategory hidden" id="playType">
+          <div class="showbtn">전시회</div>
+          <div class="activitybtn">액티비티</div>
+          <div class="etcbtn">기타</div>
+        </div>
+        <div class="introForSecond hidden">음식 종류를 골라주세요</div>
+        <div class="tablelist hidden">
+          <table>
+            <!-- <tr>
             <th></th>
             <th style="width: 100px"></th>
             <th></th>
           </tr> -->
-          <tr>
-            <td rowspan="3" style="height: 200px">
-              <img id="img1" />
-              <i class="bi bi-bookmark-heart" id="zzim"></i>
-            </td>
-            <td>이름</td>
-            <td id="name1">~~</td>
-          </tr>
-          <tr>
-            <td>별점</td>
-            <td id="grade1">4.5</td>
-          </tr>
-          <tr>
-            <td>태그</td>
-            <td id="tag1">#—</td>
-          </tr>
-        </table>
-        <table>
-          <tr>
-            <th></th>
-            <th style="width: 100px"></th>
-            <th></th>
-          </tr>
-          <tr>
-            <td rowspan="3" style="height: 200px">
-              <img id="img2" />
-              <p id="zzim2"></p>
-            </td>
-            <td>이름</td>
-            <td id="name2">~~</td>
-          </tr>
-          <tr>
-            <td>별점</td>
-            <td id="grade2">4.5</td>
-          </tr>
-          <tr>
-            <td>태그</td>
-            <td id="tag2">#—</td>
-          </tr>
-        </table>
-        <table>
-          <tr>
-            <th></th>
-            <th style="width: 100px"></th>
-            <th></th>
-          </tr>
-          <tr>
-            <td rowspan="3" style="height: 200px">
-              <img id="img3" />
-              <p id="zzim3"></p>
-            </td>
-            <td>이름</td>
-            <td id="name3">~~</td>
-          </tr>
-          <tr>
-            <td>별점</td>
-            <td id="grade3">4.5</td>
-          </tr>
-          <tr>
-            <td>태그</td>
-            <td id="tag3">#—</td>
-          </tr>
-        </table>
-        <table>
-          <tr>
-            <th></th>
-            <th style="width: 100px"></th>
-            <th></th>
-          </tr>
-          <tr>
-            <td rowspan="3" style="height: 200px">
-              <img id="img4" />
-              <p id="zzim4"></p>
-            </td>
-            <td>이름</td>
-            <td id="name4">~~</td>
-          </tr>
-          <tr>
-            <td>별점</td>
-            <td id="grade4">4.5</td>
-          </tr>
-          <tr>
-            <td>태그</td>
-            <td id="tag4">#—</td>
-          </tr>
-        </table>
-        <table>
-          <tr>
-            <th></th>
-            <th style="width: 100px"></th>
-            <th></th>
-          </tr>
-          <tr>
-            <td rowspan="3" style="height: 200px">
-              <img id="img5" />
-              <p id="zzim5"></p>
-            </td>
-            <td>이름</td>
-            <td id="name5">~~</td>
-          </tr>
-          <tr>
-            <td>별점</td>
-            <td id="grade5">4.5</td>
-          </tr>
-          <tr>
-            <td>태그</td>
-            <td id="tag5">#—</td>
-          </tr>
-        </table>
-        <table>
-          <tr>
-            <th></th>
-            <th style="width: 100px"></th>
-            <th></th>
-          </tr>
-          <tr>
-            <td rowspan="3" style="height: 200px">
-              <img id="img6" />
-              <p id="zzim6"></p>
-            </td>
-            <td>이름</td>
-            <td id="name6">~~</td>
-          </tr>
-          <tr>
-            <td>별점</td>
-            <td id="grade6">4.5</td>
-          </tr>
-          <tr>
-            <td>태그</td>
-            <td id="tag6">#—</td>
-          </tr>
-        </table>
-        <table>
-          <tr>
-            <th></th>
-            <th style="width: 100px"></th>
-            <th></th>
-          </tr>
-          <tr>
-            <td rowspan="3" style="height: 200px">
-              <img id="img7" />
-              <p id="zzim7"></p>
-            </td>
-            <td>이름</td>
-            <td id="name7">~~</td>
-          </tr>
-          <tr>
-            <td>별점</td>
-            <td id="grade7">4.5</td>
-          </tr>
-          <tr>
-            <td>태그</td>
-            <td id="tag7">#—</td>
-          </tr>
-        </table>
-        <table>
-          <tr>
-            <th></th>
-            <th style="width: 100px"></th>
-            <th></th>
-          </tr>
-          <tr>
-            <td rowspan="3" style="height: 200px">
-              <img id="img8" />
-              <p id="zzim8"></p>
-            </td>
-            <td>이름</td>
-            <td id="name8">~~</td>
-          </tr>
-          <tr>
-            <td>별점</td>
-            <td id="grade8">4.5</td>
-          </tr>
-          <tr>
-            <td>태그</td>
-            <td id="tag8">#—</td>
-          </tr>
-        </table>
-        <table>
-          <tr>
-            <th></th>
-            <th style="width: 100px"></th>
-            <th></th>
-          </tr>
-          <tr>
-            <td rowspan="3" style="height: 200px">
-              <img id="img9" />
-              <p id="zzim9"></p>
-            </td>
-            <td>이름</td>
-            <td id="name9">~~</td>
-          </tr>
-          <tr>
-            <td>별점</td>
-            <td id="grade9">4.5</td>
-          </tr>
-          <tr>
-            <td>태그</td>
-            <td id="tag9">#—</td>
-          </tr>
-        </table>
-        <table>
-          <tr>
-            <th></th>
-            <th style="width: 100px"></th>
-            <th></th>
-          </tr>
-          <tr>
-            <td rowspan="3" style="height: 200px">
-              <img id="img10" />
-              <p id="zzim10"></p>
-            </td>
-            <td>이름</td>
-            <td id="name10">~~</td>
-          </tr>
-          <tr>
-            <td>별점</td>
-            <td id="grade10">4.5</td>
-          </tr>
-          <tr>
-            <td>태그</td>
-            <td id="tag10">#—</td>
-          </tr>
-        </table>
-      </div>
-    </main>
+            <tr>
+              <td rowspan="3" style="height: 200px">
+                <img id="img1" />
+                <i class="bi bi-bookmark-heart" id="zzim"></i>
+              </td>
+              <td>이름</td>
+              <td id="name1">~~</td>
+            </tr>
+            <tr>
+              <td>별점</td>
+              <td id="grade1">4.5</td>
+            </tr>
+            <tr>
+              <td>태그</td>
+              <td id="tag1">#—</td>
+            </tr>
+          </table>
+          <table>
+            <tr>
+              <th></th>
+              <th style="width: 100px"></th>
+              <th></th>
+            </tr>
+            <tr>
+              <td rowspan="3" style="height: 200px">
+                <img id="img2" />
+                <p id="zzim2"></p>
+              </td>
+              <td>이름</td>
+              <td id="name2">~~</td>
+            </tr>
+            <tr>
+              <td>별점</td>
+              <td id="grade2">4.5</td>
+            </tr>
+            <tr>
+              <td>태그</td>
+              <td id="tag2">#—</td>
+            </tr>
+          </table>
+          <table>
+            <tr>
+              <th></th>
+              <th style="width: 100px"></th>
+              <th></th>
+            </tr>
+            <tr>
+              <td rowspan="3" style="height: 200px">
+                <img id="img3" />
+                <p id="zzim3"></p>
+              </td>
+              <td>이름</td>
+              <td id="name3">~~</td>
+            </tr>
+            <tr>
+              <td>별점</td>
+              <td id="grade3">4.5</td>
+            </tr>
+            <tr>
+              <td>태그</td>
+              <td id="tag3">#—</td>
+            </tr>
+          </table>
+          <table>
+            <tr>
+              <th></th>
+              <th style="width: 100px"></th>
+              <th></th>
+            </tr>
+            <tr>
+              <td rowspan="3" style="height: 200px">
+                <img id="img4" />
+                <p id="zzim4"></p>
+              </td>
+              <td>이름</td>
+              <td id="name4">~~</td>
+            </tr>
+            <tr>
+              <td>별점</td>
+              <td id="grade4">4.5</td>
+            </tr>
+            <tr>
+              <td>태그</td>
+              <td id="tag4">#—</td>
+            </tr>
+          </table>
+          <table>
+            <tr>
+              <th></th>
+              <th style="width: 100px"></th>
+              <th></th>
+            </tr>
+            <tr>
+              <td rowspan="3" style="height: 200px">
+                <img id="img5" />
+                <p id="zzim5"></p>
+              </td>
+              <td>이름</td>
+              <td id="name5">~~</td>
+            </tr>
+            <tr>
+              <td>별점</td>
+              <td id="grade5">4.5</td>
+            </tr>
+            <tr>
+              <td>태그</td>
+              <td id="tag5">#—</td>
+            </tr>
+          </table>
+          <table>
+            <tr>
+              <th></th>
+              <th style="width: 100px"></th>
+              <th></th>
+            </tr>
+            <tr>
+              <td rowspan="3" style="height: 200px">
+                <img id="img6" />
+                <p id="zzim6"></p>
+              </td>
+              <td>이름</td>
+              <td id="name6">~~</td>
+            </tr>
+            <tr>
+              <td>별점</td>
+              <td id="grade6">4.5</td>
+            </tr>
+            <tr>
+              <td>태그</td>
+              <td id="tag6">#—</td>
+            </tr>
+          </table>
+          <table>
+            <tr>
+              <th></th>
+              <th style="width: 100px"></th>
+              <th></th>
+            </tr>
+            <tr>
+              <td rowspan="3" style="height: 200px">
+                <img id="img7" />
+                <p id="zzim7"></p>
+              </td>
+              <td>이름</td>
+              <td id="name7">~~</td>
+            </tr>
+            <tr>
+              <td>별점</td>
+              <td id="grade7">4.5</td>
+            </tr>
+            <tr>
+              <td>태그</td>
+              <td id="tag7">#—</td>
+            </tr>
+          </table>
+          <table>
+            <tr>
+              <th></th>
+              <th style="width: 100px"></th>
+              <th></th>
+            </tr>
+            <tr>
+              <td rowspan="3" style="height: 200px">
+                <img id="img8" />
+                <p id="zzim8"></p>
+              </td>
+              <td>이름</td>
+              <td id="name8">~~</td>
+            </tr>
+            <tr>
+              <td>별점</td>
+              <td id="grade8">4.5</td>
+            </tr>
+            <tr>
+              <td>태그</td>
+              <td id="tag8">#—</td>
+            </tr>
+          </table>
+          <table>
+            <tr>
+              <th></th>
+              <th style="width: 100px"></th>
+              <th></th>
+            </tr>
+            <tr>
+              <td rowspan="3" style="height: 200px">
+                <img id="img9" />
+                <p id="zzim9"></p>
+              </td>
+              <td>이름</td>
+              <td id="name9">~~</td>
+            </tr>
+            <tr>
+              <td>별점</td>
+              <td id="grade9">4.5</td>
+            </tr>
+            <tr>
+              <td>태그</td>
+              <td id="tag9">#—</td>
+            </tr>
+          </table>
+          <table>
+            <tr>
+              <th></th>
+              <th style="width: 100px"></th>
+              <th></th>
+            </tr>
+            <tr>
+              <td rowspan="3" style="height: 200px">
+                <img id="img10" />
+                <p id="zzim10"></p>
+              </td>
+              <td>이름</td>
+              <td id="name10">~~</td>
+            </tr>
+            <tr>
+              <td>별점</td>
+              <td id="grade10">4.5</td>
+            </tr>
+            <tr>
+              <td>태그</td>
+              <td id="tag10">#—</td>
+            </tr>
+          </table>
+        </div>
+      </main>
+    </div>
   </body>
   <script>
     $(".bi").click(function (e) {
