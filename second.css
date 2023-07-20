@@ -114,9 +114,11 @@ div.head {
   text-align: center;
   text-decoration: none;
 }
+
 /* 버튼 효과 */
-.btnkorean {
-  border: none;
+
+.secondCategory > div {
+  order: none;
   background-color: green;
   color: white;
   border-radius: 5px;
@@ -125,12 +127,13 @@ div.head {
   outline: none;
   transition: 0.2s all;
 }
-.btnkorean:hover {
+
+.secondCategory > div:hover {
   transform: scale(0.9);
   box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
 
-.btnchinese {
+.allview {
   border: none;
   background-color: green;
   color: white;
@@ -140,11 +143,12 @@ div.head {
   outline: none;
   transition: 0.2s all;
 }
-.btnchinese:hover {
+.allview:hover {
   transform: scale(0.9);
   box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
-.btnjapanese {
+
+#playType > div {
   border: none;
   background-color: green;
   color: white;
@@ -154,7 +158,8 @@ div.head {
   outline: none;
   transition: 0.2s all;
 }
-.btnjapanese:hover {
+
+#playType > div:hover {
   transform: scale(0.9);
   box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
