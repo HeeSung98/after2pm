@@ -64,7 +64,7 @@
       </div>
       <div>
         <select class="region" onchange="region(this)">
-          <option selected>지역</option>
+          <option selected disabled>지역</option>
           <option value="대흥">대흥</option>
           <option value="연남">연남</option>
           <option value="신촌">신촌</option>
@@ -96,7 +96,8 @@
         <div>액티비티</div>
         <div>기타</div>
       </div>
-      <div class="tablelist">
+      <div class="introForSecond hidden">음식 종류를 골라주세요</div>
+      <div class="tablelist hidden">
         <table>
           <tr>
             <th></th>
@@ -336,9 +337,11 @@
     let secondCategory = 0;
     $(".firstCategory div").click(function (e) {
       let firstCategoryText = e.currentTarget.textContent;
+      $(".tablelist").addClass("hidden");
       if (firstCategoryText == "식당") {
         firstCategory = 1;
         $("#restaurantType").removeClass("hidden");
+        $(".introForSecond").removeClass("hidden");
         $("#cafeType").addClass("hidden");
         $("#playType").addClass("hidden");
       } else if (firstCategoryText == "카페") {
@@ -357,6 +360,8 @@
 
     $(".secondCategory div").click(function (e) {
       let secondCategoryText = e.currentTarget.textContent;
+      $(".introForSecond").addClass("hidden");
+      $(".tablelist").removeClass("hidden");
       if (secondCategoryText == "한식") {
         secondCategory = 1;
       } else if (secondCategoryText == "중식") {
