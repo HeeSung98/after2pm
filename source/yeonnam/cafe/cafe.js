@@ -1,5 +1,5 @@
-let ca1_y = {
-  img: (src = "./작당모의.jpeg"),
+arr.push({
+  img: "./source/yeonnam/cafe/작당모의.jpeg",
   name: "작당모의",
   grade: 4.39,
   tag: ["아늑한", "디저트가 맛있는"],
@@ -18,10 +18,10 @@ let ca1_y = {
     "아메리카노 (5,800원)",
     "카페라떼 (6,300원)",
   ],
-};
+});
 
-let ca2_y = {
-  img: (src = "./어썸.jpeg"),
+arr.push({
+  img: "./source/yeonnam/cafe/어썸.jpeg",
   name: "어썸마운틴",
   grade: 4.83,
   tag: ["대화하기 좋은", "커피가 맛있는"],
@@ -37,10 +37,10 @@ let ca2_y = {
     "히비스커스레몬 아이스티 (6,500원)",
     "청포도라임 에이드 (6,500원)",
   ],
-};
+});
 
-let ca3_y = {
-  img: (src = "./호안.jpeg"),
+arr.push({
+  img: "./source/yeonnam/cafe/호안.jpeg",
   name: "호안끼엠",
   grade: 4.64,
   tag: ["이색적인", "디저트가 맛있는"],
@@ -58,10 +58,10 @@ let ca3_y = {
     "코코넛 카페라떼 (7,500원)",
     "코코넛 스무디 (7,000원)",
   ],
-};
+});
 
-let ca4_y = {
-  img: (src = "./공명.jpeg"),
+arr.push({
+  img: "./source/yeonnam/cafe/공명.jpeg",
   name: "카페 공명",
   grade: "",
   tag: ["대화하기 좋은", "디저트가 맛있는"],
@@ -77,46 +77,46 @@ let ca4_y = {
     "크림모카 (6,500원)",
     "말차라떼 (6,500원)",
   ],
-};
+});
 
-let ca5_y = {
-  img: (src = "./오버트.jpeg"),
+arr.push({
+  img: "./source/yeonnam/cafe/오버트.jpeg",
   name: "오버트 연남",
   grade: 0,
   tag: ["커피가 맛있는", "이색적인"],
-};
+});
 
-let ca6_y = {
-  img: (src = "./오르트.jpeg"),
+arr.push({
+  img: "./source/yeonnam/cafe/오르트.jpeg",
   name: "카페 오르트",
   grade: 0,
   tag: ["대화하기 좋은", "루프탑이 있는"],
-};
+});
 
-let ca7_y = {
-  img: (src = "./만동제과.jpeg"),
+arr.push({
+  img: "./source/yeonnam/cafe/만동제과.jpeg",
   name: "만동제과",
   grade: 4.51,
   tag: ["넓은", "디저트가 맛있는"],
-};
+});
 
-let ca8_y = {
-  img: (src = "./앤티크.jpeg"),
+arr.push({
+  img: "./source/yeonnam/cafe/앤티크.jpeg",
   name: "앤티크커피",
   grade: 0,
   tag: ["디저트가 맛있는", "커피가 맛있는"],
-};
+});
 
-let ca9_y = {
-  img: (src = "./오랑지.jpeg"),
+arr.push({
+  img: "./source/yeonnam/cafe/오랑지.jpeg",
   name: "오랑지",
   grade: 4.62,
   tag: ["이색적인", "대화하기 좋은"],
-};
+});
 
-let ca10_y = {
-  img: (src = "./어니스트.jpeg"),
+arr.push({
+  img: "./source/yeonnam/cafe/어니스트.jpeg",
   name: "어니스트 팬케이크",
   grade: 4.67,
   tag: ["대화하기 좋은", "디저트가 맛있는"],
-};
+});

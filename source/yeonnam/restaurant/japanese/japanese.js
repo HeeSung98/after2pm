@@ -1,17 +1,17 @@
-let jf1_d = {
-  img: (src = "./1스시장인.jpeg"),
-  name: 스시장인,
+arr.push({
+  img: "./source/yeonnam/restaurant/japanese/1스시장인.jpeg",
+  name: "스시장인",
   grade: 4,
   tag: ["갓오픈한", "깔끔한"],
   explain: [
     "연남동에 위치한 일식 다이닝, 오마카세 런치 12:00부터 80,000원 디너 18:00부터 150,000원입니다.",
   ],
   menu: ["런치(80,000원)", "디너(150,000원)"],
-};
+});
 
-let jf2_d = {
-  img: (src = "./2이자카야라쿤.jpeg"),
-  name: 이자카야라쿤,
+arr.push({
+  img: "./source/yeonnam/restaurant/japanese/2이자카야라쿤.jpeg",
+  name: "이자카야라쿤",
   grade: 4.75,
   tag: ["리트리버와함께", "분위기좋은"],
   explain: [
@@ -28,10 +28,11 @@ let jf2_d = {
     "점보야끼교차(9,000원)",
     "멘치카츠(12,000원)",
   ],
-};
-let jf3_d = {
-  img: (src = "./3미쁘동.jpeg"),
-  name: 미쁘동,
+});
+
+arr.push({
+  img: "./source/yeonnam/restaurant/japanese/3미쁘동.jpeg",
+  name: "미쁘동",
   grade: 4.42,
   tag: ["가성비좋은", "인테리어맛집"],
   explain: [
@@ -48,10 +49,11 @@ let jf3_d = {
     "우니도로동(30,000원)",
     "스지탕정식(18,000원)",
   ],
-};
-let jf4_d = {
-  img: (src = "./4올랑올랑.jpeg"),
-  name: 올랑올랑,
+});
+
+arr.push({
+  img: "./source/yeonnam/restaurant/japanese/4올랑올랑.jpeg",
+  name: "올랑올랑",
   grade: 4.31,
   tag: ["후토마끼맛집", "설레는"],
   explain: [
@@ -65,54 +67,60 @@ let jf4_d = {
     "통베이컨매콤로제파스타(18,900원)",
     "관자전 냉소바(13,500원",
   ],
-};
-let jf5_d = {
-  img: (src = "./5정소바.png"),
-  name: 정소바,
+});
+
+arr.push({
+  img: "./source/yeonnam/restaurant/japanese/5정소바.png",
+  name: "정소바",
   grade: 4.62,
   tag: ["일식맛집", "양이많은"],
   explain: [
     "안녕하세요. 연남 정소바입니다. 건강하고 즐거운 식사가 되시길 바랍니다. 감사합니다.",
   ],
   // menu: [],
-};
-let jf6_d = {
-  img: (src = "./6연하동.jpeg"),
-  name: 연하동,
+});
+
+arr.push({
+  img: "./source/yeonnam/restaurant/japanese/6연하동.jpeg",
+  name: "연하동",
   grade: 4.49,
   tag: ["가성비 좋은", "현지인 맛집"],
   // explain: [],
   // menu: [],
-};
-let jf7_d = {
-  img: (src = "./7카쿠시타.jpeg"),
-  name: 카쿠시타,
+});
+
+arr.push({
+  img: "./source/yeonnam/restaurant/japanese/7카쿠시타.jpeg",
+  name: "카쿠시타",
   grade: 4.53,
   tag: ["술안주로 좋은", "인생돈가스"],
   // explain: [""],
   // menu: [],
-};
-let jf8_d = {
-  img: (src = "./8콘부연남.jpeg"),
-  name: 콘부연남,
+});
+
+arr.push({
+  img: "./source/yeonnam/restaurant/japanese/8콘부연남.jpeg",
+  name: "콘부연남",
   grade: 4.3,
   tag: ["인테리어맛집", "가성비좋은"],
   // explain: [""],
   // menu: [],
-};
-let jf9_d = {
-  img: (src = "./9쿄카이텐동.jpeg"),
-  name: 쿄카이텐동,
+});
+
+arr.push({
+  img: "./source/yeonnam/restaurant/japanese/9쿄카이텐동.jpeg",
+  name: "쿄카이텐동",
   grade: 4.82,
   tag: ["일식분위기", "혼밥하기 좋은"],
   // explain: [""],
   // menu: [],
-};
-let jf10_d = {
-  img: (src = "./10로야토야.jpeg"),
-  name: 로야토야,
+});
+
+arr.push({
+  img: "./source/yeonnam/restaurant/japanese/10로야토야.jpeg",
+  name: "로야토야",
   grade: 4.5,
   tag: ["20년이상경력", "전문적인"],
   // explain: [""],
   // menu: [],
-};
+});

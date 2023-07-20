@@ -1,14 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap");
+@font-face {
+  font-family: "TheJamsil5Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2")
+    format("woff2");
+  font-weight: 100;
+  font-style: normal;
+}
 html {
   height: 100%;
 }
 body {
+  font-family: "TheJamsil5Bold";
   margin: 0px;
   min-height: 100%;
   overflow-y: auto;
 }
 header {
   width: 100%;
-  height: fit-content;
+  height: 120px;
   position: fixed;
   z-index: 20;
 }
@@ -16,13 +25,66 @@ main {
   width: 80vw;
   margin-left: 1vw;
   position: relative;
-  top: 130px;
+  top: 200px;
   height: 100%;
 }
-p.head {
-  background-color: aquamarine;
+h1 {
+  margin: 0px;
+  /* height: 100px; */
+  text-align: center;
+}
+h1 span {
+  position: relative;
+  top: 30px;
+
+  animation: bounce 0.5s ease infinite alternate;
+  font-family: "Bagel Fat One", cursive;
+
+  font-size: 20px;
+  color: #fff;
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+    0 5px 0 #ccc, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent,
+    0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.4);
+}
+
+h1 span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+h1 span:nth-child(3) {
+  animation-delay: 0.2s;
+}
+h1 span:nth-child(4) {
+  animation-delay: 0.3s;
+}
+h1 span:nth-child(5) {
+  animation-delay: 0.4s;
+}
+h1 span:nth-child(6) {
+  animation-delay: 0.5s;
+}
+h1 span:nth-child(7) {
+  animation-delay: 0.6s;
+}
+h1 span:nth-child(8) {
+  animation-delay: 0.7s;
+}
+
+.ff {
+  margin-right: 50px;
+}
+
+@keyframes bounce {
+  100% {
+    top: 20px;
+    /* text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+      0 5px 0 #ccc, 0 6px 0 #ccc, 0 7px 0 #ccc, 0 8px 0 #ccc, 0 9px 0 #ccc,
+      0 50px 25px rgba(0, 0, 0, 0.2); */
+  }
+}
+div.head {
+  background-color: rgb(152, 255, 248);
   width: 100%;
-  height: 50px;
+  height: 100px;
   margin: 0 0 0 0;
 }
 .firstCategory {
@@ -31,11 +93,14 @@ p.head {
   justify-content: space-evenly;
   line-height: 70px;
   height: 70px;
+  border-radius: 20px;
 }
 .region {
   position: absolute;
-  top: 10px;
-  right: 20px;
+  top: 60px;
+  right: 30px;
+  padding: 5px 10px;
+  border-radius: 10px;
 }
 .secondCategory {
   flex-direction: column;
