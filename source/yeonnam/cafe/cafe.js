@@ -2,7 +2,7 @@ arr.push({
   img: "./source/yeonnam/cafe/작당모의.jpeg",
   name: "작당모의",
   grade: 4.39,
-  tag: ["아늑한", "디저트가 맛있는"],
+  tag: ["#아늑한<br>", "#디저트가 맛있는"],
   // zzim: 체크박스 selected?,
   explain:
     "한팀 최대 4인 이하로 매장이용 가능. 주차는 주변 공영주차장을 이용해주세요.",
@@ -24,7 +24,7 @@ arr.push({
   img: "./source/yeonnam/cafe/어썸.jpeg",
   name: "어썸마운틴",
   grade: 4.83,
-  tag: ["대화하기 좋은", "커피가 맛있는"],
+  tag: ["#대화하기 좋은<br>", "#커피가 맛있는"],
   explain:
     " 안개가 자욱한 새벽, 산 정상에 닿았을 때, 새벽의 상쾌한 공기, 자욱하고 신비했던 안개는 복잡한 일상을 잠시 잊게 해주었습니다. 그 때의 모습을 이 곳에 담고 싶었습니다. 쉬었다 가세요",
   menu: [
@@ -43,7 +43,7 @@ arr.push({
   img: "./source/yeonnam/cafe/호안.jpeg",
   name: "호안끼엠",
   grade: 4.64,
-  tag: ["이색적인", "디저트가 맛있는"],
+  tag: ["#이색적인<br>", "#디저트가 맛있는"],
   explain:
     "연남동 숨은 빙수 맛집 호안끼엠. 베트남 디저트를 즐기러 오세요. (월요일 휴무)",
   menu: [
@@ -63,8 +63,8 @@ arr.push({
 arr.push({
   img: "./source/yeonnam/cafe/공명.jpeg",
   name: "카페 공명",
-  grade: "",
-  tag: ["대화하기 좋은", "디저트가 맛있는"],
+  grade: 4.7,
+  tag: ["#대화하기 좋은<br>", "#디저트가 맛있는"],
   explain:
     "'카페 공명 연남점'은 필름출판사에서 운영하는 공간으로 '좋은 시간을 우리와 함께 (have a good time with)'라는 생각으로 공간을 채우기 위해 노력하고 있습니다. 공명에서만 느낄 수 있는 고즈넉한 분위기와 함께 다양한 종류의 베이커리와 커피를 즐길 수 있습니다.",
   menu: [
@@ -82,41 +82,41 @@ arr.push({
 arr.push({
   img: "./source/yeonnam/cafe/오버트.jpeg",
   name: "오버트 연남",
-  grade: 0,
-  tag: ["커피가 맛있는", "이색적인"],
+  grade: 4.5,
+  tag: ["#커피가 맛있는<br>", "#이색적인"],
 });
 
 arr.push({
   img: "./source/yeonnam/cafe/오르트.jpeg",
   name: "카페 오르트",
-  grade: 0,
-  tag: ["대화하기 좋은", "루프탑이 있는"],
+  grade: 4.52,
+  tag: ["#대화하기 좋은<br>", "#루프탑이 있는"],
 });
 
 arr.push({
   img: "./source/yeonnam/cafe/만동제과.jpeg",
   name: "만동제과",
   grade: 4.51,
-  tag: ["넓은", "디저트가 맛있는"],
+  tag: ["#넓은<br>", "#디저트가 맛있는"],
 });
 
 arr.push({
   img: "./source/yeonnam/cafe/앤티크.jpeg",
   name: "앤티크커피",
-  grade: 0,
-  tag: ["디저트가 맛있는", "커피가 맛있는"],
+  grade: 4.2,
+  tag: ["#디저트가 맛있는<br>", "#커피가 맛있는"],
 });
 
 arr.push({
   img: "./source/yeonnam/cafe/오랑지.jpeg",
   name: "오랑지",
   grade: 4.62,
-  tag: ["이색적인", "대화하기 좋은"],
+  tag: ["#이색적인<br>", "#대화하기 좋은"],
 });
 
 arr.push({
   img: "./source/yeonnam/cafe/어니스트.jpeg",
   name: "어니스트 팬케이크",
   grade: 4.67,
-  tag: ["대화하기 좋은", "디저트가 맛있는"],
+  tag: ["#대화하기 좋은<br>", "#디저트가 맛있는"],
 });
