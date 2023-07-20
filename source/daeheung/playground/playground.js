@@ -26,7 +26,7 @@ arr.push({
 });
 
 arr.push({
-  img: "./source/daeheung/playground/4마포아트센터아트홀맥.jpeg",
+  img: "./source/daeheung/playground/5마포아트센터갤러리맥2.jpeg",
   name: "마포아트센터 아트홀맥",
   grade: "-",
   tag: ["대규모수용이가능한", "마포문화생활"],
@@ -46,4 +46,32 @@ arr.push({
   name: "품프로젝트 가죽공방",
   grade: 4.47,
   tag: ["가죽공예", "가죽원데이클라스"],
+});
+
+arr.push({
+  img: "./source/daeheung/playground/7NOSTRO.jpeg",
+  name: "NOSTRO",
+  grade: 4.47,
+  tag: ["가죽공예", "가죽원데이클라스"],
+});
+
+arr.push({
+  img: "./source/daeheung/playground/8널스밤.jpeg",
+  name: "널스밤",
+  grade: 4.47,
+  tag: ["가죽공예", "가죽원데이클라스"],
+});
+
+arr.push({
+  img: "./source/daeheung/playground/9스튜디오 모든가든.jpeg",
+  name: "스튜디오 모든가든",
+  grade: 4.47,
+  tag: ["도예", "도자기공방"],
+});
+
+arr.push({
+  img: "./source/daeheung/playground/10경의선숲길.jpeg",
+  name: "경의선공원",
+  grade: 4.47,
+  tag: ["가로수가 이쁜", "산책하기 좋은"],
 });
