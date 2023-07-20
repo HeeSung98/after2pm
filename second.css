@@ -103,6 +103,10 @@ h1 span:nth-child(8) {
   padding: 0px 20px;
   line-height: 50px;
 }
+.second_page .firstCategory > div:hover {
+  scale: (1.1);
+}
+
 .second_page .region {
   position: absolute;
   top: 60px;
