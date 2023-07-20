@@ -209,6 +209,7 @@ h1 span:nth-child(8) {
 .second_page img {
   width: 80%;
   border-radius: 10px;
+  max-height: 400px;
 
   /* width: 70%; */
 }

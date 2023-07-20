@@ -52,7 +52,7 @@ arr.push({
   img: "./source/daeheung/playground/7NOSTRO.jpeg",
   name: "NOSTRO",
   grade: 4.47,
-  tag: ["가죽공예", "가죽원데이클라스"],
+  tag: ["#가죽공예<br>", "#가죽원데이클라스"],
 });
 
 arr.push({
@@ -66,12 +66,12 @@ arr.push({
   img: "./source/daeheung/playground/9스튜디오 모든가든.jpeg",
   name: "스튜디오 모든가든",
   grade: 4.47,
-  tag: ["도예", "도자기공방"],
+  tag: ["#도예<br>", "#도자기공방"],
 });
 
 arr.push({
   img: "./source/daeheung/playground/10경의선숲길.jpeg",
   name: "경의선공원",
   grade: 4.47,
-  tag: ["가로수가 이쁜", "산책하기 좋은"],
+  tag: ["#가로수가 이쁜<br>", "#산책하기 좋은"],
 });
