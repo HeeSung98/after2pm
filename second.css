@@ -15,6 +15,7 @@ body {
   min-height: 100%;
   overflow-y: auto;
 }
+/* .second_page */
 header {
   width: 100%;
   height: 120px;
@@ -22,7 +23,7 @@ header {
   z-index: 20;
 }
 main {
-  width: 80vw;
+  width: 90vw;
   margin-left: 1vw;
   position: relative;
   top: 200px;
@@ -96,6 +97,12 @@ div.head {
   height: 70px;
   border-radius: 20px;
 }
+.firstCategory div {
+  height: 50px;
+  margin: 10px 0px;
+  padding: 0px 20px;
+  line-height: 50px;
+}
 .region {
   position: absolute;
   top: 60px;
@@ -116,8 +123,8 @@ div.head {
 .tablelist {
   display: flex;
   flex-direction: column;
-  width: 70%;
-  margin-left: 30%;
+  width: 75%;
+  margin-left: 25%;
 }
 .introForSecond {
   width: 70%;
@@ -126,13 +133,29 @@ div.head {
 table {
   margin-top: 10px;
   width: 100%;
-  height: 500px;
+  height: 300px;
   text-align: center;
+  /* border: 1px solid black; */
+  background-color: aliceblue;
+  border-radius: 20px;
+  position: relative;
 }
 .hidden {
   display: none;
 }
+.selected {
+  color: red;
+  border-radius: 20px;
+}
+
 img {
-  width: 100%;
-  height: 100%;
+  width: 200px;
+  /* width: 70%; */
+}
+
+.bi {
+  font-size: 30px;
+  position: absolute;
+  top: 10px;
+  right: 20px;
 }
