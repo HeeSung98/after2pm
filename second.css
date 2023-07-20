@@ -112,7 +112,53 @@ div.head {
 .secondCategory div {
   margin: 20px 10px 20px 0px;
   text-align: center;
+  text-decoration: none;
 }
+/* 버튼 효과 */
+.btnkorean {
+  border: none;
+  background-color: green;
+  color: white;
+  border-radius: 5px;
+  box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+  cursor: pointer;
+  outline: none;
+  transition: 0.2s all;
+}
+.btnkorean:hover {
+  transform: scale(0.9);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+.btnchinese {
+  border: none;
+  background-color: green;
+  color: white;
+  border-radius: 5px;
+  box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+  cursor: pointer;
+  outline: none;
+  transition: 0.2s all;
+}
+.btnchinese:hover {
+  transform: scale(0.9);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+.btnjapanese {
+  border: none;
+  background-color: green;
+  color: white;
+  border-radius: 5px;
+  box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+  cursor: pointer;
+  outline: none;
+  transition: 0.2s all;
+}
+.btnjapanese:hover {
+  transform: scale(0.9);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
 .tablelist {
   display: flex;
   flex-direction: column;
