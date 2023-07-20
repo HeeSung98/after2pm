@@ -12,7 +12,7 @@ arr.push({
 arr.push({
   img: "./source/yeonnam/restaurant/korean/2수라간.jpeg",
   name: "수라간",
-  grade: "4.66",
+  grade: 4.66,
   tag: ["한식맛집", "푸짐한"],
   explain: [
     "수라간은 신선한 재료만을 사용합니다. 엄마가 만들어준 정갈하고 맛있는 집바, 안주를 푸짐하고 맛있게 제대로 즐기고 싶은 분들은 어서 오세요. 장소가 협소하여 예약이 안되는 점 양해 부탁드립니다.",
@@ -91,7 +91,7 @@ arr.push({
 arr.push({
   img: "./source/yeonnam/restaurant/korean/6덴키부타야.jpeg",
   name: "덴키 부타야",
-  grade: 새로오픈,
+  grade: 0,
   tag: ["비빔탄탄멘 맛집", "일본식 라멘"],
 });
 

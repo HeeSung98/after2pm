@@ -1,5 +1,5 @@
-let cf1_y = {
-  img: (src = "./중화복춘.jpeg"),
+arr.push({
+  img: "./source/yeonnam/restaurant/chinese/중화복춘.jpeg",
   name: "중화복춘",
   grade: 4.44,
   tag: ["현지셰프", "특별한 메뉴"],
@@ -13,10 +13,10 @@ let cf1_y = {
     "복춘 라즈지 (47,000원)",
     "목화솜 어향가지 (49,000원)",
   ],
-};
+});
 
-let cf2_y = {
-  img: (src = "./리춘시장.png"),
+arr.push({
+  img: "./source/yeonnam/restaurant/chinese/리춘시장.jpeg",
   name: "리춘시장 연남점",
   grade: 4.48,
   tag: ["가성비 좋은", "다양한 메뉴"],
@@ -30,10 +30,10 @@ let cf2_y = {
     "사막깐풍기 (12,900원)",
     "고추듬뿍 유린기 (13,900원)",
   ],
-};
+});
 
-let cf3_y = {
-  img: (src = "./양꼬치바.jpeg"),
+arr.push({
+  img: "./source/yeonnam/restaurant/chinese/양꼬치바.jpeg",
   name: "서대문 양꼬치 BAR",
   grade: 4.29,
   tag: ["TV출연 맛집", "신선한 재료"],
@@ -47,10 +47,10 @@ let cf3_y = {
     "양등심 5ea (7,000원)",
     "소갈비살 5ea (7,000원)",
   ],
-};
+});
 
-let cf4_y = {
-  img: (src = "./몽중식.jpeg"),
+arr.push({
+  img: "./source/yeonnam/restaurant/chinese/몽중식.jpeg",
   name: "몽중식",
   grade: "-",
   tag: ["안심식당", "TV출연 맛집"],
@@ -60,46 +60,46 @@ let cf4_y = {
     "[지금, 만나러 갑니다] 디너 코스 (93,000원)",
     "[지금, 만나러 갑니다] 런치 코스 (38,000원)",
   ],
-};
+});
 
-let cf5_y = {
-  img: (src = "./월량관.jpeg"),
+arr.push({
+  img: "./source/yeonnam/restaurant/chinese/월량관.jpeg",
   name: "월량관",
   grade: 4.45,
   tag: ["다양한 메뉴", "가성비 좋은"],
-};
+});
 
-let cf6_y = {
-  img: (src = "./조원.jpeg"),
+arr.push({
+  img: "./source/yeonnam/restaurant/chinese/조원.jpeg",
   name: "조원",
   grade: 4.32,
   tag: ["연트럴파크 맛집", "다양한 메뉴"],
-};
+});
 
-let cf7_y = {
-  img: (src = "./송가.jpeg"),
+arr.push({
+  img: "./source/yeonnam/restaurant/chinese/송가.jpeg",
   name: "송가",
   grade: 4.45,
   tag: ["TV출연 맛집", "특별한 메뉴"],
-};
+});
 
-let cf8_y = {
-  img: (src = "./하하.jpeg"),
+arr.push({
+  img: "./source/yeonnam/restaurant/chinese/하하.jpeg",
   name: "하하",
   grade: 4.35,
   tag: ["TV출연 맛집", "만두 전문"],
-};
+});
 
-let cf9_y = {
-  img: (src = "./진가.jpeg"),
+arr.push({
+  img: "./source/yeonnam/restaurant/chinese/진가.jpeg",
   name: "진가",
   grade: 4.5,
   tag: ["TV출연 맛집", "회식하기 좋은"],
-};
+});
 
-let cf10_y = {
-  img: (src = "./디이롱.jpeg"),
+arr.push({
+  img: "./source/yeonnam/restaurant/chinese/디이롱.jpeg",
   name: "디이롱",
   grade: 4.45,
   tag: ["분위기 좋은", "만두 맛집"],
-};
+});
