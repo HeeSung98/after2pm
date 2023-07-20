@@ -1,5 +1,5 @@
 arr.push({
-  img: "./source/daeheung/restaurant/playground/1다송.jpeg",
+  img: "./source/daeheung/playground/1다송.jpeg",
   name: "다송",
   grade: 4.44,
   tag: ["클래스가능", "핸드메이드"],
@@ -8,7 +8,7 @@ arr.push({
 });
 
 arr.push({
-  img: "./source/daeheung/restaurant/playground/2리브모아.jpeg",
+  img: "./source/daeheung/playground/2리브모아.jpeg",
   name: "리브모아",
   grade: 4,
   tag: ["도예공방", "도예체험"],
@@ -17,7 +17,7 @@ arr.push({
 });
 
 arr.push({
-  img: "./source/daeheung/restaurant/playground/3브런치스튜디오가죽공방.jpeg",
+  img: "./source/daeheung/playground/3브런치스튜디오가죽공방.jpeg",
   name: "브런치스튜디오 가죽공방",
   grade: 4.28,
   tag: ["서울가죽공방", "가죽공예키트DIY"],
@@ -26,7 +26,7 @@ arr.push({
 });
 
 arr.push({
-  img: "./source/daeheung/restaurant/playground/4마포아트센터아트홀맥.jpeg",
+  img: "./source/daeheung/playground/4마포아트센터아트홀맥.jpeg",
   name: "마포아트센터 아트홀맥",
   grade: "-",
   tag: ["대규모수용이가능한", "마포문화생활"],
@@ -35,14 +35,14 @@ arr.push({
 });
 
 arr.push({
-  img: "./source/daeheung/restaurant/playground/5마포아트센터갤러리맥.jpeg",
+  img: "./source/daeheung/playground/5마포아트센터갤러리맥.jpeg",
   name: "마포아트센터 갤러리맥",
   grade: "-",
   tag: ["대흥역6번출구", "마포문화생활"],
 });
 
 arr.push({
-  img: "./source/daeheung/restaurant/playground/6품프로젝트가죽공방.jpeg",
+  img: "./source/daeheung/playground/6품프로젝트가죽공방.jpeg",
   name: "품프로젝트 가죽공방",
   grade: 4.47,
   tag: ["가죽공예", "가죽원데이클라스"],

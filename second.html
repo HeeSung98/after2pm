@@ -35,6 +35,7 @@
             "./source/daeheung/restaurant/chinese/chinese.js",
             "./source/daeheung/restaurant/japanese/japanese.js",
             "./source/daeheung/cafe/cafe.js",
+            "./source/daeheung/playground/playground.js",
           ];
         } else if (option == "연남") {
           scrArr = [
@@ -42,20 +43,21 @@
             "./source/yeonnam/restaurant/chinese/chinese.js",
             "./source/yeonnam/restaurant/japanese/japanese.js",
             "./source/yeonnam/cafe/cafe.js",
+            "./source/yeonnam/playground/playground.js",
           ];
         }
       }
     </script>
-    <script>
-      // let foodname = "cf";
-      // for (var i = 1; i <= 10; i++) {
-      //   foodname = foodname + i;
+    <!-- <script>
+      let foodname = "cf";
+      for (var i = 1; i <= 10; i++) {
+        foodname = foodname + i;
 
-      //   //테이블 내용 추가 과정
-      //   console.log(foodname);
-      //   foodname = "cf";
-      // }
-    </script>
+        //테이블 내용 추가 과정
+        console.log(foodname);
+        foodname = "cf";
+      }
+    </script> -->
   </head>
   <body>
     <div class="second_page">
@@ -88,318 +90,224 @@
         </div>
       </header>
 
-      <main>
-        <div class="secondCategory" id="restaurantType">
-          <div class="btnkorean">한식</div>
-          <!-- <div>양식</div> -->
-          <div class="btnchinese">중식</div>
-          <div class="btnjapanese">일식</div>
-          <!-- <div>아시안</div> -->
-        </div>
-        <div class="secondCategory hidden" id="cafeType">
-          <div class="allview">전체보기</div>
-        </div>
-        <div class="secondCategory hidden" id="playType">
-          <div class="showbtn">전시회</div>
-          <div class="activitybtn">액티비티</div>
-          <div class="etcbtn">기타</div>
-        </div>
-        <div class="introForSecond hidden">음식 종류를 골라주세요</div>
-        <div class="tablelist hidden">
-          <table>
-            <!-- <tr>
+    <main>
+      <div class="secondCategory" id="restaurantType">
+        <div class="btnkorean">한식</div>
+        <!-- <div>양식</div> -->
+        <div class="btnchinese">중식</div>
+        <div class="btnjapanese">일식</div>
+        <!-- <div>아시안</div> -->
+      </div>
+      <div class="secondCategory hidden" id="cafeType">
+        <div class="allview">전체보기</div>
+      </div>
+      <div class="secondCategory hidden" id="playType">
+        <div class="showbtn">전체보기</div>
+        <!-- <div class="activitybtn">액티비티</div>
+        <div class="etcbtn">기타</div> -->
+      </div>
+      <div class="introForSecond hidden">음식 종류를 골라주세요</div>
+      <div class="tablelist hidden">
+        <table>
+          <!-- <tr>
             <th></th>
             <th style="width: 100px"></th>
             <th></th>
           </tr> -->
-            <tr>
-              <td rowspan="3" style="height: 200px">
-                <img id="img1" />
-                <i class="bi bi-bookmark-heart" id="zzim"></i>
-              </td>
-              <td>이름</td>
-              <td id="name1">~~</td>
-            </tr>
-            <tr>
-              <td>별점</td>
-              <td id="grade1">4.5</td>
-            </tr>
-            <tr>
-              <td>태그</td>
-              <td id="tag1">#—</td>
-            </tr>
-          </table>
-          <table>
-            <tr>
-              <th></th>
-              <th style="width: 100px"></th>
-              <th></th>
-            </tr>
-            <tr>
-              <td rowspan="3" style="height: 200px">
-                <img id="img2" />
-                <p id="zzim2"></p>
-              </td>
-              <td>이름</td>
-              <td id="name2">~~</td>
-            </tr>
-            <tr>
-              <td>별점</td>
-              <td id="grade2">4.5</td>
-            </tr>
-            <tr>
-              <td>태그</td>
-              <td id="tag2">#—</td>
-            </tr>
-          </table>
-          <table>
-            <tr>
-              <th></th>
-              <th style="width: 100px"></th>
-              <th></th>
-            </tr>
-            <tr>
-              <td rowspan="3" style="height: 200px">
-                <img id="img3" />
-                <p id="zzim3"></p>
-              </td>
-              <td>이름</td>
-              <td id="name3">~~</td>
-            </tr>
-            <tr>
-              <td>별점</td>
-              <td id="grade3">4.5</td>
-            </tr>
-            <tr>
-              <td>태그</td>
-              <td id="tag3">#—</td>
-            </tr>
-          </table>
-          <table>
-            <tr>
-              <th></th>
-              <th style="width: 100px"></th>
-              <th></th>
-            </tr>
-            <tr>
-              <td rowspan="3" style="height: 200px">
-                <img id="img4" />
-                <p id="zzim4"></p>
-              </td>
-              <td>이름</td>
-              <td id="name4">~~</td>
-            </tr>
-            <tr>
-              <td>별점</td>
-              <td id="grade4">4.5</td>
-            </tr>
-            <tr>
-              <td>태그</td>
-              <td id="tag4">#—</td>
-            </tr>
-          </table>
-          <table>
-            <tr>
-              <th></th>
-              <th style="width: 100px"></th>
-              <th></th>
-            </tr>
-            <tr>
-              <td rowspan="3" style="height: 200px">
-                <img id="img5" />
-                <p id="zzim5"></p>
-              </td>
-              <td>이름</td>
-              <td id="name5">~~</td>
-            </tr>
-            <tr>
-              <td>별점</td>
-              <td id="grade5">4.5</td>
-            </tr>
-            <tr>
-              <td>태그</td>
-              <td id="tag5">#—</td>
-            </tr>
-          </table>
-          <table>
-            <tr>
-              <th></th>
-              <th style="width: 100px"></th>
-              <th></th>
-            </tr>
-            <tr>
-              <td rowspan="3" style="height: 200px">
-                <img id="img6" />
-                <p id="zzim6"></p>
-              </td>
-              <td>이름</td>
-              <td id="name6">~~</td>
-            </tr>
-            <tr>
-              <td>별점</td>
-              <td id="grade6">4.5</td>
-            </tr>
-            <tr>
-              <td>태그</td>
-              <td id="tag6">#—</td>
-            </tr>
-          </table>
-          <table>
-            <tr>
-              <th></th>
-              <th style="width: 100px"></th>
-              <th></th>
-            </tr>
-            <tr>
-              <td rowspan="3" style="height: 200px">
-                <img id="img7" />
-                <p id="zzim7"></p>
-              </td>
-              <td>이름</td>
-              <td id="name7">~~</td>
-            </tr>
-            <tr>
-              <td>별점</td>
-              <td id="grade7">4.5</td>
-            </tr>
-            <tr>
-              <td>태그</td>
-              <td id="tag7">#—</td>
-            </tr>
-          </table>
-          <table>
-            <tr>
-              <th></th>
-              <th style="width: 100px"></th>
-              <th></th>
-            </tr>
-            <tr>
-              <td rowspan="3" style="height: 200px">
-                <img id="img8" />
-                <p id="zzim8"></p>
-              </td>
-              <td>이름</td>
-              <td id="name8">~~</td>
-            </tr>
-            <tr>
-              <td>별점</td>
-              <td id="grade8">4.5</td>
-            </tr>
-            <tr>
-              <td>태그</td>
-              <td id="tag8">#—</td>
-            </tr>
-          </table>
-          <table>
-            <tr>
-              <th></th>
-              <th style="width: 100px"></th>
-              <th></th>
-            </tr>
-            <tr>
-              <td rowspan="3" style="height: 200px">
-                <img id="img9" />
-                <p id="zzim9"></p>
-              </td>
-              <td>이름</td>
-              <td id="name9">~~</td>
-            </tr>
-            <tr>
-              <td>별점</td>
-              <td id="grade9">4.5</td>
-            </tr>
-            <tr>
-              <td>태그</td>
-              <td id="tag9">#—</td>
-            </tr>
-          </table>
-          <table>
-            <tr>
-              <th></th>
-              <th style="width: 100px"></th>
-              <th></th>
-            </tr>
-            <tr>
-              <td rowspan="3" style="height: 200px">
-                <img id="img10" />
-                <p id="zzim10"></p>
-              </td>
-              <td>이름</td>
-              <td id="name10">~~</td>
-            </tr>
-            <tr>
-              <td>별점</td>
-              <td id="grade10">4.5</td>
-            </tr>
-            <tr>
-              <td>태그</td>
-              <td id="tag10">#—</td>
-            </tr>
-          </table>
-        </div>
-      </main>
-    </div>
+          <tr>
+            <td rowspan="3" style="height: 200px">
+              <img id="img1" />
+              <i class="bi bi-bookmark-heart" id="zzim1"></i>
+            </td>
+            <td>이름</td>
+            <td id="name1">~~</td>
+          </tr>
+          <tr>
+            <td>별점</td>
+            <td id="grade1">4.5</td>
+          </tr>
+          <tr>
+            <td>태그</td>
+            <td id="tag1">#—</td>
+          </tr>
+        </table>
+        <table>
+          <tr>
+            <td rowspan="3" style="height: 200px">
+              <img id="img2" />
+              <i class="bi bi-bookmark-heart" id="zzim2"></i>
+            </td>
+            <td>이름</td>
+            <td id="name2">~~</td>
+          </tr>
+          <tr>
+            <td>별점</td>
+            <td id="grade2">4.5</td>
+          </tr>
+          <tr>
+            <td>태그</td>
+            <td id="tag2">#—</td>
+          </tr>
+        </table>
+        <table>
+          <tr>
+            <td rowspan="3" style="height: 200px">
+              <img id="img3" />
+              <i class="bi bi-bookmark-heart" id="zzim3"></i>
+            </td>
+            <td>이름</td>
+            <td id="name3">~~</td>
+          </tr>
+          <tr>
+            <td>별점</td>
+            <td id="grade3">4.5</td>
+          </tr>
+          <tr>
+            <td>태그</td>
+            <td id="tag3">#—</td>
+          </tr>
+        </table>
+        <table>
+          <tr>
+            <td rowspan="3" style="height: 200px">
+              <img id="img4" />
+              <i class="bi bi-bookmark-heart" id="zzim4"></i>
+            </td>
+            <td>이름</td>
+            <td id="name4">~~</td>
+          </tr>
+          <tr>
+            <td>별점</td>
+            <td id="grade4">4.5</td>
+          </tr>
+          <tr>
+            <td>태그</td>
+            <td id="tag4">#—</td>
+          </tr>
+        </table>
+        <table>
+          <tr>
+            <td rowspan="3" style="height: 200px">
+              <img id="img5" />
+              <i class="bi bi-bookmark-heart" id="zzim5"></i>
+            </td>
+            <td>이름</td>
+            <td id="name5">~~</td>
+          </tr>
+          <tr>
+            <td>별점</td>
+            <td id="grade5">4.5</td>
+          </tr>
+          <tr>
+            <td>태그</td>
+            <td id="tag5">#—</td>
+          </tr>
+        </table>
+        <table>
+          <tr>
+            <td rowspan="3" style="height: 200px">
+              <img id="img6" />
+              <i class="bi bi-bookmark-heart" id="zzim6"></i>
+            </td>
+            <td>이름</td>
+            <td id="name6">~~</td>
+          </tr>
+          <tr>
+            <td>별점</td>
+            <td id="grade6">4.5</td>
+          </tr>
+          <tr>
+            <td>태그</td>
+            <td id="tag6">#—</td>
+          </tr>
+        </table>
+        <table>
+          <tr>
+            <td rowspan="3" style="height: 200px">
+              <img id="img7" />
+              <i class="bi bi-bookmark-heart" id="zzim7"></i>
+            </td>
+            <td>이름</td>
+            <td id="name7">~~</td>
+          </tr>
+          <tr>
+            <td>별점</td>
+            <td id="grade7">4.5</td>
+          </tr>
+          <tr>
+            <td>태그</td>
+            <td id="tag7">#—</td>
+          </tr>
+        </table>
+        <table>
+          <tr>
+            <td rowspan="3" style="height: 200px">
+              <img id="img8" />
+              <i class="bi bi-bookmark-heart" id="zzim8"></i>
+            </td>
+            <td>이름</td>
+            <td id="name8">~~</td>
+          </tr>
+          <tr>
+            <td>별점</td>
+            <td id="grade8">4.5</td>
+          </tr>
+          <tr>
+            <td>태그</td>
+            <td id="tag8">#—</td>
+          </tr>
+        </table>
+        <table>
+          <tr>
+            <td rowspan="3" style="height: 200px">
+              <img id="img9" />
+              <i class="bi bi-bookmark-heart" id="zzim9"></i>
+            </td>
+            <td>이름</td>
+            <td id="name9">~~</td>
+          </tr>
+          <tr>
+            <td>별점</td>
+            <td id="grade9">4.5</td>
+          </tr>
+          <tr>
+            <td>태그</td>
+            <td id="tag9">#—</td>
+          </tr>
+        </table>
+        <table>
+          <tr>
+            <td rowspan="3" style="height: 200px">
+              <img id="img10" />
+              <i class="bi bi-bookmark-heart" id="zzim"></i>
+            </td>
+            <td>이름</td>
+            <td id="name10">~~</td>
+          </tr>
+          <tr>
+            <td>별점</td>
+            <td id="grade10">4.5</td>
+          </tr>
+          <tr>
+            <td>태그</td>
+            <td id="tag10">#—</td>
+          </tr>
+        </table>
+      </div>
+    </main>
   </body>
   <script>
-    $(".bi").click(function (e) {
-      let zzim = e.currentTarget;
-      if ($(zzim).hasClass("bi-bookmark-heart-fill")) {
-        $(zzim).switchClass("bi-bookmark-heart-fill", "bi-bookmark-heart");
-      } else {
-        $(zzim).switchClass("bi-bookmark-heart", "bi-bookmark-heart-fill");
-      }
-    });
-
     let arr = [];
     let firstCategory = 0;
     let secondCategory = 0;
-    $(".firstCategory div").click(function (e) {
-      $(".firstCategory div").removeClass("selected");
-      let firstCategorySelected = e.currentTarget;
-      $(firstCategorySelected).addClass("selected");
-      let firstCategoryText = e.currentTarget.textContent;
-      $(".tablelist").addClass("hidden");
-      if (firstCategoryText == "식당") {
-        firstCategory = 1;
-        $("#restaurantType").removeClass("hidden");
-        $(".introForSecond").removeClass("hidden");
-        $("#cafeType").addClass("hidden");
-        $("#playType").addClass("hidden");
-      } else if (firstCategoryText == "카페") {
-        firstCategory = 2;
-        $("#restaurantType").addClass("hidden");
-        $("#cafeType").removeClass("hidden");
-        $("#playType").addClass("hidden");
-      } else if (firstCategoryText == "놀거리") {
-        firstCategory = 3;
-        $("#restaurantType").addClass("hidden");
-        $("#cafeType").addClass("hidden");
-        $("#playType").removeClass("hidden");
-      }
-      // console.log(firstCategory);
-    });
 
-    $(".secondCategory div").click(function (e) {
-      let secondCategoryText = e.currentTarget.textContent;
-      $(".introForSecond").addClass("hidden");
-      $(".tablelist").removeClass("hidden");
-      if (secondCategoryText == "한식") {
-        secondCategory = 1;
-      } else if (secondCategoryText == "중식") {
-        secondCategory = 2;
-      } else if (secondCategoryText == "일식") {
-        secondCategory = 3;
-      } else if (secondCategoryText == "전체보기") {
-        secondCategory = 4;
-      }
-
+    function showTable(secondCategory) {
       // secondCategory 값에 따라 script 파일 불러오기
       let sc = document.createElement("script");
       sc.setAttribute("src", scrArr[secondCategory - 1]);
       $("head").append(sc);
 
       // 객체 불러오기
-
       let name = "#name";
       let img = "#img";
       let grade = "#grade";
@@ -424,6 +332,64 @@
       }
       arr = [];
       // console.log(secondCategory);
+    }
+
+    $(".bi").click(function (e) {
+      let zzim = e.currentTarget;
+      if ($(zzim).hasClass("bi-bookmark-heart-fill")) {
+        $(zzim).switchClass("bi-bookmark-heart-fill", "bi-bookmark-heart");
+      } else {
+        $(zzim).switchClass("bi-bookmark-heart", "bi-bookmark-heart-fill");
+      }
+    });
+    $(".firstCategory div").click(function (e) {
+      $(".firstCategory div").removeClass("selected");
+      let firstCategorySelected = e.currentTarget;
+      $(firstCategorySelected).addClass("selected");
+      let firstCategoryText = e.currentTarget.textContent;
+      if (firstCategoryText == "식당") {
+        firstCategory = 1;
+        $(".tablelist").addClass("hidden");
+        $(".introForSecond").removeClass("hidden");
+        $("#restaurantType").removeClass("hidden");
+        $("#cafeType").addClass("hidden");
+        $("#playType").addClass("hidden");
+      } else if (firstCategoryText == "카페") {
+        firstCategory = 2;
+        $(".tablelist").removeClass("hidden");
+        $(".introForSecond").addClass("hidden");
+        $("#restaurantType").addClass("hidden");
+        $("#cafeType").removeClass("hidden");
+        $("#playType").addClass("hidden");
+        secondCategory = 4;
+        showTable(secondCategory);
+      } else if (firstCategoryText == "놀거리") {
+        firstCategory = 3;
+        $(".tablelist").removeClass("hidden");
+        $(".introForSecond").addClass("hidden");
+        $("#restaurantType").addClass("hidden");
+        $("#cafeType").addClass("hidden");
+        $("#playType").removeClass("hidden");
+        secondCategory = 5;
+        showTable(secondCategory);
+      }
+      // console.log(firstCategory);
+    });
+
+    $(".secondCategory div").click(function (e) {
+      let secondCategoryText = e.currentTarget.textContent;
+      $(".introForSecond").addClass("hidden");
+      $(".tablelist").removeClass("hidden");
+      if (secondCategoryText == "한식") {
+        secondCategory = 1;
+      } else if (secondCategoryText == "중식") {
+        secondCategory = 2;
+      } else if (secondCategoryText == "일식") {
+        secondCategory = 3;
+        // } else if (secondCategoryText == "전체보기") {
+        //   secondCategory = 4;
+      }
+      showTable(secondCategory);
     });
   </script>
 </html>
