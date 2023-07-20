@@ -1,5 +1,5 @@
 arr.push({
-  img: "./source/daeheung/restaurant/playground/1홍대향수공방 뤼미에르퍼퓸 연남.jpeg",
+  img: "./source/yeonnam/playground/1홍대향수공방 뤼미에르퍼퓸 연남.jpeg",
   name: "홍대향수공방 뤼미에르퍼퓸 연남",
   grade: 4.44,
   tag: ["향수공방", "서율향수공방"],
@@ -8,7 +8,7 @@ arr.push({
 });
 
 arr.push({
-  img: "./source/daeheung/restaurant/playground/2도토리 캐리커쳐.jpeg",
+  img: "./source/yeonnam/playground/2도토리 캐리커쳐.jpeg",
   name: "도토리 캐리커쳐",
   grade: 4,
   tag: ["캐리커쳐", "일러스트"],
@@ -17,7 +17,7 @@ arr.push({
 });
 
 arr.push({
-  img: "./source/daeheung/restaurant/playground/3영메이슨 도예 스튜디오.png",
+  img: "./source/yeonnam/playground/3영메이슨 도예 스튜디오.png",
   name: "영메이슨 도예 스튜디오",
   grade: 4.28,
   tag: ["연남동도예공방", "연남동도예"],
@@ -26,7 +26,7 @@ arr.push({
 });
 
 arr.push({
-  img: "./source/daeheung/restaurant/playground/4셀피스트 셀프사진관 홍대.jpeg",
+  img: "./source/yeonnam/playground/4셀피스트 셀프사진관 홍대.jpeg",
   name: "셀피스트 셀프사진관 홍대",
   grade: "-",
   tag: ["셀프사진관", "커플사진"],
@@ -35,39 +35,39 @@ arr.push({
 });
 
 arr.push({
-  img: "./source/daeheung/restaurant/playground/5칠앤아트 1호점.jpeg",
+  img: "./source/yeonnam/playground/5칠앤아트 1호점.jpeg",
   name: "칠앤아트 1호점",
   grade: "-",
   tag: ["대흥역6번출구", "마포문화생활"],
 });
 
 arr.push({
-  img: "./source/daeheung/restaurant/playground/6위에트 연남.jpeg",
+  img: "./source/yeonnam/playground/6위에트 연남.jpeg",
   name: "위에트 연남",
   grade: 4.47,
   tag: ["원데이클라스", "커플링공방"],
 });
 
 arr.push({
-  img: "./source/daeheung/restaurant/playground/7도토리 캐리커쳐.jpeg",
+  img: "./source/yeonnam/playground/7도토리 캐리커쳐.jpeg",
   name: "도토리 캐리커쳐",
   grade: 4.47,
   tag: ["캐리커쳐", "일러스트"],
 });
 arr.push({
-  img: "./source/daeheung/restaurant/playground/8돈룩업 연남.jpeg",
+  img: "./source/yeonnam/playground/8돈룩업 연남.jpeg",
   name: "돈룩업 연남",
   grade: 4.47,
   tag: ["항공샷", "셀프사진관"],
 });
 arr.push({
-  img: "./source/daeheung/restaurant/playground/9취미미술 그링.jpeg",
+  img: "./source/yeonnam/playground/9취미미술 그링.jpeg",
   name: "취미미술 그링",
   grade: 4.47,
   tag: ["홍대원데이클래스", "홍대취미미술"],
 });
 arr.push({
-  img: "./source/daeheung/restaurant/playground/10플라비s 연남점.jpeg",
+  img: "./source/yeonnam/playground/10플라비s 연남점.jpeg",
   name: "플라비s 연남점",
   grade: 4.47,
   tag: ["은팔지만들기", "향수만들기"],
