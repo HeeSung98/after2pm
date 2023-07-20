@@ -88,7 +88,7 @@
           <div id="cafe">카페</div>
           <div id="play">놀거리</div>
         </div>
-      </header>
+            </header>
 
     <main>
       <div class="secondCategory" id="restaurantType">
@@ -116,8 +116,10 @@
           </tr> -->
           <tr>
             <td rowspan="3" style="height: 200px">
+              <!-- <div class="balloon hidden">찜하려면 눌러주세요</div> -->
               <img id="img1" />
-              <i class="bi bi-bookmark-heart" id="zzim1"></i>
+              <i class="bi" id="zzim1">
+              </i>
             </td>
             <td>이름</td>
             <td id="name1">~~</td>
@@ -135,7 +137,7 @@
           <tr>
             <td rowspan="3" style="height: 200px">
               <img id="img2" />
-              <i class="bi bi-bookmark-heart" id="zzim2"></i>
+              <i class="bi" id="zzim2"></i>
             </td>
             <td>이름</td>
             <td id="name2">~~</td>
@@ -153,7 +155,7 @@
           <tr>
             <td rowspan="3" style="height: 200px">
               <img id="img3" />
-              <i class="bi bi-bookmark-heart" id="zzim3"></i>
+              <i class="bi" id="zzim3"></i>
             </td>
             <td>이름</td>
             <td id="name3">~~</td>
@@ -171,7 +173,7 @@
           <tr>
             <td rowspan="3" style="height: 200px">
               <img id="img4" />
-              <i class="bi bi-bookmark-heart" id="zzim4"></i>
+              <i class="bi" id="zzim4"></i>
             </td>
             <td>이름</td>
             <td id="name4">~~</td>
@@ -189,7 +191,7 @@
           <tr>
             <td rowspan="3" style="height: 200px">
               <img id="img5" />
-              <i class="bi bi-bookmark-heart" id="zzim5"></i>
+              <i class="bi" id="zzim5"></i>
             </td>
             <td>이름</td>
             <td id="name5">~~</td>
@@ -207,7 +209,7 @@
           <tr>
             <td rowspan="3" style="height: 200px">
               <img id="img6" />
-              <i class="bi bi-bookmark-heart" id="zzim6"></i>
+              <i class="bi" id="zzim6"></i>
             </td>
             <td>이름</td>
             <td id="name6">~~</td>
@@ -225,7 +227,7 @@
           <tr>
             <td rowspan="3" style="height: 200px">
               <img id="img7" />
-              <i class="bi bi-bookmark-heart" id="zzim7"></i>
+              <i class="bi" id="zzim7"></i>
             </td>
             <td>이름</td>
             <td id="name7">~~</td>
@@ -243,7 +245,7 @@
           <tr>
             <td rowspan="3" style="height: 200px">
               <img id="img8" />
-              <i class="bi bi-bookmark-heart" id="zzim8"></i>
+              <i class="bi" id="zzim8"></i>
             </td>
             <td>이름</td>
             <td id="name8">~~</td>
@@ -261,7 +263,7 @@
           <tr>
             <td rowspan="3" style="height: 200px">
               <img id="img9" />
-              <i class="bi bi-bookmark-heart" id="zzim9"></i>
+              <i class="bi" id="zzim9"></i>
             </td>
             <td>이름</td>
             <td id="name9">~~</td>
@@ -279,7 +281,7 @@
           <tr>
             <td rowspan="3" style="height: 200px">
               <img id="img10" />
-              <i class="bi bi-bookmark-heart" id="zzim"></i>
+              <i class="bi" id="zzim"></i>
             </td>
             <td>이름</td>
             <td id="name10">~~</td>
@@ -301,6 +303,7 @@
     let firstCategory = 0;
     let secondCategory = 0;
 
+    // table 값 불러오는 함수
     function showTable(secondCategory) {
       // secondCategory 값에 따라 script 파일 불러오기
       let sc = document.createElement("script");
@@ -319,7 +322,7 @@
         img = "#img";
         //이름
         name = name + (i + 1);
-        $(name).text(arr[i].name);
+        $(name).html(arr[i].name);
         name = "#name";
         // 별점
         grade = grade + (i + 1);
@@ -327,13 +330,14 @@
         grade = "#grade";
         // 태그
         tag = tag + (i + 1);
-        $(tag).text(arr[i].tag);
+        $(tag).html(arr[i].tag);
         tag = "#tag";
       }
+      $(".bi").addClass("bi-bookmark-heart");
       arr = [];
-      // console.log(secondCategory);
     }
 
+    // 찜버튼
     $(".bi").click(function (e) {
       let zzim = e.currentTarget;
       if ($(zzim).hasClass("bi-bookmark-heart-fill")) {
@@ -342,6 +346,8 @@
         $(zzim).switchClass("bi-bookmark-heart", "bi-bookmark-heart-fill");
       }
     });
+
+    // 식당/카페/놀거리 선택 (카페/놀거리 선택 시, table 바로 불러옴)
     $(".firstCategory div").click(function (e) {
       $(".firstCategory div").removeClass("selected");
       let firstCategorySelected = e.currentTarget;
@@ -373,7 +379,6 @@
         secondCategory = 5;
         showTable(secondCategory);
       }
-      // console.log(firstCategory);
     });
 
     $(".secondCategory div").click(function (e) {
@@ -386,10 +391,23 @@
         secondCategory = 2;
       } else if (secondCategoryText == "일식") {
         secondCategory = 3;
-        // } else if (secondCategoryText == "전체보기") {
-        //   secondCategory = 4;
       }
       showTable(secondCategory);
     });
+    
+    // 찜 - 말풍선
+    let div = document.createElement("div");
+    div.innerText = "찜하려면 눌러주세요"
+    $(div).addClass("balloon hidden");
+    $(".bi").before(div);
+        
+    $(".bi").hover(
+      function (e) {
+        $(e.currentTarget).prev().removeClass("hidden");
+      },
+      function(e){
+      $(e.currentTarget).prev().addClass("hidden");
+      }
+    );
   </script>
 </html>

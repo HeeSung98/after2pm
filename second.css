@@ -13,7 +13,7 @@ html {
   font-family: "TheJamsil5Bold";
   margin: 0px;
   min-height: 100%;
-  overflow-y: auto;
+  /* overflow-y: auto; */
 }
 /* .second_page */
 .second_page header {
@@ -90,21 +90,20 @@ h1 span:nth-child(8) {
   margin: 0 0 0 0;
 }
 .second_page .firstCategory {
-  background-color: beige;
+  background-color: white;
+  border-bottom: 1px solid black;
   display: flex;
   justify-content: space-evenly;
-  line-height: 70px;
-  height: 70px;
-  border-radius: 20px;
+  line-height: 50px;
+  height: 50px;
+  /* border-radius: 20px; */
 }
 .second_page .firstCategory div {
   height: 50px;
-  margin: 10px 0px;
-  padding: 0px 20px;
   line-height: 50px;
 }
 .second_page .firstCategory > div:hover {
-  scale: (1.1);
+  transform: scale(1.1);
 }
 
 .second_page .region {
@@ -121,7 +120,8 @@ h1 span:nth-child(8) {
   position: fixed;
 }
 .second_page .secondCategory div {
-  margin: 20px 10px 20px 0px;
+  margin: 20px;
+  padding: 10px 0px;
   text-align: center;
   text-decoration: none;
 }
@@ -144,7 +144,8 @@ h1 span:nth-child(8) {
   box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
 
-.second_page .allview {
+/* 바로 위에 .secondCategory > div 로 커버되는 것 같아서 주석처리하였음 */
+/* .second_page .allview {
   border: none;
   background-color: green;
   color: white;
@@ -157,8 +158,8 @@ h1 span:nth-child(8) {
 .second_page .allview:hover {
   transform: scale(0.9);
   box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
-}
-
+} */
+/* 
 #playType > div {
   border: none;
   background-color: green;
@@ -173,7 +174,7 @@ h1 span:nth-child(8) {
 #playType > div:hover {
   transform: scale(0.9);
   box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
-}
+} */
 
 .second_page .tablelist {
   display: flex;
@@ -199,12 +200,16 @@ h1 span:nth-child(8) {
   display: none;
 }
 .second_page .selected {
-  color: red;
+  color: green;
+  transform: scale(1.1);
+  text-shadow: 1px 1px 2px grey;
   border-radius: 20px;
 }
 
 .second_page img {
-  width: 200px;
+  width: 80%;
+  border-radius: 10px;
+
   /* width: 70%; */
 }
 
@@ -213,4 +218,41 @@ h1 span:nth-child(8) {
   position: absolute;
   top: 10px;
   right: 20px;
+}
+
+/* 테이블 크기 조정 */
+.second_page tr:first-child td:first-child {
+  width: 50%;
+}
+.second_page tr:first-child td:nth-child(2) {
+  width: 10%;
+}
+.second_page tr:first-child td:last-child {
+  width: 40%;
+}
+
+/* 말풍선 */
+.second_page .balloon {
+  position: absolute;
+  top: -40px;
+  right: 0px;
+  width: 205px;
+  height: 40px;
+  bottom: 62px;
+  background: #484848;
+  color: white;
+  border-radius: 10px;
+  padding: 10px 12.8px;
+  opacity: 0.7;
+}
+
+.second_page .balloon:after {
+  border-top: 10px solid #484848;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 0px solid transparent;
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 160px;
 }

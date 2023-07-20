@@ -2,7 +2,7 @@ arr.push({
   img: "./source/daeheung/restaurant/korean/1황금콩밭.jpeg",
   name: "황금콩밭",
   grade: 4.36,
-  tag: ["미쉐린가이드서울", "직접만드는"],
+  tag: ["#미쉐린가이드서울<br>", "#직접만드는"],
   explain: [
     "황금콩밭은 지속가능성을 실천하며 국내서 생산된 친환경 재료만을 사용하여 손님들에게 건강한 한끼 식사를 전해드립니다.",
   ],
@@ -22,8 +22,8 @@ arr.push({
 arr.push({
   img: "./source/daeheung/restaurant/korean/2롤앤롤김밥.png",
   name: "롤앤롤김밥",
-  grade: "-",
-  tag: ["오픈주방", "트렌드에맞는"],
+  grade: 4.5,
+  tag: ["#오픈주방<br>", "#트렌드에맞는"],
   explain: [
     "갑작스러운 주문량 상승으로 한시적인 재료 준비 시간을 가지려고 합니다. 브레이는 주중, 주말 동이랗게 15:00-17:00로 적용되니 이용 시에 참고해주시면 감사하겠습니다.",
   ],
@@ -33,7 +33,7 @@ arr.push({
   img: "./source/daeheung/restaurant/korean/3요수정.jpeg",
   name: "요수정",
   grade: 4.4,
-  tag: ["퓨전적인", "믿고맡김"],
+  tag: ["#퓨전적인<br>", "#믿고맡김"],
   explain: [
     "안녕하세요. 요수정입니다. 요수정은 코리아이탈리안 비스트로입니다. 고향 거창의 한식을 바탕으로 이탈리안 음식을 표방 합니다.",
   ],
@@ -48,7 +48,7 @@ arr.push({
   img: "./source/daeheung/restaurant/korean/4도꼭지.jpeg",
   name: "도꼭지",
   grade: 4.46,
-  tag: ["솥밥맛집", "건강식"],
+  tag: ["#솥밥맛집<br>", "#건강식"],
   explain: [
     "서강대학교 주차장, 서강역 공영주차장 이용 부탁드립니다(유료 주차 / 개인 부담)",
   ],
@@ -69,8 +69,8 @@ arr.push({
 arr.push({
   img: "./source/daeheung/restaurant/korean/5포도원삼계탕.jpeg",
   name: "포도원삼계탕",
-  grade: "-",
-  tag: ["보양식", "들깨맛집"],
+  grade: 4.5,
+  tag: ["#보양식<br>", "#들깨맛집"],
   explain: [
     "안녕하세요. 삼계탕 전문점 포도원삼계탕입니다. 내 가족이 먹는다는 생각으로 매장의 청결함을 관리하고 있습니다.",
   ],
@@ -86,8 +86,8 @@ arr.push({
 arr.push({
   img: "./source/daeheung/restaurant/korean/6계모임_마포직영점.jpeg",
   name: "계모임마포직영점",
-  grade: "-",
-  tag: ["모든세대도_즐길_수_있는", "갓도축한"],
+  grade: 4.35,
+  tag: ["#모든세대도_즐길_수_있는<br>", "#갓도축한"],
   explain: [
     "닭을 즐기는 새로운 미식경험 계:모임마포 직영점입니다. 모든 세대들도 즐길 수 있는 숯불 닭구이 전문점입니다.",
   ],
@@ -108,7 +108,7 @@ arr.push({
   img: "./source/daeheung/restaurant/korean/7밀밭정원.jpeg",
   name: "밀밭정원",
   grade: 4.24,
-  tag: ["매일만드는", "부드러운"],
+  tag: ["#매일만드는<br>", "#부드러운"],
   explain: [
     "밀밭정원의 국시와 만두는 매일 아침 맷돌로 제분한 우리 밀이고, 직접 만두피를 만들어 만두를 빚습니다.",
   ],
@@ -130,7 +130,7 @@ arr.push({
   img: "./source/daeheung/restaurant/korean/8마포나룻가.jpeg",
   name: "마포나룻가",
   grade: 4.07,
-  tag: ["원조김치찌개", "술안주"],
+  tag: ["#원조김치찌개<br>", "#술안주"],
   explain: [
     "마포에서 10년 이상 운영한 원조 김치찌개 집입니다. 묵은지 닭볶음탕은 묵은지를 넣어 시원한 맛을 더했고, 별미 짤라는 간단히 소주한잔 하기에 좋은 소내장 수육입니다.",
   ],
@@ -147,7 +147,7 @@ arr.push({
   img: "./source/daeheung/restaurant/korean/9황톳길.jpeg",
   name: "황톳길",
   grade: 4.24,
-  tag: ["항아리음식", "보쌈맛집"],
+  tag: ["#항아리음식<br>", "#보쌈맛집"],
   explain: [
     "야들야들한 고기와 맛있는 김치배추와의 환상적인 조합을 맛 볼 수 있는 각시보쌈입니다. 산채비빔밤과 항이라 수제비가 인기인 민속음식도 준비되어 있습니다.",
   ],
@@ -168,7 +168,7 @@ arr.push({
   img: "./source/daeheung/restaurant/korean/10조선초가한끼.jpeg",
   name: "조선초가한끼",
   grade: 4.51,
-  tag: ["가족끼리 외식하기 좋은", "국악공연"],
+  tag: ["#가족끼리 외식하기 좋은<br>", "#국악공연"],
   explain: [
     "[소갈비구이명가 조선초가한끼]매일 평쳐지는 아름다운 국악공연과 조선시대를 그대로 옮겨놓은 감성가득한 인테리어, 그리고 꽃등심부위 왕갈비를 진득하게 구워 드립니다,.",
   ],
