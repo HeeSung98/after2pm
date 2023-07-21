@@ -141,6 +141,7 @@
       <script>
         let select_region_result
         let select_part_result
+
         const open = () => {
           document.querySelector('.modal').classList.remove('hidden')
         }
@@ -154,12 +155,19 @@
             // 선택된 값 없으면 넘어가지 않게 하기
             var listRegion = $('input[name=select_region]').is(':checked')
 
+            option = $('input[name=select_region]:checked').val()
+            console.log(option)
+            region(option)
+
             if (listRegion == true) {
+              input_region = $('input[name=select_region]:checked').val()
               document.querySelector('.modal_content01').classList.add('hidden')
               document
                 .querySelector('.modal_content02')
                 .classList.remove('hidden')
               order++
+
+              // region 선택 된 후에 region()함수 실행되게 하기
             } else alert('선택 해주세요')
           } else if (order == 2) {
             var listPart = $('input[name=select_part]').is(':checked')
@@ -211,14 +219,18 @@
       <!-- 두번째 페이지 지역 선택 스크립트 -->
       <script>
         let scrArr = []
+        // 첫번째 모달창에서 지역 값 가져오기
+
         let option = '대흥'
 
+        console.log(option)
+
         function region(el) {
-          console.log(el)
+          // console.log(el)
           if (typeof el != 'string') {
             option = el.value
           }
-          console.log(option)
+          // console.log(option)
 
           // 내가 지금 건들고 있는 거
 
@@ -284,14 +296,15 @@
           <!-- <div>아시안</div> -->
         </div>
         <div class="secondCategory hidden" id="cafeType">
-          <div class="allview">전체보기</div>
+          <div class="person">개인</div>
+          <div class="fran">프랜차이즈</div>
         </div>
         <div class="secondCategory hidden" id="playType">
           <div class="showbtn">전체보기</div>
           <!-- <div class="activitybtn">액티비티</div>
         <div class="etcbtn">기타</div> -->
         </div>
-        <div class="introForSecond hidden">음식 종류를 골라주세요</div>
+        <div class="introForSecond hidden">종류를 골라주세요</div>
         <div class="tablelist hidden">
           <table>
             <!-- <tr>
