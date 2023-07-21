@@ -31,53 +31,7 @@
     <link rel="stylesheet" href="./main.css" />
     <script>
       let order = 1;
-      let scrArr = [];
-  let option = "대흥";
-  console.log(option);
-  if (option == "대흥") {
-    console.log(option);
-    scrArr = [
-      "./source/daeheung/restaurant/korean/korean.js",
-      "./source/daeheung/restaurant/chinese/chinese.js",
-      "./source/daeheung/restaurant/japanese/japanese.js",
-      "./source/daeheung/cafe/cafe.js",
-    ];
-  } else if (option == "연남") {
-    scrArr = [
-      "./source/yeonnam/restaurant/korean/korean.js",
-      "./source/yeonnam/restaurant/chinese/chinese.js",
-      "./source/yeonnam/restaurant/japanese/japanese.js",
-      "./source/yeonnam/cafe/cafe.js",
-    ];
-  }
     </script>
-
-<script>
-  
-function region(el) {
-  // option = el.value;
-
-  // 내가 지금 건들고 있는 거 
-  console.log(option);
-
-  if (option == "대흥") {
-    console.log(option);
-    scrArr = [
-      "./source/daeheung/restaurant/korean/korean.js",
-      "./source/daeheung/restaurant/chinese/chinese.js",
-      "./source/daeheung/restaurant/japanese/japanese.js",
-      "./source/daeheung/cafe/cafe.js",
-    ];
-  } else if (option == "연남") {
-    scrArr = [
-      "./source/yeonnam/restaurant/korean/korean.js",
-      "./source/yeonnam/restaurant/chinese/chinese.js",
-      "./source/yeonnam/restaurant/japanese/japanese.js",
-      "./source/yeonnam/cafe/cafe.js",
-    ];
-  }
-}
-</script>
     
   </head>
   <body>
@@ -188,7 +142,6 @@ function region(el) {
       <script>
         let select_region_result;
         let select_part_result;
-        // let option = "대흥"
         const open = () => {
           document.querySelector(".modal").classList.remove("hidden");
         };
@@ -252,10 +205,38 @@ function region(el) {
       </script>
 
       <!-- 두번째 페이지 지역 선택 스크립트 -->
-      
+      <script>
+        var scrArr = [];
+      function region(el) {
+        const option = el.value;
+
+        // 내가 지금 건들고 있는 거 
+        
+        
+        
+
+        if (option == "대흥") {
+          scrArr = [
+            "./source/daeheung/restaurant/korean/korean.js",
+            "./source/daeheung/restaurant/chinese/chinese.js",
+            "./source/daeheung/restaurant/japanese/japanese.js",
+            "./source/daeheung/cafe/cafe.js",
+          ];
+        } else if (option == "연남") {
+          scrArr = [
+            "./source/yeonnam/restaurant/korean/korean.js",
+            "./source/yeonnam/restaurant/chinese/chinese.js",
+            "./source/yeonnam/restaurant/japanese/japanese.js",
+            "./source/yeonnam/cafe/cafe.js",
+          ];
+        }
+      }
+      </script>
     </div>
 
-    <div class="second_page hidden">
+    <!-- 두번째 페이지 시작 -->
+
+    <div class="second_page">
       <header>
         <div class="head">
           <h1>
@@ -268,7 +249,7 @@ function region(el) {
           </h1>
         </div>
         <div>
-          <select class="region" id="region" onchange="region(this)">
+          <select class="region" onchange="region(this)">
             <option selected disabled>지역</option>
             <option value="대흥">대흥</option>
             <option value="연남">연남</option>
@@ -297,9 +278,9 @@ function region(el) {
           <div class="allview">전체보기</div>
         </div>
         <div class="secondCategory hidden" id="playType">
-          <div class="showbtn">전시회</div>
-          <div class="activitybtn">액티비티</div>
-          <div class="etcbtn">기타</div>
+          <div class="showbtn">전체보기</div>
+          <!-- <div class="activitybtn">액티비티</div>
+        <div class="etcbtn">기타</div> -->
         </div>
         <div class="introForSecond hidden">음식 종류를 골라주세요</div>
         <div class="tablelist hidden">
@@ -311,8 +292,9 @@ function region(el) {
           </tr> -->
             <tr>
               <td rowspan="3" style="height: 200px">
+                <!-- <div class="balloon hidden">찜하려면 눌러주세요</div> -->
                 <img id="img1" />
-                <i class="bi bi-bookmark-heart" id="zzim"></i>
+                <i class="bi" id="zzim1"> </i>
               </td>
               <td>이름</td>
               <td id="name1">~~</td>
@@ -328,14 +310,9 @@ function region(el) {
           </table>
           <table>
             <tr>
-              <th></th>
-              <th style="width: 100px"></th>
-              <th></th>
-            </tr>
-            <tr>
               <td rowspan="3" style="height: 200px">
                 <img id="img2" />
-                <p id="zzim2"></p>
+                <i class="bi" id="zzim2"></i>
               </td>
               <td>이름</td>
               <td id="name2">~~</td>
@@ -351,14 +328,9 @@ function region(el) {
           </table>
           <table>
             <tr>
-              <th></th>
-              <th style="width: 100px"></th>
-              <th></th>
-            </tr>
-            <tr>
               <td rowspan="3" style="height: 200px">
                 <img id="img3" />
-                <p id="zzim3"></p>
+                <i class="bi" id="zzim3"></i>
               </td>
               <td>이름</td>
               <td id="name3">~~</td>
@@ -374,14 +346,9 @@ function region(el) {
           </table>
           <table>
             <tr>
-              <th></th>
-              <th style="width: 100px"></th>
-              <th></th>
-            </tr>
-            <tr>
               <td rowspan="3" style="height: 200px">
                 <img id="img4" />
-                <p id="zzim4"></p>
+                <i class="bi" id="zzim4"></i>
               </td>
               <td>이름</td>
               <td id="name4">~~</td>
@@ -397,14 +364,9 @@ function region(el) {
           </table>
           <table>
             <tr>
-              <th></th>
-              <th style="width: 100px"></th>
-              <th></th>
-            </tr>
-            <tr>
               <td rowspan="3" style="height: 200px">
                 <img id="img5" />
-                <p id="zzim5"></p>
+                <i class="bi" id="zzim5"></i>
               </td>
               <td>이름</td>
               <td id="name5">~~</td>
@@ -420,14 +382,9 @@ function region(el) {
           </table>
           <table>
             <tr>
-              <th></th>
-              <th style="width: 100px"></th>
-              <th></th>
-            </tr>
-            <tr>
               <td rowspan="3" style="height: 200px">
                 <img id="img6" />
-                <p id="zzim6"></p>
+                <i class="bi" id="zzim6"></i>
               </td>
               <td>이름</td>
               <td id="name6">~~</td>
@@ -443,14 +400,9 @@ function region(el) {
           </table>
           <table>
             <tr>
-              <th></th>
-              <th style="width: 100px"></th>
-              <th></th>
-            </tr>
-            <tr>
               <td rowspan="3" style="height: 200px">
                 <img id="img7" />
-                <p id="zzim7"></p>
+                <i class="bi" id="zzim7"></i>
               </td>
               <td>이름</td>
               <td id="name7">~~</td>
@@ -466,14 +418,9 @@ function region(el) {
           </table>
           <table>
             <tr>
-              <th></th>
-              <th style="width: 100px"></th>
-              <th></th>
-            </tr>
-            <tr>
               <td rowspan="3" style="height: 200px">
                 <img id="img8" />
-                <p id="zzim8"></p>
+                <i class="bi" id="zzim8"></i>
               </td>
               <td>이름</td>
               <td id="name8">~~</td>
@@ -489,14 +436,9 @@ function region(el) {
           </table>
           <table>
             <tr>
-              <th></th>
-              <th style="width: 100px"></th>
-              <th></th>
-            </tr>
-            <tr>
               <td rowspan="3" style="height: 200px">
                 <img id="img9" />
-                <p id="zzim9"></p>
+                <i class="bi" id="zzim9"></i>
               </td>
               <td>이름</td>
               <td id="name9">~~</td>
@@ -512,14 +454,9 @@ function region(el) {
           </table>
           <table>
             <tr>
-              <th></th>
-              <th style="width: 100px"></th>
-              <th></th>
-            </tr>
-            <tr>
               <td rowspan="3" style="height: 200px">
                 <img id="img10" />
-                <p id="zzim10"></p>
+                <i class="bi" id="zzim"></i>
               </td>
               <td>이름</td>
               <td id="name10">~~</td>
@@ -536,81 +473,82 @@ function region(el) {
         </div>
       </main>
     </div>
-        </body>
-        <script>
-          let arr = [];
-          let firstCategory = 0;
-          let secondCategory = 0;
-          $(".firstCategory div").click(function (e) {
-            let firstCategoryText = e.currentTarget.textContent;
-            $(".tablelist").addClass("hidden");
-            if (firstCategoryText == "식당") {
-              firstCategory = 1;
-              $("#restaurantType").removeClass("hidden");
-              $(".introForSecond").removeClass("hidden");
-              $("#cafeType").addClass("hidden");
-              $("#playType").addClass("hidden");
-            } else if (firstCategoryText == "카페") {
-              firstCategory = 2;
-              $("#restaurantType").addClass("hidden");
-              $("#cafeType").removeClass("hidden");
-              $("#playType").addClass("hidden");
-            } else if (firstCategoryText == "놀거리") {
-              firstCategory = 3;
-              $("#restaurantType").addClass("hidden");
-              $("#cafeType").addClass("hidden");
-              $("#playType").removeClass("hidden");
-            }
-            // console.log(firstCategory);
-          });
-      
-          $(".secondCategory div").click(function (e) {
-            let secondCategoryText = e.currentTarget.textContent;
-            $(".introForSecond").addClass("hidden");
-            $(".tablelist").removeClass("hidden");
-            if (secondCategoryText == "한식") {
-              secondCategory = 1;
-            } else if (secondCategoryText == "중식") {
-              secondCategory = 2;
-            } else if (secondCategoryText == "일식") {
-              secondCategory = 3;
-            } else if (secondCategoryText == "전체보기") {
-              secondCategory = 4;
-            }
-      
-            // secondCategory 값에 따라 script 파일 불러오기
-            let sc = document.createElement("script");
-            sc.setAttribute("src", scrArr[secondCategory - 1]);
-            $("head").append(sc);
-      
-            // 객체 불러오기
-      
-            let name = "#name";
-            let img = "#img";
-            let grade = "#grade";
-            let tag = "#tag";
-            for (i = 0; i < arr.length; i++) {
-              //사진
-              img = img + (i + 1);
-              $(img).attr("src", arr[i].img);
-              img = "#img";
-              //이름
-              name = name + (i + 1);
-              $(name).text(arr[i].name);
-              name = "#name";
-              // 별점
-              grade = grade + (i + 1);
-              $(grade).text(arr[i].grade);
-              grade = "#grade";
-              // 태그
-              tag = tag + (i + 1);
-              $(tag).text(arr[i].tag);
-              tag = "#tag";
-            }
-            arr = [];
-            // console.log(secondCategory);
-          });
-        </script>
+
+        
     </div>
   </body>
+  <script>
+    let arr = [];
+    let firstCategory = 0;
+    let secondCategory = 0;
+    $(".firstCategory div").click(function (e) {
+      let firstCategoryText = e.currentTarget.textContent;
+      $(".tablelist").addClass("hidden");
+      if (firstCategoryText == "식당") {
+        firstCategory = 1;
+        $("#restaurantType").removeClass("hidden");
+        $(".introForSecond").removeClass("hidden");
+        $("#cafeType").addClass("hidden");
+        $("#playType").addClass("hidden");
+      } else if (firstCategoryText == "카페") {
+        firstCategory = 2;
+        $("#restaurantType").addClass("hidden");
+        $("#cafeType").removeClass("hidden");
+        $("#playType").addClass("hidden");
+      } else if (firstCategoryText == "놀거리") {
+        firstCategory = 3;
+        $("#restaurantType").addClass("hidden");
+        $("#cafeType").addClass("hidden");
+        $("#playType").removeClass("hidden");
+      }
+      // console.log(firstCategory);
+    });
+
+    $(".secondCategory div").click(function (e) {
+      let secondCategoryText = e.currentTarget.textContent;
+      $(".introForSecond").addClass("hidden");
+      $(".tablelist").removeClass("hidden");
+      if (secondCategoryText == "한식") {
+        secondCategory = 1;
+      } else if (secondCategoryText == "중식") {
+        secondCategory = 2;
+      } else if (secondCategoryText == "일식") {
+        secondCategory = 3;
+      } else if (secondCategoryText == "전체보기") {
+        secondCategory = 4;
+      }
+
+      // secondCategory 값에 따라 script 파일 불러오기
+      let sc = document.createElement("script");
+      sc.setAttribute("src", scrArr[secondCategory - 1]);
+      $("head").append(sc);
+
+      // 객체 불러오기
+
+      let name = "#name";
+      let img = "#img";
+      let grade = "#grade";
+      let tag = "#tag";
+      for (i = 0; i < arr.length; i++) {
+        //사진
+        img = img + (i + 1);
+        $(img).attr("src", arr[i].img);
+        img = "#img";
+        //이름
+        name = name + (i + 1);
+        $(name).text(arr[i].name);
+        name = "#name";
+        // 별점
+        grade = grade + (i + 1);
+        $(grade).text(arr[i].grade);
+        grade = "#grade";
+        // 태그
+        tag = tag + (i + 1);
+        $(tag).text(arr[i].tag);
+        tag = "#tag";
+      }
+      arr = [];
+      // console.log(secondCategory);
+    });
+  </script>
 </html>
