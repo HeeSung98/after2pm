@@ -31,6 +31,71 @@
     <link rel="stylesheet" href="./main.css" />
     <script>
       let order = 1
+      let arr = []
+      let firstCategory = 0
+      let secondCategory = 0
+
+      // table 값 불러오는 함수
+      function showTable(secondCategory) {
+        // secondCategory 값에 따라 script 파일 불러오기
+        let sc = document.createElement('script')
+        sc.setAttribute('src', scrArr[secondCategory - 1])
+        $('head').append(sc)
+
+        // 객체 불러오기
+        let name = '#name'
+        let img = '#img'
+        let grade = '#grade'
+        let tag = '#tag'
+        for (i = 0; i < arr.length; i++) {
+          //사진
+          img = img + (i + 1)
+          $(img).attr('src', arr[i].img)
+          img = '#img'
+          //이름
+          name = name + (i + 1)
+          $(name).html(arr[i].name)
+          name = '#name'
+          // 별점
+          grade = grade + (i + 1)
+          $(grade).text(arr[i].grade)
+          grade = '#grade'
+          // 태그
+          tag = tag + (i + 1)
+          $(tag).html(arr[i].tag)
+          tag = '#tag'
+        }
+        $('.bi').addClass('bi-bookmark-heart')
+        arr = []
+      }
+
+      let scrArr = []
+      let option // 지역을 담는 변수
+
+      function region(el) {
+        console.log(el)
+        if (typeof el != 'string') {
+          option = el.value
+        }
+        console.log(option)
+
+        if (option == '대흥') {
+          scrArr = [
+            './source/daeheung/restaurant/korean/korean.js',
+            './source/daeheung/restaurant/chinese/chinese.js',
+            './source/daeheung/restaurant/japanese/japanese.js',
+            './source/daeheung/cafe/cafe.js',
+          ]
+        } else if (option == '연남') {
+          scrArr = [
+            './source/yeonnam/restaurant/korean/korean.js',
+            './source/yeonnam/restaurant/chinese/chinese.js',
+            './source/yeonnam/restaurant/japanese/japanese.js',
+            './source/yeonnam/cafe/cafe.js',
+          ]
+        }
+        showTable(secondCategory)
+      }
     </script>
   </head>
   <body>
@@ -209,39 +274,7 @@
       </script>
 
       <!-- 두번째 페이지 지역 선택 스크립트 -->
-      <script>
-        let scrArr = []
-        let option = '대흥'
-
-        function region(el) {
-          console.log(el)
-          if (typeof el != 'string') {
-            option = el.value
-          }
-          console.log(option)
-
-          // 내가 지금 건들고 있는 거
-
-          if (option == '대흥') {
-            scrArr = [
-              './source/daeheung/restaurant/korean/korean.js',
-              './source/daeheung/restaurant/chinese/chinese.js',
-              './source/daeheung/restaurant/japanese/japanese.js',
-              './source/daeheung/cafe/cafe.js',
-            ]
-          } else if (option == '연남') {
-            scrArr = [
-              './source/yeonnam/restaurant/korean/korean.js',
-              './source/yeonnam/restaurant/chinese/chinese.js',
-              './source/yeonnam/restaurant/japanese/japanese.js',
-              './source/yeonnam/cafe/cafe.js',
-            ]
-          }
-          showTable(secondCategory)
-        }
-
-        region(option)
-      </script>
+      <script></script>
     </div>
 
     <!-- 두번째 페이지 시작 -->
@@ -485,44 +518,6 @@
     </div>
   </body>
   <script>
-    let arr = []
-    let firstCategory = 0
-    let secondCategory = 0
-
-    // table 값 불러오는 함수
-    function showTable(secondCategory) {
-      // secondCategory 값에 따라 script 파일 불러오기
-      let sc = document.createElement('script')
-      sc.setAttribute('src', scrArr[secondCategory - 1])
-      $('head').append(sc)
-
-      // 객체 불러오기
-      let name = '#name'
-      let img = '#img'
-      let grade = '#grade'
-      let tag = '#tag'
-      for (i = 0; i < arr.length; i++) {
-        //사진
-        img = img + (i + 1)
-        $(img).attr('src', arr[i].img)
-        img = '#img'
-        //이름
-        name = name + (i + 1)
-        $(name).html(arr[i].name)
-        name = '#name'
-        // 별점
-        grade = grade + (i + 1)
-        $(grade).text(arr[i].grade)
-        grade = '#grade'
-        // 태그
-        tag = tag + (i + 1)
-        $(tag).html(arr[i].tag)
-        tag = '#tag'
-      }
-      $('.bi').addClass('bi-bookmark-heart')
-      arr = []
-    }
-
     // 찜버튼
     $('.bi').click(function (e) {
       let zzim = e.currentTarget
