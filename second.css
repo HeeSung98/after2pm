@@ -283,6 +283,30 @@ td {
   background-color: blue;
 }
 .picture {
-  height: 35vh;
+  /* height: 40vh; */
   background-color: pink;
+}
+
+.btn-primary {
+  order: none;
+  background-color: rgb(81, 154, 81);
+  color: white;
+  border-radius: 15px;
+  box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+  cursor: pointer;
+  outline: none;
+  transition: 0.2s all;
+  border: 0px;
+  position: relative;
+  left: 10px;
+}
+
+.btn-primary:hover {
+  transform: scale(0.9);
+  background-color: rgb(81, 154, 81);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+.carousel-item img {
+  margin: 0% 10%;
 }
