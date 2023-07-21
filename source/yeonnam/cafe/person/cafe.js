@@ -1,5 +1,5 @@
 arr.push({
-  img: "./source/yeonnam/cafe/작당모의.jpeg",
+  img: "./source/yeonnam/cafe/person/작당모의.jpeg",
   name: "작당모의",
   grade: 4.39,
   tag: ["#아늑한<br>", "#디저트가 맛있는"],
@@ -21,7 +21,7 @@ arr.push({
 });
 
 arr.push({
-  img: "./source/yeonnam/cafe/어썸.jpeg",
+  img: "./source/yeonnam/cafe/person/어썸.jpeg",
   name: "어썸마운틴",
   grade: 4.83,
   tag: ["#대화하기 좋은<br>", "#커피가 맛있는"],
@@ -40,7 +40,7 @@ arr.push({
 });
 
 arr.push({
-  img: "./source/yeonnam/cafe/호안.jpeg",
+  img: "./source/yeonnam/cafe/person/호안.jpeg",
   name: "호안끼엠",
   grade: 4.64,
   tag: ["#이색적인<br>", "#디저트가 맛있는"],
@@ -61,7 +61,7 @@ arr.push({
 });
 
 arr.push({
-  img: "./source/yeonnam/cafe/공명.jpeg",
+  img: "./source/yeonnam/cafe/person/공명.jpeg",
   name: "카페 공명",
   grade: 4.7,
   tag: ["#대화하기 좋은<br>", "#디저트가 맛있는"],
@@ -80,42 +80,42 @@ arr.push({
 });
 
 arr.push({
-  img: "./source/yeonnam/cafe/오버트.jpeg",
+  img: "./source/yeonnam/cafe/person/오버트.jpeg",
   name: "오버트 연남",
   grade: 4.5,
   tag: ["#커피가 맛있는<br>", "#이색적인"],
 });
 
 arr.push({
-  img: "./source/yeonnam/cafe/오르트.jpeg",
+  img: "./source/yeonnam/cafe/person/오르트.jpeg",
   name: "카페 오르트",
   grade: 4.52,
   tag: ["#대화하기 좋은<br>", "#루프탑이 있는"],
 });
 
 arr.push({
-  img: "./source/yeonnam/cafe/만동제과.jpeg",
+  img: "./source/yeonnam/cafe/person/만동제과.jpeg",
   name: "만동제과",
   grade: 4.51,
   tag: ["#넓은<br>", "#디저트가 맛있는"],
 });
 
 arr.push({
-  img: "./source/yeonnam/cafe/앤티크.jpeg",
+  img: "./source/yeonnam/cafe/person/앤티크.jpeg",
   name: "앤티크커피",
   grade: 4.2,
   tag: ["#디저트가 맛있는<br>", "#커피가 맛있는"],
 });
 
 arr.push({
-  img: "./source/yeonnam/cafe/오랑지.jpeg",
+  img: "./source/yeonnam/cafe/person/오랑지.jpeg",
   name: "오랑지",
   grade: 4.62,
   tag: ["#이색적인<br>", "#대화하기 좋은"],
 });
 
 arr.push({
-  img: "./source/yeonnam/cafe/어니스트.jpeg",
+  img: "./source/yeonnam/cafe/person/어니스트.jpeg",
   name: "어니스트 팬케이크",
   grade: 4.67,
   tag: ["#대화하기 좋은<br>", "#디저트가 맛있는"],
