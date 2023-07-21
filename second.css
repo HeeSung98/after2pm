@@ -307,6 +307,7 @@ td {
   box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
 
-.carousel-item img {
-  margin: 0% 10%;
+.carousel-item > img {
+  width: 400px;
+  /* margin: 0% 25%; */
 }
