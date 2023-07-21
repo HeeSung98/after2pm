@@ -151,46 +151,54 @@
 
         const next = () => {
           if (order == 1) {
-            document.querySelector('.modal_content01').classList.add('hidden')
-            document
-              .querySelector('.modal_content02')
-              .classList.remove('hidden')
-            order++
-          } else if (order == 2) {
-            // 첫번째 페이지 숨기고 두번째 페이지 보여주기
-            document.querySelector('.first_page').classList.add('hidden')
-            document.querySelector('.second_page').classList.remove('hidden')
-            // second로 넘어가게 선택된 정보가 넘어가게
-            $('input:checkbox[name=select_region]').each(function (index) {
-              if ($(this).is(':checked') == true) {
-                // console.log($(this).val());
-                select_region_result = $(this).val()
-                // console.log(select_region_result);
-              }
-            })
-            $('input:radio[name=select_part]').each(function (index) {
-              if ($(this).is(':checked') == true) {
-                // console.log($(this).val());
-                select_part_result = $(this).val()
-              }
-            })
+            // 선택된 값 없으면 넘어가지 않게 하기
+            var listRegion = $('input[name=select_region]').is(':checked')
 
-            if (select_part_result == '식당') {
-              //   firstCategory = 1;
-              $('#restaurantType').removeClass('hidden')
-              $('#cafeType').addClass('hidden')
-              $('#playType').addClass('hidden')
-            } else if (select_part_result == '카페') {
-              //   firstCategory = 2;
-              $('#restaurantType').addClass('hidden')
-              $('#cafeType').removeClass('hidden')
-              $('#playType').addClass('hidden')
-            } else if (select_part_result == '놀거리') {
-              //   firstCategory = 3;
-              $('#restaurantType').addClass('hidden')
-              $('#cafeType').addClass('hidden')
-              $('#playType').removeClass('hidden')
-            }
+            if (listRegion == true) {
+              document.querySelector('.modal_content01').classList.add('hidden')
+              document
+                .querySelector('.modal_content02')
+                .classList.remove('hidden')
+              order++
+            } else alert('선택 해주세요')
+          } else if (order == 2) {
+            var listPart = $('input[name=select_part]').is(':checked')
+            if (listPart == true) {
+              // 첫번째 페이지 숨기고 두번째 페이지 보여주기
+              document.querySelector('.first_page').classList.add('hidden')
+              document.querySelector('.second_page').classList.remove('hidden')
+              // second로 넘어가게 선택된 정보가 넘어가게
+              $('input:checkbox[name=select_region]').each(function (index) {
+                if ($(this).is(':checked') == true) {
+                  // console.log($(this).val());
+                  select_region_result = $(this).val()
+                  // console.log(select_region_result);
+                }
+              })
+              $('input:radio[name=select_part]').each(function (index) {
+                if ($(this).is(':checked') == true) {
+                  // console.log($(this).val());
+                  select_part_result = $(this).val()
+                }
+              })
+
+              if (select_part_result == '식당') {
+                //   firstCategory = 1;
+                $('#restaurantType').removeClass('hidden')
+                $('#cafeType').addClass('hidden')
+                $('#playType').addClass('hidden')
+              } else if (select_part_result == '카페') {
+                //   firstCategory = 2;
+                $('#restaurantType').addClass('hidden')
+                $('#cafeType').removeClass('hidden')
+                $('#playType').addClass('hidden')
+              } else if (select_part_result == '놀거리') {
+                //   firstCategory = 3;
+                $('#restaurantType').addClass('hidden')
+                $('#cafeType').addClass('hidden')
+                $('#playType').removeClass('hidden')
+              }
+            } else alert('선택 해주세요')
           }
         }
 
@@ -202,9 +210,15 @@
 
       <!-- 두번째 페이지 지역 선택 스크립트 -->
       <script>
-        var scrArr = []
+        let scrArr = []
+        let option = '대흥'
+
         function region(el) {
-          const option = el.value
+          console.log(el)
+          if (typeof el != 'string') {
+            option = el.value
+          }
+          console.log(option)
 
           // 내가 지금 건들고 있는 거
 
@@ -224,6 +238,8 @@
             ]
           }
         }
+
+        region(option)
       </script>
     </div>
 
