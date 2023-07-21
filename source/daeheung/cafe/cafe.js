@@ -2,7 +2,7 @@ arr.push({
   img: "./source/daeheung/cafe/퍼머넌트.jpeg",
   name: "퍼머넌트해비텟",
   grade: 4.67,
-  tag: ["대화하기 좋은", "디저트가 맛있는"],
+  tag: ["#대화하기 좋은<br>", "#디저트가 맛있는"],
   // zzim: 체크박스 selected?,
   explain:
     "모든 공지는 인스타그램 스토리 혹은 피드에 올립니다. 주차는 도보 10분거리 마포아트센터 이용해 주세요. 어린 아이, 애완동물 환영합니다. 가방, 담요, 물통 지참 필수입니다.",
@@ -24,7 +24,7 @@ arr.push({
   img: "./source/daeheung/cafe/누아네.jpeg",
   name: "누아네",
   grade: 4.46,
-  tag: ["디저트가 맛있는", "아늑한"],
+  tag: ["#디저트가 맛있는<br>", "#아늑한"],
   explain:
     "누아네는 르 꼬르동 블루 출신의 셰프가 운영하는 베이커리 카페로, 프랑스산 고급 유기농 밀가루, 프랑스산 AOP버터, 프랑스산 발로나 초콜릿 등 고급 재료만을 사용해 베이커리 제품들을 생산하고 있습니다.",
   menu: [
@@ -42,7 +42,7 @@ arr.push({
   img: "./source/daeheung/cafe/콜로라도.jpeg",
   name: "콜로라도 프로젝트",
   grade: 4.89,
-  tag: ["대화하기 좋은", "이색적인"],
+  tag: ["#대화하기 좋은<br>", "#이색적인"],
   explain:
     "<콜로라도프로젝트 Colorado Project> 는 컬러의 특색을 반영한 아트숍 & 카페 입니다. 콜로라도프로젝트의 타이틀은 <Color> 라는 단어가 포함된 지명에서 비롯 되었으며 미서부 자연에서 느껴지는 거칠고 자유로우며 예술 친화적인 경험을 지향합니다.",
   menu: [
@@ -60,7 +60,7 @@ arr.push({
   img: "./source/daeheung/cafe/파크사이드.jpeg",
   name: "파크사이드",
   grade: 0,
-  tag: ["대화하기 좋은", "넓은"],
+  tag: ["#대화하기 좋은<br>", "#넓은"],
   explain:
     "대흥역 3번 출구와 공덕역 1번 출구 사이에요. 대흥역에서 더 가까워요. 주차는 현대민영주차장이나 염리공영주차장에 하시면 됩니다. 예약은 따로 받지 않습니다.",
   menu: [
@@ -77,40 +77,40 @@ arr.push({
   img: "./source/daeheung/cafe/이트커피.jpeg",
   name: "이트커피",
   grade: 0,
-  tag: ["커피가 맛있는", "이색적인"],
+  tag: ["#커피가 맛있는<br>", "#이색적인"],
 });
 
 arr.push({
   img: "./source/daeheung/cafe/이바머스.jpeg",
   name: "이바머스 커피",
   grade: 4.8,
-  tag: ["커피가 맛있는", "아늑한"],
+  tag: ["#커피가 맛있는<br>", "#아늑한"],
 });
 
 arr.push({
   img: "./source/daeheung/cafe/카페대흥.jpeg",
   name: "카페 대흥",
   grade: 4.62,
-  tag: ["대화하기 좋은", "커피가 맛있는"],
+  tag: ["#대화하기 좋은<br>", "#커피가 맛있는"],
 });
 
 arr.push({
   img: "./source/daeheung/cafe/달쏘.jpeg",
   name: "달쏘",
   grade: 4.67,
-  tag: ["대화하기 좋은", "아늑한"],
+  tag: ["#대화하기 좋은<br>", "#아늑한"],
 });
 
 arr.push({
   img: "./source/daeheung/cafe/클로드.jpeg",
   name: "클로드 커피",
   grade: 0,
-  tag: ["대화하기 좋은", "아늑한"],
+  tag: ["#대화하기 좋은<br>", "#아늑한"],
 });
 
 arr.push({
   img: "./source/daeheung/cafe/이어커피.jpeg",
   name: "이어커피 로스터스",
   grade: 0,
-  tag: ["대화하기 좋은", "커피가 맛있는"],
+  tag: ["#대화하기 좋은<br>", "#커피가 맛있는"],
 });

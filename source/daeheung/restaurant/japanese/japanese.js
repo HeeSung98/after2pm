@@ -2,7 +2,7 @@ arr.push({
   img: "./source/daeheung/restaurant/japanese/1스시복.jpeg",
   name: "스시복",
   grade: 4.53,
-  tag: ["스시킬러가인정한", "다양한사케"],
+  tag: ["#스시킬러가인정한<br>", "#다양한사케"],
   explain: [
     "신성하고 양질의 재료를 매일 직접 손지랗고 정성껏 준비해 합리적인 가격과 퀼리티로 제공합니다. ",
   ],
@@ -23,7 +23,7 @@ arr.push({
   img: "./source/daeheung/restaurant/japanese/2정든그릇.jpeg",
   name: "정든그릇본점",
   grade: 4.62,
-  tag: ["아늑한실내", "조명맛집"],
+  tag: ["#아늑한실내<br>", "#조명맛집"],
   explain: [
     "안녕하세요. 정든그릇입니다. 저희 매장은 소스 하나하나 직접 배합하여 만드렴 주문과 동시에 조리합니다. 요리부터 서비스까지 정성을 다하겠습니다.",
   ],
@@ -43,8 +43,8 @@ arr.push({
 arr.push({
   img: "./source/daeheung/restaurant/japanese/3오타코.jpeg",
   name: "오타코",
-  grade: "-",
-  tag: ["오코노미야끼맛집", "맥주와잘어울리는"],
+  grade: 4.2,
+  tag: ["#오코노미야끼맛집<br>", "#맥주와잘어울리는"],
   explain: ["안녕하세요. 오타코입니다."],
   menu: ["타코야끼9알(4,000원)"],
 });
@@ -52,8 +52,8 @@ arr.push({
 arr.push({
   img: "./source/daeheung/restaurant/japanese/4육연타마포.jpeg",
   name: "육연타마포",
-  grade: "-",
-  tag: ["20년경력", "가성비좋은"],
+  grade: 4.5,
+  tag: ["#20년경력<br>", "#가성비좋은"],
   explain: [
     "안녕하세요. 대흥동 맛집 새로 런칭한 브랜드 육연타 인사드립니다. 원재료부터 고객님께 한상차림을 완성하기까지 도와주고 고민하여 투자해준 사ㅏㅁ들의 경력을 합치면 백년이 넘습니다. 정성을 담아 보답해 드리겠습니다.",
   ],
@@ -68,8 +68,8 @@ arr.push({
 arr.push({
   img: "./source/daeheung/restaurant/japanese/5타코방타코야끼.jpeg",
   name: "타코방타코야끼",
-  grade: "-",
-  tag: ["오픈이벤트", "오사카풍"],
+  grade: 4.7,
+  tag: ["#오픈이벤트<br>", "#오사카풍"],
   explain: ["오사카풍 타코야끼입니다. 소스 1~3개 선택가능"],
   menu: [
     "타코야끼 13알(7,000원)",
@@ -83,7 +83,7 @@ arr.push({
   img: "./source/daeheung/restaurant/japanese/6멘카야.jpeg",
   name: "멘카야",
   grade: 4.45,
-  tag: ["돈까스맛집", "라멘맛집"],
+  tag: ["#돈까스맛집<br>", "#라멘맛집"],
   explain: [
     "그냥 동네 라멘집입니다. 화려한 기술 없고 정직하게 끓여냅니다. 블로그 마케팅 같은 거 안합니다. 업자들 전화하지 마세요.",
   ],
@@ -99,7 +99,7 @@ arr.push({
   img: "./source/daeheung/restaurant/japanese/7톨.jpeg",
   name: "톨",
   grade: 4.6,
-  tag: ["혼밥하기좋은", "현지인맛집"],
+  tag: ["#혼밥하기좋은<br>", "#현지인맛집"],
   explain: ["안녕하세요. 서울시 마포구 대흥동에 위치한 톨입니다."],
   menu: ["마제돌솥밥(9,000원)", "마제멘(9,000원)", "가츠동("],
 });
@@ -108,7 +108,7 @@ arr.push({
   img: "./source/daeheung/restaurant/japanese/8경수사.jpeg",
   name: "경수사",
   grade: 4.23,
-  tag: ["깔끔한", "초밥전문점"],
+  tag: ["#깔끔한<br>", "#초밥전문점"],
   explain: ["안녕하세요. 경수사 인사드립니다."],
   menu: [
     "모듬사시미(65,000원)",
@@ -126,7 +126,7 @@ arr.push({
   img: "./source/daeheung/restaurant/japanese/9소돌초밥.jpeg",
   name: "소돌초밥",
   grade: 4.22,
-  tag: ["혼밥하기좋은", "가성비좋은"],
+  tag: ["#혼밥하기좋은<br>", "#가성비좋은"],
   explain: ["안녕하세요. 혼밥하기 좋은 소돌초밥입니다."],
   menu: [
     "특소돌초밥10p(15,000원)",
@@ -143,7 +143,7 @@ arr.push({
   img: "./source/daeheung/restaurant/japanese/10후쿠스시.jpeg",
   name: "후쿠스시",
   grade: 4.65,
-  tag: ["트렌디한", "스시맛집"],
+  tag: ["#트렌디한<br>", "#스시맛집"],
   explain: ["특급호텔 출신 요리사의 착한 가격, 맛있는 초밥집"],
   menu: [
     "후쿠 모듬초밥(16,000원)",
