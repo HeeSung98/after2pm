@@ -40,11 +40,11 @@ body {
   align-items: center;
 }
 
-h1 {
+.first_page h1 {
   height: 100px;
   text-align: center;
 }
-h1 span {
+.first_page h1 span {
   position: relative;
   top: 20px;
   display: inline-block;
@@ -176,7 +176,13 @@ h1 span:nth-child(8) {
 }
 
 /* second.html */
-
+.second_page {
+  font-family: "TheJamsil5Bold";
+  margin: 0px;
+  min-height: 100%;
+  overflow-y: auto;
+}
+/* .second_page */
 .second_page header {
   width: 100%;
   height: 120px;
@@ -184,7 +190,7 @@ h1 span:nth-child(8) {
   z-index: 20;
 }
 .second_page main {
-  width: 80vw;
+  width: 90vw;
   margin-left: 1vw;
   position: relative;
   top: 200px;
@@ -195,11 +201,11 @@ h1 span:nth-child(8) {
   /* height: 100px; */
   text-align: center;
 }
-h1 span {
+.second_page .head h1 span {
   position: relative;
   top: 30px;
 
-  animation: bounce 0.5s ease infinite alternate;
+  animation: bounces 0.5s ease infinite alternate;
   font-family: "Bagel Fat One", cursive;
 
   font-size: 30px;
@@ -209,33 +215,33 @@ h1 span {
     0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.4);
 }
 
-h1 span:nth-child(2) {
+.second_page h1 span:nth-child(2) {
   animation-delay: 0.1s;
 }
-h1 span:nth-child(3) {
+.second_page h1 span:nth-child(3) {
   animation-delay: 0.2s;
 }
-h1 span:nth-child(4) {
+.second_page h1 span:nth-child(4) {
   animation-delay: 0.3s;
 }
-h1 span:nth-child(5) {
+.second_page h1 span:nth-child(5) {
   animation-delay: 0.4s;
 }
-h1 span:nth-child(6) {
+.second_page h1 span:nth-child(6) {
   animation-delay: 0.5s;
 }
-h1 span:nth-child(7) {
+.second_page h1 span:nth-child(7) {
   animation-delay: 0.6s;
 }
-h1 span:nth-child(8) {
+.second_page h1 span:nth-child(8) {
   animation-delay: 0.7s;
 }
 
-.ff {
+.second_page .ff {
   margin-right: 50px;
 }
 
-@keyframes bounce {
+@keyframes bounces {
   100% {
     top: 20px;
     /* text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
@@ -258,6 +264,12 @@ h1 span:nth-child(8) {
   height: 70px;
   border-radius: 20px;
 }
+.second_page .firstCategory div {
+  height: 50px;
+  margin: 10px 0px;
+  padding: 0px 20px;
+  line-height: 50px;
+}
 .second_page .region {
   position: absolute;
   top: 60px;
@@ -274,12 +286,63 @@ h1 span:nth-child(8) {
 .second_page .secondCategory div {
   margin: 20px 10px 20px 0px;
   text-align: center;
+  text-decoration: none;
 }
+
+/* 버튼 효과 */
+
+.second_page .secondCategory > div {
+  order: none;
+  background-color: green;
+  color: white;
+  border-radius: 5px;
+  box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+  cursor: pointer;
+  outline: none;
+  transition: 0.2s all;
+}
+
+.second_page .secondCategory > div:hover {
+  transform: scale(0.9);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+.second_page .allview {
+  border: none;
+  background-color: green;
+  color: white;
+  border-radius: 5px;
+  box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+  cursor: pointer;
+  outline: none;
+  transition: 0.2s all;
+}
+.second_page .allview:hover {
+  transform: scale(0.9);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+#playType > div {
+  border: none;
+  background-color: green;
+  color: white;
+  border-radius: 5px;
+  box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+  cursor: pointer;
+  outline: none;
+  transition: 0.2s all;
+}
+
+#playType > div:hover {
+  transform: scale(0.9);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
 .second_page .tablelist {
   display: flex;
   flex-direction: column;
-  width: 70%;
-  margin-left: 30%;
+  width: 75%;
+  margin-left: 25%;
 }
 .second_page .introForSecond {
   width: 70%;
@@ -288,13 +351,29 @@ h1 span:nth-child(8) {
 .second_page table {
   margin-top: 10px;
   width: 100%;
-  height: 500px;
+  height: 300px;
   text-align: center;
+  /* border: 1px solid black; */
+  background-color: aliceblue;
+  border-radius: 20px;
+  position: relative;
 }
-.hidden {
+.second_page .hidden {
   display: none;
 }
+.second_page .selected {
+  color: red;
+  border-radius: 20px;
+}
+
 .second_page img {
-  width: 100%;
-  height: 100%;
+  width: 200px;
+  /* width: 70%; */
+}
+
+.second_page .bi {
+  font-size: 30px;
+  position: absolute;
+  top: 10px;
+  right: 20px;
 }
