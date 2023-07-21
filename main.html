@@ -237,6 +237,7 @@
               './source/yeonnam/cafe/cafe.js',
             ]
           }
+          showTable(secondCategory)
         }
 
         region(option)
@@ -487,27 +488,98 @@
     let arr = []
     let firstCategory = 0
     let secondCategory = 0
+
+    // table 값 불러오는 함수
+    function showTable(secondCategory) {
+      // secondCategory 값에 따라 script 파일 불러오기
+      let sc = document.createElement('script')
+      sc.setAttribute('src', scrArr[secondCategory - 1])
+      $('head').append(sc)
+
+      // 객체 불러오기
+      let name = '#name'
+      let img = '#img'
+      let grade = '#grade'
+      let tag = '#tag'
+      for (i = 0; i < arr.length; i++) {
+        //사진
+        img = img + (i + 1)
+        $(img).attr('src', arr[i].img)
+        img = '#img'
+        //이름
+        name = name + (i + 1)
+        $(name).html(arr[i].name)
+        name = '#name'
+        // 별점
+        grade = grade + (i + 1)
+        $(grade).text(arr[i].grade)
+        grade = '#grade'
+        // 태그
+        tag = tag + (i + 1)
+        $(tag).html(arr[i].tag)
+        tag = '#tag'
+      }
+      $('.bi').addClass('bi-bookmark-heart')
+      arr = []
+    }
+
+    // 찜버튼
+    $('.bi').click(function (e) {
+      let zzim = e.currentTarget
+      if ($(zzim).hasClass('bi-bookmark-heart-fill')) {
+        $(zzim).switchClass('bi-bookmark-heart-fill', 'bi-bookmark-heart')
+      } else {
+        $(zzim).switchClass('bi-bookmark-heart', 'bi-bookmark-heart-fill')
+      }
+    })
+
+    // 찜 - 말풍선
+    let div = document.createElement('div')
+    div.innerText = '찜하려면 눌러주세요'
+    $(div).addClass('balloon hidden')
+    $('.bi').before(div)
+
+    $('.bi').hover(
+      function (e) {
+        $(e.currentTarget).prev().removeClass('hidden')
+      },
+      function (e) {
+        $(e.currentTarget).prev().addClass('hidden')
+      }
+    )
+
+    // 식당/카페/놀거리 선택 (카페/놀거리 선택 시, table 바로 불러옴)
     $('.firstCategory div').click(function (e) {
+      $('.firstCategory div').removeClass('selected')
+      let firstCategorySelected = e.currentTarget
+      $(firstCategorySelected).addClass('selected')
       let firstCategoryText = e.currentTarget.textContent
-      $('.tablelist').addClass('hidden')
       if (firstCategoryText == '식당') {
         firstCategory = 1
-        $('#restaurantType').removeClass('hidden')
+        $('.tablelist').addClass('hidden')
         $('.introForSecond').removeClass('hidden')
+        $('#restaurantType').removeClass('hidden')
         $('#cafeType').addClass('hidden')
         $('#playType').addClass('hidden')
       } else if (firstCategoryText == '카페') {
         firstCategory = 2
+        $('.tablelist').removeClass('hidden')
+        $('.introForSecond').addClass('hidden')
         $('#restaurantType').addClass('hidden')
         $('#cafeType').removeClass('hidden')
         $('#playType').addClass('hidden')
+        secondCategory = 4
+        showTable(secondCategory)
       } else if (firstCategoryText == '놀거리') {
         firstCategory = 3
+        $('.tablelist').removeClass('hidden')
+        $('.introForSecond').addClass('hidden')
         $('#restaurantType').addClass('hidden')
         $('#cafeType').addClass('hidden')
         $('#playType').removeClass('hidden')
+        secondCategory = 5
+        showTable(secondCategory)
       }
-      // console.log(firstCategory);
     })
 
     $('.secondCategory div').click(function (e) {
@@ -520,41 +592,8 @@
         secondCategory = 2
       } else if (secondCategoryText == '일식') {
         secondCategory = 3
-      } else if (secondCategoryText == '전체보기') {
-        secondCategory = 4
       }
-
-      // secondCategory 값에 따라 script 파일 불러오기
-      let sc = document.createElement('script')
-      sc.setAttribute('src', scrArr[secondCategory - 1])
-      $('head').append(sc)
-
-      // 객체 불러오기
-
-      let name = '#name'
-      let img = '#img'
-      let grade = '#grade'
-      let tag = '#tag'
-      for (i = 0; i < arr.length; i++) {
-        //사진
-        img = img + (i + 1)
-        $(img).attr('src', arr[i].img)
-        img = '#img'
-        //이름
-        name = name + (i + 1)
-        $(name).text(arr[i].name)
-        name = '#name'
-        // 별점
-        grade = grade + (i + 1)
-        $(grade).text(arr[i].grade)
-        grade = '#grade'
-        // 태그
-        tag = tag + (i + 1)
-        $(tag).text(arr[i].tag)
-        tag = '#tag'
-      }
-      arr = []
-      // console.log(secondCategory);
+      showTable(secondCategory)
     })
   </script>
 </html>
