@@ -263,11 +263,13 @@ td {
 }
 .fullDiv {
   display: flex;
+  position: relative;
+  left: 4vw;
 }
 .leftDiv {
   display: inline-block;
   width: 65vw;
-  height: fit-content;
+  height: 100vh;
   background-color: red;
   margin-right: 4vw;
 }
