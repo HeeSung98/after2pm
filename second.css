@@ -225,13 +225,13 @@ h1 span:nth-child(8) {
 }
 
 /* 테이블 크기 조정 */
-.second_page tr:first-child td:first-child {
+.second_page .tablelist tr:first-child td:first-child {
   width: 50%;
 }
-.second_page tr:first-child td:nth-child(2) {
+.second_page .tablelist tr:first-child td:nth-child(2) {
   width: 10%;
 }
-.second_page tr:first-child td:last-child {
+.second_page .tablelist tr:first-child td:last-child {
   width: 40%;
 }
 
@@ -261,33 +261,73 @@ h1 span:nth-child(8) {
   left: 160px;
 }
 
-td {
+/* 세번째 페이지 css */
+
+.second_page td {
   border: 1px solid black;
 }
-.fullDiv {
+.second_page .fullDiv {
   display: flex;
   position: relative;
   left: 4vw;
 }
-.leftDiv {
+
+.second_page .leftDiv {
   display: inline-block;
   width: 65vw;
   height: 100vh;
-  background-color: red;
+  background-color: rgb(255, 253, 238);
+  /* border: 1px solid black; */
+  border-radius: 5px;
   margin-right: 4vw;
 }
-.rightDiv {
+
+/* 소개/메뉴/리뷰창 스타일 */
+.second_page .name {
+  font-size: 30px;
+  margin: 20px;
+}
+.second_page .introduce,
+.second_page .menu,
+.second_page .review {
+  font-size: 20px;
+  margin: 20px;
+}
+
+.second_page .introduce > div,
+.second_page .menu > div,
+.second_page .review > div {
+  border-top: 1px dashed black;
+  padding: 20px;
+}
+
+.second_page .menu table {
+  background-color: rgb(255, 253, 238);
+}
+.second_page .menu td {
+  border: none;
+  border-bottom: 1px dashed black;
+  padding: 10px 5px 0px 5px;
+}
+.second_page .menu td:first-child {
+  text-align: left;
+}
+.second_page .menu td:last-child {
+  text-align: right;
+}
+
+.second_page .rightDiv {
   display: inline-block;
   width: 20vw;
   height: fit-content;
-  background-color: blue;
+  border: 1px solid black;
+  border-radius: 5px;
 }
-.picture {
+.second_page .picture {
   /* height: 40vh; */
-  background-color: pink;
+  /* background-color: pink; */
 }
-
-.btn-primary {
+.second_page .btn-primary {
   order: none;
   background-color: rgb(81, 154, 81);
   color: white;
@@ -301,13 +341,131 @@ td {
   left: 10px;
 }
 
-.btn-primary:hover {
+.second_page .btn-primary:hover {
   transform: scale(0.9);
   background-color: rgb(81, 154, 81);
   box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
 
-.carousel-item > img {
-  width: 400px;
-  /* margin: 0% 25%; */
+.second_page .carousel-item > img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+}
+
+.second_page .rightDiv div {
+  font-size: 20px;
+  margin: 10px 10px 0px 10px;
+}
+.second_page .Content {
+  border-top: 1px dashed black;
+}
+
+/* 예약창 달력 스타일 */
+
+.second_page .Calendar td {
+  width: 45px;
+  height: 45px;
+  font-weight: 400;
+}
+
+.second_page .Calendar {
+  text-align: center;
+  background-color: white;
+}
+.second_page .Calendar td {
+  border: none;
+}
+
+.second_page .Calendar > thead > tr:first-child > td {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.second_page .Calendar > tbody > tr > td {
+  height: 45px;
+  width: 45px;
+  border-radius: 45px;
+  transition-duration: 0.2s;
+  line-height: 45px;
+  margin: 2.5px;
+  text-align: center;
+}
+.second_page .pastDay {
+  color: lightgray;
+}
+
+.second_page .today {
+  background-color: #f5d042;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.second_page .futureDay {
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.second_page .futureDay:hover {
+  background: #eee;
+}
+.second_page .futureDay.choiceDay,
+.second_page .today.choiceDay {
+  background: #5f7af0;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* 예약창 - 시간 */
+.second_page .reserveTime,
+.second_page .reservePeople {
+  text-align: left;
+  background-color: white;
+}
+.second_page .reserveTime td,
+.second_page .reservePeople td {
+  padding-left: 10px;
+}
+
+.second_page .reserveTime button {
+  margin-bottom: 5px;
+  border-radius: 10px;
+  border: none;
+}
+.second_page .timeSelected {
+  background: #5f7af0;
+  font-weight: bold;
+  color: #fff;
+}
+.second_page .reservePeople {
+  height: 50px;
+}
+.second_page .countPeople {
+  text-align: right;
+  padding-right: 10px;
+}
+.second_page .countPeople button {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  line-height: 10px;
+  border: none;
+  background-color: #5f7af0;
+  color: #fff;
+  font-weight: bold;
+}
+
+.second_page .reserveComplete {
+  text-align: right;
+}
+.second_page .reserveComplete button {
+  margin-top: 30px;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+.second_page .reserve button:hover {
+  transform: scale(1.1);
 }
