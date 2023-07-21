@@ -30,7 +30,7 @@
     ></script>
     <link rel="stylesheet" href="./first.css" />
     <script>
-      let order = 1;
+      let order = 1
     </script>
   </head>
   <body>
@@ -140,37 +140,37 @@
   </body>
   <script>
     const open = () => {
-      document.querySelector(".modal").classList.remove("hidden");
-    };
+      document.querySelector('.modal').classList.remove('hidden')
+    }
 
     const close = () => {
-      document.querySelector(".modal").classList.add("hidden");
-    };
+      document.querySelector('.modal').classList.add('hidden')
+    }
 
     const next = () => {
       // console.log("다음 클릭: " + order);
 
       if (order == 1) {
-        document.querySelector(".modal_content01").classList.add("hidden");
-        document.querySelector(".modal_content02").classList.remove("hidden");
-        order++;
+        document.querySelector('.modal_content01').classList.add('hidden')
+        document.querySelector('.modal_content02').classList.remove('hidden')
+        order++
       } else if (order == 2) {
-        $("input:checkbox[name=select_region]").each(function (index) {
-          if ($(this).is(":checked") == true) {
-            console.log($(this).val());
+        $('input:checkbox[name=select_region]').each(function (index) {
+          if ($(this).is(':checked') == true) {
+            console.log($(this).val())
           }
-        });
-        $("input:radio[name=select_part]").each(function (index) {
-          if ($(this).is(":checked") == true) {
-            console.log($(this).val());
+        })
+        $('input:radio[name=select_part]').each(function (index) {
+          if ($(this).is(':checked') == true) {
+            console.log($(this).val())
           }
-        });
+        })
       }
-    };
+    }
 
-    document.querySelector(".openBtn").addEventListener("click", open);
-    document.querySelector("#btnClose").addEventListener("click", close);
-    document.querySelector("#btnNext").addEventListener("click", next);
-    document.querySelector(".bg").addEventListener("click", close);
+    document.querySelector('.openBtn').addEventListener('click', open)
+    document.querySelector('#btnClose').addEventListener('click', close)
+    document.querySelector('#btnNext').addEventListener('click', next)
+    document.querySelector('.bg').addEventListener('click', close)
   </script>
 </html>

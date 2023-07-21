@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap');
 
 /* 디자인 */
 html,
@@ -21,7 +21,7 @@ h1 span {
   top: 20px;
   display: inline-block;
   animation: bounce 0.3s ease infinite alternate;
-  font-family: "Bagel Fat One", cursive;
+  font-family: 'Bagel Fat One', cursive;
 
   font-size: 130px;
   color: #fff;

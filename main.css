@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap');
 
 @font-face {
-  font-family: "TheJamsil5Bold";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2")
-    format("woff2");
+  font-family: 'TheJamsil5Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2')
+    format('woff2');
   font-weight: 100;
   font-style: normal;
 }
@@ -49,7 +49,7 @@ body {
   top: 20px;
   display: inline-block;
   animation: bounce 0.3s ease infinite alternate;
-  font-family: "Bagel Fat One", cursive;
+  font-family: 'Bagel Fat One', cursive;
 
   font-size: 130px;
   color: #fff;
@@ -177,7 +177,7 @@ h1 span:nth-child(8) {
 
 /* second.html */
 .second_page {
-  font-family: "TheJamsil5Bold";
+  font-family: 'TheJamsil5Bold';
   margin: 0px;
   min-height: 100%;
   overflow-y: auto;
@@ -206,7 +206,7 @@ h1 span:nth-child(8) {
   top: 30px;
 
   animation: bounces 0.5s ease infinite alternate;
-  font-family: "Bagel Fat One", cursive;
+  font-family: 'Bagel Fat One', cursive;
 
   font-size: 30px;
   color: #fff;
