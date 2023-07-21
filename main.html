@@ -224,6 +224,39 @@
         let option = '대흥'
 
         console.log(option)
+        // table 값 불러오는 함수
+        function showTable(secondCategory) {
+          // secondCategory 값에 따라 script 파일 불러오기
+          let sc = document.createElement('script')
+          sc.setAttribute('src', scrArr[secondCategory - 1])
+          $('head').append(sc)
+
+          // 객체 불러오기
+          let name = '#name'
+          let img = '#img'
+          let grade = '#grade'
+          let tag = '#tag'
+          for (i = 0; i < arr.length; i++) {
+            //사진
+            img = img + (i + 1)
+            $(img).attr('src', arr[i].img)
+            img = '#img'
+            //이름
+            name = name + (i + 1)
+            $(name).html(arr[i].name)
+            name = '#name'
+            // 별점
+            grade = grade + (i + 1)
+            $(grade).text(arr[i].grade)
+            grade = '#grade'
+            // 태그
+            tag = tag + (i + 1)
+            $(tag).html(arr[i].tag)
+            tag = '#tag'
+          }
+          $('.bi').addClass('bi-bookmark-heart')
+          arr = []
+        }
 
         function region(el) {
           // console.log(el)
@@ -497,44 +530,11 @@
       </main>
     </div>
   </body>
+
   <script>
     let arr = []
     let firstCategory = 0
     let secondCategory = 0
-
-    // table 값 불러오는 함수
-    function showTable(secondCategory) {
-      // secondCategory 값에 따라 script 파일 불러오기
-      let sc = document.createElement('script')
-      sc.setAttribute('src', scrArr[secondCategory - 1])
-      $('head').append(sc)
-
-      // 객체 불러오기
-      let name = '#name'
-      let img = '#img'
-      let grade = '#grade'
-      let tag = '#tag'
-      for (i = 0; i < arr.length; i++) {
-        //사진
-        img = img + (i + 1)
-        $(img).attr('src', arr[i].img)
-        img = '#img'
-        //이름
-        name = name + (i + 1)
-        $(name).html(arr[i].name)
-        name = '#name'
-        // 별점
-        grade = grade + (i + 1)
-        $(grade).text(arr[i].grade)
-        grade = '#grade'
-        // 태그
-        tag = tag + (i + 1)
-        $(tag).html(arr[i].tag)
-        tag = '#tag'
-      }
-      $('.bi').addClass('bi-bookmark-heart')
-      arr = []
-    }
 
     // 찜버튼
     $('.bi').click(function (e) {
