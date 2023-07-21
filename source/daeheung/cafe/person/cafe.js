@@ -1,5 +1,5 @@
 arr.push({
-  img: "./source/daeheung/cafe/퍼머넌트.jpeg",
+  img: "./source/daeheung/cafe/person/퍼머넌트.jpeg",
   name: "퍼머넌트해비텟",
   grade: 4.67,
   tag: ["#대화하기 좋은<br>", "#디저트가 맛있는"],
@@ -21,7 +21,7 @@ arr.push({
 });
 
 arr.push({
-  img: "./source/daeheung/cafe/누아네.jpeg",
+  img: "./source/daeheung/cafe/person/누아네.jpeg",
   name: "누아네",
   grade: 4.46,
   tag: ["#디저트가 맛있는<br>", "#아늑한"],
@@ -39,7 +39,7 @@ arr.push({
 });
 
 arr.push({
-  img: "./source/daeheung/cafe/콜로라도.jpeg",
+  img: "./source/daeheung/cafe/person/콜로라도.jpeg",
   name: "콜로라도 프로젝트",
   grade: 4.89,
   tag: ["#대화하기 좋은<br>", "#이색적인"],
@@ -57,7 +57,7 @@ arr.push({
 });
 
 arr.push({
-  img: "./source/daeheung/cafe/파크사이드.jpeg",
+  img: "./source/daeheung/cafe/person/파크사이드.jpeg",
   name: "파크사이드",
   grade: 0,
   tag: ["#대화하기 좋은<br>", "#넓은"],
@@ -74,42 +74,42 @@ arr.push({
 });
 
 arr.push({
-  img: "./source/daeheung/cafe/이트커피.jpeg",
+  img: "./source/daeheung/cafe/person/이트커피.jpeg",
   name: "이트커피",
   grade: 0,
   tag: ["#커피가 맛있는<br>", "#이색적인"],
 });
 
 arr.push({
-  img: "./source/daeheung/cafe/이바머스.jpeg",
+  img: "./source/daeheung/cafe/person/이바머스.jpeg",
   name: "이바머스 커피",
   grade: 4.8,
   tag: ["#커피가 맛있는<br>", "#아늑한"],
 });
 
 arr.push({
-  img: "./source/daeheung/cafe/카페대흥.jpeg",
+  img: "./source/daeheung/cafe/person/카페대흥.jpeg",
   name: "카페 대흥",
   grade: 4.62,
   tag: ["#대화하기 좋은<br>", "#커피가 맛있는"],
 });
 
 arr.push({
-  img: "./source/daeheung/cafe/달쏘.jpeg",
+  img: "./source/daeheung/cafe/person/달쏘.jpeg",
   name: "달쏘",
   grade: 4.67,
   tag: ["#대화하기 좋은<br>", "#아늑한"],
 });
 
 arr.push({
-  img: "./source/daeheung/cafe/클로드.jpeg",
+  img: "./source/daeheung/cafe/person/클로드.jpeg",
   name: "클로드 커피",
   grade: 0,
   tag: ["#대화하기 좋은<br>", "#아늑한"],
 });
 
 arr.push({
-  img: "./source/daeheung/cafe/이어커피.jpeg",
+  img: "./source/daeheung/cafe/person/이어커피.jpeg",
   name: "이어커피 로스터스",
   grade: 0,
   tag: ["#대화하기 좋은<br>", "#커피가 맛있는"],
