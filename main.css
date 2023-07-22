@@ -40,15 +40,15 @@ body {
   align-items: center;
 }
 
-h1 {
+.first_page h1 {
   height: 100px;
   text-align: center;
 }
-h1 span {
+.first_page span {
   position: relative;
   top: 20px;
   display: inline-block;
-  animation: bounce 0.3s ease infinite alternate;
+  animation: bounces 0.3s ease infinite alternate;
   font-family: 'Bagel Fat One', cursive;
 
   font-size: 130px;
@@ -83,7 +83,7 @@ h1 span:nth-child(8) {
   margin-right: 50px;
 }
 
-@keyframes bounce {
+@keyframes bounces {
   100% {
     top: -20px;
     text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
