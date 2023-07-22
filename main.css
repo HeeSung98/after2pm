@@ -283,6 +283,7 @@ h1 span:nth-child(8) {
 }
 .second_page .firstCategory > div:hover {
   transform: scale(1.1);
+  cursor: pointer;
 }
 
 .second_page .region {
@@ -299,6 +300,7 @@ h1 span:nth-child(8) {
   max-width: 200px;
   position: fixed;
 }
+
 .second_page .secondCategory div {
   margin: 20px;
   padding: 10px 0px;
@@ -525,10 +527,7 @@ h1 span:nth-child(8) {
   border: 1px solid black;
   border-radius: 5px;
 }
-.second_page .picture {
-  /* height: 40vh; */
-  /* background-color: pink; */
-}
+
 .second_page .btn-primary {
   order: none;
   background-color: rgb(81, 154, 81);
@@ -691,4 +690,27 @@ h1 span:nth-child(8) {
 
 radio {
   vertical-align: middle;
+}
+
+/* 두번째 페이지 반응형 */
+@media screen and (max-width: 800px) {
+  .second_page .secondCategory {
+    max-width: 800px;
+    width: 100vw;
+    flex-direction: row;
+    justify-content: space-around;
+    position: fixed;
+    top: 160px;
+    background-color: white;
+    z-index: 30;
+  }
+  .second_page .secondCategory div {
+    width: 100px;
+  }
+  .second_page .tablelist {
+    position: relative;
+    top: 50px;
+    margin-left: 10%;
+    width: 90%;
+  }
 }
