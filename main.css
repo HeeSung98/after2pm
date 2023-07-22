@@ -687,8 +687,7 @@ h1 span:nth-child(8) {
     display: flex;
     justify-content: center;
   }
-}
-
-radio {
-  vertical-align: middle;
+  .second_page .secondCategory {
+    font-size: 13px;
+  }
 }
