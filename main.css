@@ -146,6 +146,8 @@ h1 span:nth-child(8) {
   justify-content: center;
   align-items: center;
 }
+
+/* 모달창 내부 div */
 .modal_content01 .modal_content_part > div {
   display: flex;
   justify-content: center;
@@ -154,13 +156,11 @@ h1 span:nth-child(8) {
 
 .modal_content01 .modal_content_part > label {
   font-size: 30px;
-  margin-right: 10px;
 }
 
 .modal_content01 .modal_content_part input {
   width: 30px;
   height: 30px;
-  margin-right: 10px;
 }
 
 .modal_content02 .modal_content_part {
@@ -171,13 +171,11 @@ h1 span:nth-child(8) {
 
 .modal_content02 .modal_content_part > label {
   font-size: 30px;
-  margin-right: 10px;
 }
 
 .modal_content02 .modal_content_part input {
   width: 30px;
   height: 30px;
-  margin-right: 10px;
 }
 
 /* second.html */
@@ -678,14 +676,19 @@ h1 span:nth-child(8) {
   .modal_content01 .modal_content_part > label {
     text-align: center;
     font-size: 15px;
-    margin-right: 10px;
+    margin: 0 2vw;
   }
   .modal_content02 .modal_content_part > label {
+    text-align: center;
     font-size: 15px;
-    margin-right: 10px;
+    margin: 0 5vw;
   }
-  .ff::after {
-    content: '\A';
-    white-space: pre;
+  .modal_content01 .modal_content_part > div {
+    display: flex;
+    justify-content: center;
   }
+}
+
+radio {
+  vertical-align: middle;
 }
