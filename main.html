@@ -55,7 +55,7 @@
           name = name + (i + 1)
           $(name).html(arr[i].name)
           $(name).click(function () {
-            window.open('./second_clicked/second_1.html')
+            window.open(arr[i].postLink)
           })
           $(function () {
             $(name).hover(
@@ -204,6 +204,10 @@
                 />놀거리</label
               >
             </div>
+          </div>
+
+          <div class="modal_content03 hidden">
+            <div class="modal_content_part">if() else if() else</div>
           </div>
 
           <p>
