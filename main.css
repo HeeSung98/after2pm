@@ -377,3 +377,7 @@ h1 span:nth-child(8) {
   top: 10px;
   right: 20px;
 }
+
+.hover {
+  color: red;
+}

@@ -42,28 +42,37 @@
         sc.setAttribute('src', scrArr[secondCategory - 1])
         $('head').append(sc)
 
-        // 객체 불러오기
-        let name = '#name'
-        let img = '#img'
-        let grade = '#grade'
-        let tag = '#tag'
         for (i = 0; i < arr.length; i++) {
+          // 객체 불러오기
+          let name = '#name'
+          let img = '#img'
+          let grade = '#grade'
+          let tag = '#tag'
           //사진
           img = img + (i + 1)
           $(img).attr('src', arr[i].img)
-          img = '#img'
-          //이름
+          //이름 및 링크
           name = name + (i + 1)
           $(name).html(arr[i].name)
-          name = '#name'
+          $(name).click(function () {
+            window.open('./second_clicked/second_1.html')
+          })
+          $(function () {
+            $(name).hover(
+              function () {
+                $(this).addClass('hover')
+              },
+              function () {
+                $(this).removeClass('hover')
+              }
+            )
+          })
           // 별점
           grade = grade + (i + 1)
           $(grade).text(arr[i].grade)
-          grade = '#grade'
           // 태그
           tag = tag + (i + 1)
           $(tag).html(arr[i].tag)
-          tag = '#tag'
         }
         $('.bi').addClass('bi-bookmark-heart')
         arr = []
@@ -337,11 +346,6 @@
         <div class="introForSecond hidden">종류를 골라주세요</div>
         <div class="tablelist hidden">
           <table>
-            <!-- <tr>
-            <th></th>
-            <th style="width: 100px"></th>
-            <th></th>
-          </tr> -->
             <tr>
               <td rowspan="3" style="height: 200px">
                 <!-- <div class="balloon hidden">찜하려면 눌러주세요</div> -->
