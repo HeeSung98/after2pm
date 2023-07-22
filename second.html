@@ -304,49 +304,49 @@
     let firstCategory = 0
     let secondCategory = 0
 
-    // 추가 한것
-    $('.firstCategory div').click(function (e) {
-      let firstCategoryText = e.currentTarget.textContent
-      $('.tablelist').addClass('hidden')
-      if (firstCategoryText == '식당') {
-        firstCategory = 1
-        $('#restaurantType').removeClass('hidden')
-        $('.introForSecond').removeClass('hidden')
-        $('#cafeType').addClass('hidden')
-        $('#playType').addClass('hidden')
-      } else if (firstCategoryText == '카페') {
-        firstCategory = 2
-        $('#restaurantType').addClass('hidden')
-        $('#cafeType').removeClass('hidden')
-        $('#playType').addClass('hidden')
-      } else if (firstCategoryText == '놀거리') {
-        firstCategory = 3
-        $('#restaurantType').addClass('hidden')
-        $('#cafeType').addClass('hidden')
-        $('#playType').removeClass('hidden')
-      }
-      // console.log(firstCategory);
-    })
+    // // 추가 한것
+    // $('.firstCategory div').click(function (e) {
+    //   let firstCategoryText = e.currentTarget.textContent
+    //   $('.tablelist').addClass('hidden')
+    //   if (firstCategoryText == '식당') {
+    //     firstCategory = 1
+    //     $('#restaurantType').removeClass('hidden')
+    //     $('.introForSecond').removeClass('hidden')
+    //     $('#cafeType').addClass('hidden')
+    //     $('#playType').addClass('hidden')
+    //   } else if (firstCategoryText == '카페') {
+    //     firstCategory = 2
+    //     $('#restaurantType').addClass('hidden')
+    //     $('#cafeType').removeClass('hidden')
+    //     $('#playType').addClass('hidden')
+    //   } else if (firstCategoryText == '놀거리') {
+    //     firstCategory = 3
+    //     $('#restaurantType').addClass('hidden')
+    //     $('#cafeType').addClass('hidden')
+    //     $('#playType').removeClass('hidden')
+    //   }
+    //   // console.log(firstCategory);
+    // })
 
-    $('.secondCategory div').click(function (e) {
-      let secondCategoryText = e.currentTarget.textContent
-      $('.introForSecond').addClass('hidden')
-      $('.tablelist').removeClass('hidden')
-      if (secondCategoryText == '한식') {
-        secondCategory = 1
-      } else if (secondCategoryText == '중식') {
-        secondCategory = 2
-      } else if (secondCategoryText == '일식') {
-        secondCategory = 3
-      } else if (secondCategoryText == '전체보기') {
-        secondCategory = 4
-      }
+    // $('.secondCategory div').click(function (e) {
+    //   let secondCategoryText = e.currentTarget.textContent
+    //   $('.introForSecond').addClass('hidden')
+    //   $('.tablelist').removeClass('hidden')
+    //   if (secondCategoryText == '한식') {
+    //     secondCategory = 1
+    //   } else if (secondCategoryText == '중식') {
+    //     secondCategory = 2
+    //   } else if (secondCategoryText == '일식') {
+    //     secondCategory = 3
+    //   } else if (secondCategoryText == '전체보기') {
+    //     secondCategory = 4
+    //   }
 
-      // secondCategory 값에 따라 script 파일 불러오기
-      let sc = document.createElement('script')
-      sc.setAttribute('src', scrArr[secondCategory - 1])
-      $('head').append(sc)
-    // 추가 끝
+    //   // secondCategory 값에 따라 script 파일 불러오기
+    //   let sc = document.createElement('script')
+    //   sc.setAttribute('src', scrArr[secondCategory - 1])
+    //   $('head').append(sc)
+    // // 추가 끝
 
     // table 값 불러오는 함수
     function showTable(secondCategory) {

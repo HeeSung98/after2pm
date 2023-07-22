@@ -275,7 +275,7 @@ h1 span:nth-child(8) {
 .second_page .leftDiv {
   display: inline-block;
   width: 65vw;
-  height: 100vh;
+  height: fit-content;
   background-color: rgb(255, 253, 238);
   /* border: 1px solid black; */
   border-radius: 5px;
@@ -314,6 +314,31 @@ h1 span:nth-child(8) {
 }
 .second_page .menu td:last-child {
   text-align: right;
+}
+/* 리뷰창 스타일 */
+.second_page .review table {
+  width: fit-content;
+  height: fit-content;
+  background-color: rgb(255, 253, 238);
+}
+.second_page .review td {
+  border: none;
+  padding: 0px 5px;
+}
+.second_page .review button {
+  border: none;
+  border-radius: 5px;
+}
+.second_page .review .reviewStar {
+  text-align: left;
+  font-size: 15px;
+}
+.second_page .bi-person-circle {
+  padding-right: 10px;
+  font-size: 40px;
+}
+.second_page .reviewStar {
+  margin-left: 30px;
 }
 
 .second_page .rightDiv {

@@ -327,7 +327,34 @@
               </div>
             </div>
             <br />
-            <div class="review">리뷰</div>
+            <div class="review">
+              리뷰
+              <div>
+                <table>
+                  <tr>
+                    <td><button>방문자리뷰</button></td>
+                    <td>|</td>
+                    <td><button>블로그리뷰</button></td>
+                  </tr>
+                </table>
+              </div>
+              <table class="reviewStar hidden">
+                <tr>
+                  <td><i class="bi-person-circle"></i>sh들꽃</td>
+                  <!-- <td>sh 돌꽃</td> -->
+                </tr>
+                <tr>
+                  <td>⭐⭐⭐⭐</td>
+                </tr>
+                <tr>
+                  <td>
+                    스시 너무 신선하고 모둠 튀김이 지인짜 마싯어요 후토마끼도
+                    반줄 시켰는데 워낙 커서 그런지 든든했어요 가격대가 좀 있는
+                    만큼 퀄리티도 높아서 만족스런 식사엿네요😍
+                  </td>
+                </tr>
+              </table>
+            </div>
             <br />
           </div>
           <div class="rightDiv">
@@ -446,6 +473,15 @@
         alert('최소 1명의 인원을 선택해주세요.')
       } else {
         alert('업체확인 후 예약완료 창으로 넘어갑니다.')
+      }
+    })
+
+    // 방문자리뷰 hidden 클래스 삭제
+    $('.review button').click(function (e) {
+      if ($(e.currentTarget).text() == '방문자리뷰') {
+        $('.reviewStar').removeClass('hidden')
+      } else {
+        $('.reviewStar').addClass('hidden')
       }
     })
   </script>
