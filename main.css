@@ -668,8 +668,13 @@ h1 span:nth-child(8) {
   border-radius: 5px;
   padding: 5px 10px;
 }
+
 .second_page .reserve button:hover {
   transform: scale(1.1);
+}
+
+.tdName:hover {
+  color: red;
 }
 
 @media screen and (max-width: 800px) {
