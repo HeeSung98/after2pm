@@ -48,6 +48,7 @@
           let img = '#img'
           let grade = '#grade'
           let tag = '#tag'
+          let postLink = arr[i].postLink
           //사진
           img = img + (i + 1)
           $(img).attr('src', arr[i].img)
@@ -55,7 +56,8 @@
           name = name + (i + 1)
           $(name).html(arr[i].name)
           $(name).click(function () {
-            window.open(arr[i].postLink)
+            console.log(postLink)
+            window.open(postLink)
           })
           $(function () {
             $(name).hover(
@@ -140,7 +142,7 @@
                   id="check01"
                   name="select_region"
                   value="대흥"
-                />대흥</label
+                /><br />대흥</label
               >
               <label for="check02"
                 ><input
@@ -148,7 +150,7 @@
                   id="check02"
                   name="select_region"
                   value="홍대"
-                />홍대</label
+                /><br />홍대</label
               >
               <label for="check03"
                 ><input
@@ -156,7 +158,7 @@
                   id="check03"
                   name="select_region"
                   value="연남"
-                />연남</label
+                /><br />연남</label
               >
               <label for="check04"
                 ><input
@@ -164,7 +166,7 @@
                   id="check04"
                   name="select_region"
                   value="신촌"
-                />신촌</label
+                /><br />신촌</label
               >
               <label for="check05"
                 ><input
@@ -172,7 +174,7 @@
                   id="check05"
                   name="select_region"
                   value="이대"
-                />이대</label
+                /><br />이대</label
               >
             </div>
           </div>

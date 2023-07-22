@@ -482,3 +482,15 @@ td {
 .hover {
   color: red;
 }
+
+@media screen and (max-width: 800px) {
+  .modal_content01 .modal_content_part > label {
+    text-align: center;
+    font-size: 15px;
+    margin-right: 10px;
+  }
+  .ff::after {
+    content: '\A';
+    white-space: pre;
+  }
+}
