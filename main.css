@@ -489,6 +489,10 @@ td {
     font-size: 15px;
     margin-right: 10px;
   }
+  .modal_content02 .modal_content_part > label {
+    font-size: 15px;
+    margin-right: 10px;
+  }
   .ff::after {
     content: '\A';
     white-space: pre;
