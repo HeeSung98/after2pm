@@ -86,21 +86,25 @@
         if (typeof el != 'string') {
           option = el.value
         }
-        console.log(option)
+        // console.log(option)
 
         if (option == '대흥') {
           scrArr = [
             './source/daeheung/restaurant/korean/korean.js',
             './source/daeheung/restaurant/chinese/chinese.js',
             './source/daeheung/restaurant/japanese/japanese.js',
-            './source/daeheung/cafe/cafe.js',
+            './source/daeheung/cafe/person/cafe.js',
+            './source/daeheung/cafe/fran/cafe.js',
+            './source/daeheung/playground/playground.js',
           ]
         } else if (option == '연남') {
           scrArr = [
             './source/yeonnam/restaurant/korean/korean.js',
             './source/yeonnam/restaurant/chinese/chinese.js',
             './source/yeonnam/restaurant/japanese/japanese.js',
-            './source/yeonnam/cafe/cafe.js',
+            './source/yeonnam/cafe/person/cafe.js',
+            './source/yeonnam/cafe/fran/cafe.js',
+            './source/yeonnam/playground/playground.js',
           ]
         }
         showTable(secondCategory)
@@ -572,13 +576,11 @@
         $('#playType').addClass('hidden')
       } else if (firstCategoryText == '카페') {
         firstCategory = 2
-        $('.tablelist').removeClass('hidden')
-        $('.introForSecond').addClass('hidden')
+        $('.tablelist').addClass('hidden')
+        $('.introForSecond').removeClass('hidden')
         $('#restaurantType').addClass('hidden')
         $('#cafeType').removeClass('hidden')
         $('#playType').addClass('hidden')
-        secondCategory = 4
-        showTable(secondCategory)
       } else if (firstCategoryText == '놀거리') {
         firstCategory = 3
         $('.tablelist').removeClass('hidden')
@@ -586,7 +588,7 @@
         $('#restaurantType').addClass('hidden')
         $('#cafeType').addClass('hidden')
         $('#playType').removeClass('hidden')
-        secondCategory = 5
+        secondCategory = 6
         showTable(secondCategory)
       }
     })
@@ -595,13 +597,12 @@
       let secondCategoryText = e.currentTarget.textContent
       $('.introForSecond').addClass('hidden')
       $('.tablelist').removeClass('hidden')
-      if (secondCategoryText == '한식') {
-        secondCategory = 1
-      } else if (secondCategoryText == '중식') {
-        secondCategory = 2
-      } else if (secondCategoryText == '일식') {
-        secondCategory = 3
-      }
+      if (secondCategoryText == '한식') secondCategory = 1
+      else if (secondCategoryText == '중식') secondCategory = 2
+      else if (secondCategoryText == '일식') secondCategory = 3
+      else if (secondCategoryText == '개인') secondCategory = 4
+      else if (secondCategoryText == '프랜차이즈') secondCategory = 5
+
       showTable(secondCategory)
     })
   </script>
