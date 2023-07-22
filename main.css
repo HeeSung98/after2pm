@@ -478,3 +478,7 @@ td {
   width: 400px;
   /* margin: 0% 25%; */
 }
+
+.hover {
+  color: red;
+}
