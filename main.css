@@ -79,7 +79,7 @@ h1 span:nth-child(8) {
   animation-delay: 0.7s;
 }
 
-.ff {
+.first_page .ff {
   margin-right: 50px;
 }
 
@@ -154,13 +154,17 @@ h1 span:nth-child(8) {
   margin: 0 15px;
 }
 
-.modal_content01 .modal_content_part > label {
+.modal_content01 .modal_content_part label {
   font-size: 30px;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
 .modal_content01 .modal_content_part input {
   width: 30px;
   height: 30px;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
 .modal_content02 .modal_content_part {
@@ -169,13 +173,50 @@ h1 span:nth-child(8) {
   align-items: center;
 }
 
-.modal_content02 .modal_content_part > label {
+.modal_content02 .modal_content_part > div {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  /* margin: 0 15px; */
+}
+
+.modal_content02 .modal_content_part label {
+  vertical-align: middle;
   font-size: 30px;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
 .modal_content02 .modal_content_part input {
   width: 30px;
   height: 30px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+/* 반응형 모달창 */
+@media screen and (max-width: 1000px) {
+  .modal_content01 .modal_content_part > div {
+    margin: 0;
+  }
+  .modal_content01 .modal_content_part label {
+    text-align: center;
+    font-size: 15px;
+    margin-left: 2vw;
+    margin-right: 2vw;
+  }
+  .modal_content01 .modal_content_part input {
+    width: 15px;
+    height: 15px;
+  }
+  .modal_content02 .modal_content_part label {
+    font-size: 15px;
+  }
+
+  .first_page .ff::after {
+    content: '\A';
+    white-space: pre;
+  }
 }
 
 /* second.html */
@@ -247,16 +288,12 @@ h1 span:nth-child(8) {
   animation-delay: 0.7s;
 }
 
-.ff {
-  margin-right: 50px;
-}
-
 @keyframes bounce {
   100% {
     top: 20px;
-    /* text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
       0 5px 0 #ccc, 0 6px 0 #ccc, 0 7px 0 #ccc, 0 8px 0 #ccc, 0 9px 0 #ccc,
-      0 50px 25px rgba(0, 0, 0, 0.2); */
+      0 50px 25px rgba(0, 0, 0, 0.2);
   }
 }
 .second_page div.head {
