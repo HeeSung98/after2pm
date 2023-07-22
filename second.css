@@ -277,9 +277,9 @@ h1 span:nth-child(8) {
   width: 65vw;
   height: fit-content;
   background-color: rgb(255, 253, 238);
-  /* border: 1px solid black; */
   border-radius: 5px;
   margin-right: 4vw;
+  margin-bottom: 50px;
 }
 
 /* 소개/메뉴/리뷰창 스타일 */
@@ -327,9 +327,10 @@ h1 span:nth-child(8) {
 }
 .second_page .review button {
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 .second_page .review .reviewStar {
+  margin-top: 30px;
   text-align: left;
   font-size: 15px;
 }
@@ -338,9 +339,10 @@ h1 span:nth-child(8) {
   font-size: 40px;
 }
 .second_page .reviewStar {
-  margin-left: 30px;
+  margin: 0px 30px;
 }
 
+/* rightDiv */
 .second_page .rightDiv {
   display: inline-block;
   width: 20vw;
@@ -348,10 +350,10 @@ h1 span:nth-child(8) {
   border: 1px solid black;
   border-radius: 5px;
 }
-.second_page .picture {
-  /* height: 40vh; */
-  /* background-color: pink; */
+.second_page .rightDiv .tag {
+  padding: 5px;
 }
+
 .second_page .btn-primary {
   order: none;
   background-color: rgb(81, 154, 81);
@@ -491,6 +493,35 @@ h1 span:nth-child(8) {
   border-radius: 5px;
   padding: 5px 10px;
 }
-.second_page .reserve button:hover {
+.second_page .fullDiv button:hover {
   transform: scale(1.1);
+}
+
+/* 지도 */
+.second_page .map {
+  display: flex;
+  align-items: center;
+}
+.second_page .map iframe {
+  margin: 0px 30px 30px 50px;
+  width: 50%;
+}
+.second_page .map div {
+  margin-right: 20px;
+  font-size: 20px;
+}
+
+/* 반응형 - 세번째 페이지 (예약창) */
+@media screen and (max-width: 1000px) {
+  .second_page .fullDiv {
+    display: block;
+  }
+  .second_page .rightDiv {
+    width: 80vw;
+    position: relative;
+    top: 20px;
+  }
+  .second_page .leftDiv {
+    width: 80vw;
+  }
 }
