@@ -17,7 +17,7 @@ arr.push({
     '사시미모리와세 3인(75,000원)',
     '특선스시(19,000원)',
   ],
-  postLink: './second_clicked/second_1.html',
+  postLink: './second_clicked/스시복.html',
 })
 
 arr.push({
