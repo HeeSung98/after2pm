@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>after2pm_third</title>
+    <title>뤼미에르퍼퓸 연남</title>
     <link
       rel="stylesheet"
       href="./bootstrap-5.2.3/dist/js/bootstrap.bundle.min.js"
@@ -377,6 +377,11 @@
                   </td>
                 </tr>
               </table>
+              <table class="reviewBlog hidden">
+                <tr>
+                  <td>아직 등록된 리뷰가 없습니다 :(</td>
+                </tr>
+              </table>
             </div>
             <br />
             <div class="map">
@@ -513,8 +518,10 @@
     $('.review button').click(function (e) {
       if ($(e.currentTarget).text() == '방문자리뷰') {
         $('.reviewStar').removeClass('hidden')
+        $('.reviewBlog').addCladd('hidden')
       } else {
         $('.reviewStar').addClass('hidden')
+        $('.reviewBlog').removeClass('hidden')
       }
     })
   </script>
