@@ -212,6 +212,10 @@ h1 span:nth-child(8) {
   .modal_content02 .modal_content_part label {
     font-size: 15px;
   }
+  .modal_content02 .modal_content_part input {
+    width: 15px;
+    height: 15px;
+  }
 
   .first_page .ff::after {
     content: '\A';
