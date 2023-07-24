@@ -341,6 +341,10 @@ h1 span:nth-child(8) {
 .second_page .reviewStar {
   margin: 0px 30px;
 }
+.second_page .reviewBlog {
+  margin: 30px;
+  text-align: center;
+}
 
 /* rightDiv */
 .second_page .rightDiv {
