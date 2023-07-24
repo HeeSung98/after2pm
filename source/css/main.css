@@ -455,6 +455,9 @@ h1 span:nth-child(8) {
   top: 10px;
   right: 20px;
 }
+.second_page .bi:hover {
+  cursor: pointer;
+}
 
 /* 테이블 크기 조정 */
 .second_page .tablelist tr:first-child td:first-child {
