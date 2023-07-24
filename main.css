@@ -674,6 +674,7 @@ h1 span:nth-child(8) {
 
 .tdName:hover {
   color: red;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 800px) {

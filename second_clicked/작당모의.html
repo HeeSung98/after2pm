@@ -403,6 +403,11 @@
                   </td>
                 </tr>
               </table>
+              <table class="reviewBlog hidden">
+                <tr>
+                  <td>아직 등록된 리뷰가 없습니다 :(</td>
+                </tr>
+              </table>
             </div>
             <br />
             <div class="map">
@@ -539,8 +544,10 @@
     $('.review button').click(function (e) {
       if ($(e.currentTarget).text() == '방문자리뷰') {
         $('.reviewStar').removeClass('hidden')
+        $('.reviewBlog').addClass('hidden')
       } else {
         $('.reviewStar').addClass('hidden')
+        $('.reviewBlog').removeClass('hidden')
       }
     })
   </script>
