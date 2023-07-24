@@ -18,7 +18,7 @@ arr.push({
     '아메리카노 (5,800원)',
     '카페라떼 (6,300원)',
   ],
-  postlink: './second_clicked/작당모의.html/',
+  postLink: './second_clicked/작당모의.html',
 })
 
 arr.push({

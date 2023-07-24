@@ -13,7 +13,7 @@ arr.push({
     '복춘 라즈지 (47,000원)',
     '목화솜 어향가지 (49,000원)',
   ],
-  postlink: './second_clicked/중화복춘.html/',
+  postLink: './second_clicked/중화복춘.html',
 })
 
 arr.push({

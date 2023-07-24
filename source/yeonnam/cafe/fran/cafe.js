@@ -6,7 +6,7 @@ arr.push({
   // zzim: 체크박스 selected?,
   // explain: "",
   // menu: [],
-  postlink: './second_clicked/스타벅스 홍대동교점.html/',
+  postLink: './second_clicked/스타벅스 홍대동교점.html',
 })
 
 arr.push({

@@ -7,7 +7,7 @@ arr.push({
     '연남동에 위치한 일식 다이닝, 오마카세 런치 12:00부터 80,000원 디너 18:00부터 150,000원입니다.',
   ],
   menu: ['런치(80,000원)', '디너(150,000원)'],
-  postlink: './second_clicked/스시정인.html/',
+  postLink: './second_clicked/스시정인.html',
 })
 
 arr.push({

@@ -5,7 +5,7 @@ arr.push({
   tag: ['#향수공방', '#서율향수공방'],
   explain:
     '안녕하세요. 소수인원으로 운영되는 보다 집중있게 , 질높은 원데이 클래스 제공. 타 향수공방과 다른 편한 분위기에 직접 조향할수 있는 강점이 있는 공방입니다.',
-  postlink: './second_clicked/향수공방연남.html/',
+  postLink: './second_clicked/향수공방연남.html',
 })
 
 arr.push({
