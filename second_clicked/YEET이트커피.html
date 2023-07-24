@@ -453,7 +453,7 @@
                 </tr>
                 <tr>
                   <td>
-                    <button disabled>9:00</button>
+                    <button>9:00</button>
                     <button>10:00</button>
                     <button>11:00</button>
                     <button>12:00</button>
@@ -465,7 +465,7 @@
                 <tr>
                   <td>
                     <button>13:00</button>
-                    <button disabled>14:00</button>
+                    <button>14:00</button>
                     <button>18:00</button>
                     <button>19:00</button>
                     <button>20:00</button>
@@ -500,15 +500,16 @@
       $(firstCategorySelected).addClass('selected')
     })
 
+    let i = 1
     $('.reserveTime button').click(function (e) {
       $('.reserveTime button').attr('disabled', true)
       $(e.currentTarget).attr('disabled', false)
       $(e.currentTarget).addClass('timeSelected')
       $('.reservePeople').removeClass('hidden')
+      i = 1
     })
 
     // 예약 인원 증감
-    let i = 1
     $('.countPlus').click(function () {
       i++
       $('.countResult').text(i)
