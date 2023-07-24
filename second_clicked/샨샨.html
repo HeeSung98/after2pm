@@ -390,21 +390,26 @@
                   </td>
                 </tr>
               </table>
-              <div class="map">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3163.282578691063!2d126.94273456124068!3d37.54840567192674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c99970530f3cd%3A0x60653a128fd5f9f2!2z7IOo7IOo!5e0!3m2!1sko!2skr!4v1689996658308!5m2!1sko!2skr"
-                  width="600"
-                  height="450"
-                  style="border: 0"
-                  allowfullscreen=""
-                  loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"
-                >
-                </iframe>
-                <div>서울특별시 마포구 염리동 숭문길 43</div>
-              </div>
+              <table class="reviewBlog hidden">
+                <tr>
+                  <td>아직 등록된 리뷰가 없습니다 :(</td>
+                </tr>
+              </table>
             </div>
             <br />
+            <div class="map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3163.282578691063!2d126.94273456124068!3d37.54840567192674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c99970530f3cd%3A0x60653a128fd5f9f2!2z7IOo7IOo!5e0!3m2!1sko!2skr!4v1689996658308!5m2!1sko!2skr"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              >
+              </iframe>
+              <div>서울특별시 마포구 염리동 숭문길 43</div>
+            </div>
           </div>
           <div class="rightDiv">
             <div class="tag">
@@ -528,8 +533,10 @@
     $('.review button').click(function (e) {
       if ($(e.currentTarget).text() == '방문자리뷰') {
         $('.reviewStar').removeClass('hidden')
+        $('reviewBlog').addClass('hidden')
       } else {
         $('.reviewStar').addClass('hidden')
+        $('.reviewBlog').removeClass('hidden')
       }
     })
   </script>
