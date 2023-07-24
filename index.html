@@ -3,7 +3,641 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>index</title>
+    <title>after2pm</title>
+    <link
+      rel="stylesheet"
+      href="./bootstrap-5.2.3/dist/js/bootstrap.bundle.min.js"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <!-- switchClass 사용을 위한 jquery ui 추가 -->
+    <script
+      src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"
+      integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./source/css/main.css" />
+    <script>
+      let order = 1
+      let arr = []
+      let firstCategory = 0
+      let secondCategory = 0
+
+      // table 값 불러오는 함수
+      function showTable(secondCategory) {
+        // secondCategory 값에 따라 script 파일 불러오기
+        let sc = document.createElement('script')
+        sc.setAttribute('src', scrArr[secondCategory - 1])
+        $('head').append(sc)
+
+        for (i = 0; i < arr.length; i++) {
+          // 객체 불러오기
+          let name = '#name'
+          let img = '#img'
+          let grade = '#grade'
+          let tag = '#tag'
+          let postLink = arr[i].postLink
+          //사진
+          img = img + (i + 1)
+          $(img).attr('src', arr[i].img)
+          //이름 및 링크
+          name = name + (i + 1)
+          $(name).html(
+            '<a href="' + postLink + '" target="_blank">' + arr[i].name + '</a>'
+          )
+          console.log('postLink: ' + postLink)
+          $(name).click(function () {})
+          $(function () {
+            $(name).hover(
+              function () {
+                $(this).addClass('tdName')
+              },
+              function () {
+                $(this).removeClass('tdName')
+              }
+            )
+          })
+          // 별점
+          grade = grade + (i + 1)
+          $(grade).text(arr[i].grade)
+          // 태그
+          tag = tag + (i + 1)
+          $(tag).html(arr[i].tag)
+        }
+        $('.bi').addClass('bi-bookmark-heart')
+        arr = []
+      }
+
+      let scrArr = []
+      let option // 지역을 담는 변수
+
+      function region(el) {
+        console.log(el)
+        if (typeof el != 'string') {
+          option = el.value
+        }
+        // console.log(option)
+
+        if (option == '대흥') {
+          scrArr = [
+            './source/daeheung/restaurant/korean/korean.js',
+            './source/daeheung/restaurant/chinese/chinese.js',
+            './source/daeheung/restaurant/japanese/japanese.js',
+            './source/daeheung/cafe/person/cafe.js',
+            './source/daeheung/cafe/fran/cafe.js',
+            './source/daeheung/playground/playground.js',
+          ]
+        } else if (option == '연남') {
+          scrArr = [
+            './source/yeonnam/restaurant/korean/korean.js',
+            './source/yeonnam/restaurant/chinese/chinese.js',
+            './source/yeonnam/restaurant/japanese/japanese.js',
+            './source/yeonnam/cafe/person/cafe.js',
+            './source/yeonnam/cafe/fran/cafe.js',
+            './source/yeonnam/playground/playground.js',
+          ]
+        }
+        showTable(secondCategory)
+      }
+    </script>
   </head>
-  <body></body>
+  <body>
+    <div class="first_page">
+      <div class="container openBtn">
+        <h1>
+          <span>2</span>
+          <span>시</span>
+          <span class="ff">에</span>
+          <span>뭐</span>
+          <span>해</span>
+          <span>?</span>
+        </h1>
+      </div>
+
+      <div class="modal hidden">
+        <div class="bg"></div>
+        <div class="modalBox">
+          <button
+            class="btn btn-danger"
+            id="btnClose"
+            style="position: absolute; right: 20px; width: 50px"
+          >
+            ✖</button
+          ><br />
+
+          <div class="modal_content01">
+            <!-- 지역 선택 시작-->
+            <div class="modal_content_part">
+              <div>
+                <label for="check01"
+                  ><input
+                    type="radio"
+                    id="check01"
+                    name="select_region"
+                    value="대흥"
+                  /><br />대흥</label
+                >
+              </div>
+              <div>
+                <label for="check03"
+                  ><input
+                    type="radio"
+                    id="check03"
+                    name="select_region"
+                    value="연남"
+                  /><br />연남</label
+                >
+              </div>
+              <div>
+                <label for="check02"
+                  ><input
+                    type="radio"
+                    id="check02"
+                    name="select_region"
+                    value="홍대"
+                  /><br />홍대</label
+                >
+              </div>
+              <div>
+                <label for="check04"
+                  ><input
+                    type="radio"
+                    id="check04"
+                    name="select_region"
+                    value="신촌"
+                  /><br />신촌</label
+                >
+              </div>
+              <div>
+                <label for="check05"
+                  ><input
+                    type="radio"
+                    id="check05"
+                    name="select_region"
+                    value="이대"
+                  /><br />이대</label
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="modal_content02 hidden">
+            <div class="modal_content_part">
+              <div>
+                <label for="select_food"
+                  ><input
+                    type="radio"
+                    id="select_food"
+                    name="select_part"
+                    value="식당"
+                  /><br />식당</label
+                >
+              </div>
+              <div>
+                <label for="select_cafe"
+                  ><input
+                    type="radio"
+                    id="select_cafe"
+                    name="select_part"
+                    value="카페"
+                  /><br />카페</label
+                >
+              </div>
+              <div>
+                <label for="select_play"
+                  ><input
+                    type="radio"
+                    id="select_play"
+                    name="select_part"
+                    value="놀거리"
+                  /><br />놀거리</label
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- 세번째 모달창 한식 중식 일식 선택 -->
+          <div class="modal_content03 hidden">
+            <div class="modal_content_part"></div>
+          </div>
+
+          <!-- 네번째 모달창 개인 프랜차이즈 선택 -->
+          <div class="modal_content03 hidden">
+            <div class="modal_content_part"></div>
+          </div>
+
+          <p>
+            <button class="btn btn-primary" id="btnNext">다음</button>
+          </p>
+        </div>
+      </div>
+      <!-- 첫번쨰 모달창 끝 -->
+      <script>
+        let select_region_result
+        let select_part_result
+
+        const open = () => {
+          document.querySelector('.modal').classList.remove('hidden')
+        }
+
+        const close = () => {
+          document.querySelector('.modal').classList.add('hidden')
+        }
+
+        const next = () => {
+          if (order == 1) {
+            // 선택된 값 없으면 넘어가지 않게 하기
+            var listRegion = $('input[name=select_region]').is(':checked')
+
+            option = $('input[name=select_region]:checked').val()
+            console.log(option)
+            region(option)
+
+            if (listRegion == true) {
+              input_region = $('input[name=select_region]:checked').val()
+              document.querySelector('.modal_content01').classList.add('hidden')
+              document
+                .querySelector('.modal_content02')
+                .classList.remove('hidden')
+              order++
+
+              // region 선택 된 후에 region()함수 실행되게 하기
+            } else alert('선택 해주세요')
+          } else if (order == 2) {
+            var listPart = $('input[name=select_part]').is(':checked')
+            if (listPart == true) {
+              // 첫번째 페이지 숨기고 두번째 페이지 보여주기
+              document.querySelector('.first_page').classList.add('hidden')
+              document.querySelector('.second_page').classList.remove('hidden')
+              // second로 넘어가게 선택된 정보가 넘어가게
+              $('input:checkbox[name=select_region]').each(function (index) {
+                if ($(this).is(':checked') == true) {
+                  // console.log($(this).val());
+                  select_region_result = $(this).val()
+                  // console.log(select_region_result);
+                }
+              })
+              $('input:radio[name=select_part]').each(function (index) {
+                if ($(this).is(':checked') == true) {
+                  // console.log($(this).val());
+                  select_part_result = $(this).val()
+                }
+              })
+
+              if (select_part_result == '식당') {
+                //   firstCategory = 1;
+                $('#restaurantType').removeClass('hidden')
+                $('#cafeType').addClass('hidden')
+                $('#playType').addClass('hidden')
+              } else if (select_part_result == '카페') {
+                //   firstCategory = 2;
+                $('#restaurantType').addClass('hidden')
+                $('#cafeType').removeClass('hidden')
+                $('#playType').addClass('hidden')
+              } else if (select_part_result == '놀거리') {
+                //   firstCategory = 3;
+                $('#restaurantType').addClass('hidden')
+                $('#cafeType').addClass('hidden')
+                $('#playType').removeClass('hidden')
+              }
+            } else alert('선택 해주세요')
+          }
+        }
+
+        document.querySelector('.openBtn').addEventListener('click', open)
+        document.querySelector('#btnClose').addEventListener('click', close)
+        document.querySelector('#btnNext').addEventListener('click', next)
+        document.querySelector('.bg').addEventListener('click', close)
+      </script>
+
+      <!-- 두번째 페이지 지역 선택 스크립트 -->
+      <script></script>
+    </div>
+
+    <!-- 두번째 페이지 시작 -->
+
+    <div class="second_page hidden">
+      <header>
+        <div class="head">
+          <h1>
+            <span>2</span>
+            <span>시</span>
+            <span class="ff">에</span>
+            <span>뭐</span>
+            <span>해</span>
+            <span>?</span>
+          </h1>
+        </div>
+        <div>
+          <select class="region" onchange="region(this)">
+            <option selected disabled>지역</option>
+            <option value="대흥">대흥</option>
+            <option value="연남">연남</option>
+            <option value="신촌">신촌</option>
+            <option value="이대">이대</option>
+            <option value="홍대">홍대</option>
+          </select>
+        </div>
+
+        <div class="firstCategory">
+          <div id="restaurant">식당</div>
+          <div id="cafe">카페</div>
+          <div id="play">놀거리</div>
+        </div>
+      </header>
+
+      <main>
+        <div class="secondCategory" id="restaurantType">
+          <div class="btnkorean">한식</div>
+          <!-- <div>양식</div> -->
+          <div class="btnchinese">중식</div>
+          <div class="btnjapanese">일식</div>
+          <!-- <div>아시안</div> -->
+        </div>
+        <div class="secondCategory hidden" id="cafeType">
+          <div class="person">개인</div>
+          <div class="fran">프랜차이즈</div>
+        </div>
+        <div class="secondCategory hidden" id="playType">
+          <div class="showbtn">전체보기</div>
+          <!-- <div class="activitybtn">액티비티</div>
+        <div class="etcbtn">기타</div> -->
+        </div>
+        <div class="introForSecond hidden">종류를 골라주세요</div>
+        <div class="tablelist hidden">
+          <table>
+            <tr>
+              <td rowspan="3" style="height: 200px">
+                <!-- <div class="balloon hidden">찜하려면 눌러주세요</div> -->
+                <img id="img1" />
+                <i class="bi" id="zzim1"> </i>
+              </td>
+              <td>이름</td>
+              <td id="name1"><a href="" target="_blank" id="a1">~~</a></td>
+            </tr>
+            <tr>
+              <td>별점</td>
+              <td id="grade1">4.5</td>
+            </tr>
+            <tr>
+              <td>태그</td>
+              <td id="tag1">#—</td>
+            </tr>
+          </table>
+          <table>
+            <tr>
+              <td rowspan="3" style="height: 200px">
+                <img id="img2" />
+                <i class="bi" id="zzim2"></i>
+              </td>
+              <td>이름</td>
+              <td id="name2">~~</td>
+            </tr>
+            <tr>
+              <td>별점</td>
+              <td id="grade2">4.5</td>
+            </tr>
+            <tr>
+              <td>태그</td>
+              <td id="tag2">#—</td>
+            </tr>
+          </table>
+          <table>
+            <tr>
+              <td rowspan="3" style="height: 200px">
+                <img id="img3" />
+                <i class="bi" id="zzim3"></i>
+              </td>
+              <td>이름</td>
+              <td id="name3">~~</td>
+            </tr>
+            <tr>
+              <td>별점</td>
+              <td id="grade3">4.5</td>
+            </tr>
+            <tr>
+              <td>태그</td>
+              <td id="tag3">#—</td>
+            </tr>
+          </table>
+          <table>
+            <tr>
+              <td rowspan="3" style="height: 200px">
+                <img id="img4" />
+                <i class="bi" id="zzim4"></i>
+              </td>
+              <td>이름</td>
+              <td id="name4">~~</td>
+            </tr>
+            <tr>
+              <td>별점</td>
+              <td id="grade4">4.5</td>
+            </tr>
+            <tr>
+              <td>태그</td>
+              <td id="tag4">#—</td>
+            </tr>
+          </table>
+          <table>
+            <tr>
+              <td rowspan="3" style="height: 200px">
+                <img id="img5" />
+                <i class="bi" id="zzim5"></i>
+              </td>
+              <td>이름</td>
+              <td id="name5">~~</td>
+            </tr>
+            <tr>
+              <td>별점</td>
+              <td id="grade5">4.5</td>
+            </tr>
+            <tr>
+              <td>태그</td>
+              <td id="tag5">#—</td>
+            </tr>
+          </table>
+          <table>
+            <tr>
+              <td rowspan="3" style="height: 200px">
+                <img id="img6" />
+                <i class="bi" id="zzim6"></i>
+              </td>
+              <td>이름</td>
+              <td id="name6">~~</td>
+            </tr>
+            <tr>
+              <td>별점</td>
+              <td id="grade6">4.5</td>
+            </tr>
+            <tr>
+              <td>태그</td>
+              <td id="tag6">#—</td>
+            </tr>
+          </table>
+          <table>
+            <tr>
+              <td rowspan="3" style="height: 200px">
+                <img id="img7" />
+                <i class="bi" id="zzim7"></i>
+              </td>
+              <td>이름</td>
+              <td id="name7">~~</td>
+            </tr>
+            <tr>
+              <td>별점</td>
+              <td id="grade7">4.5</td>
+            </tr>
+            <tr>
+              <td>태그</td>
+              <td id="tag7">#—</td>
+            </tr>
+          </table>
+          <table>
+            <tr>
+              <td rowspan="3" style="height: 200px">
+                <img id="img8" />
+                <i class="bi" id="zzim8"></i>
+              </td>
+              <td>이름</td>
+              <td id="name8">~~</td>
+            </tr>
+            <tr>
+              <td>별점</td>
+              <td id="grade8">4.5</td>
+            </tr>
+            <tr>
+              <td>태그</td>
+              <td id="tag8">#—</td>
+            </tr>
+          </table>
+          <table>
+            <tr>
+              <td rowspan="3" style="height: 200px">
+                <img id="img9" />
+                <i class="bi" id="zzim9"></i>
+              </td>
+              <td>이름</td>
+              <td id="name9">~~</td>
+            </tr>
+            <tr>
+              <td>별점</td>
+              <td id="grade9">4.5</td>
+            </tr>
+            <tr>
+              <td>태그</td>
+              <td id="tag9">#—</td>
+            </tr>
+          </table>
+          <table>
+            <tr>
+              <td rowspan="3" style="height: 200px">
+                <img id="img10" />
+                <i class="bi" id="zzim"></i>
+              </td>
+              <td>이름</td>
+              <td id="name10">~~</td>
+            </tr>
+            <tr>
+              <td>별점</td>
+              <td id="grade10">4.5</td>
+            </tr>
+            <tr>
+              <td>태그</td>
+              <td id="tag10">#—</td>
+            </tr>
+          </table>
+        </div>
+      </main>
+    </div>
+  </body>
+
+  <script>
+    // 찜버튼
+    $('.bi').click(function (e) {
+      let zzim = e.currentTarget
+      if ($(zzim).hasClass('bi-bookmark-heart-fill')) {
+        $(zzim).switchClass('bi-bookmark-heart-fill', 'bi-bookmark-heart')
+      } else {
+        $(zzim).switchClass('bi-bookmark-heart', 'bi-bookmark-heart-fill')
+      }
+    })
+
+    // 찜 - 말풍선
+    let div = document.createElement('div')
+    div.innerText = '찜하려면 눌러주세요'
+    $(div).addClass('balloon hidden')
+    $('.bi').before(div)
+
+    $('.bi').hover(
+      function (e) {
+        $(e.currentTarget).prev().removeClass('hidden')
+      },
+      function (e) {
+        $(e.currentTarget).prev().addClass('hidden')
+      }
+    )
+
+    // 식당/카페/놀거리 선택 (카페/놀거리 선택 시, table 바로 불러옴)
+    $('.firstCategory div').click(function (e) {
+      $('.firstCategory div').removeClass('selected')
+      let firstCategorySelected = e.currentTarget
+      $(firstCategorySelected).addClass('selected')
+      let firstCategoryText = e.currentTarget.textContent
+      if (firstCategoryText == '식당') {
+        firstCategory = 1
+        $('.tablelist').addClass('hidden')
+        $('.introForSecond').removeClass('hidden')
+        $('#restaurantType').removeClass('hidden')
+        $('#cafeType').addClass('hidden')
+        $('#playType').addClass('hidden')
+      } else if (firstCategoryText == '카페') {
+        firstCategory = 2
+        $('.tablelist').addClass('hidden')
+        $('.introForSecond').removeClass('hidden')
+        $('#restaurantType').addClass('hidden')
+        $('#cafeType').removeClass('hidden')
+        $('#playType').addClass('hidden')
+      } else if (firstCategoryText == '놀거리') {
+        firstCategory = 3
+        $('.tablelist').removeClass('hidden')
+        $('.introForSecond').addClass('hidden')
+        $('#restaurantType').addClass('hidden')
+        $('#cafeType').addClass('hidden')
+        $('#playType').removeClass('hidden')
+        secondCategory = 6
+        showTable(secondCategory)
+      }
+    })
+
+    $('.secondCategory div').click(function (e) {
+      let secondCategoryText = e.currentTarget.textContent
+      $('.introForSecond').addClass('hidden')
+      $('.tablelist').removeClass('hidden')
+      if (secondCategoryText == '한식') secondCategory = 1
+      else if (secondCategoryText == '중식') secondCategory = 2
+      else if (secondCategoryText == '일식') secondCategory = 3
+      else if (secondCategoryText == '개인') secondCategory = 4
+      else if (secondCategoryText == '프랜차이즈') secondCategory = 5
+
+      showTable(secondCategory)
+    })
+  </script>
 </html>
