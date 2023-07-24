@@ -179,7 +179,7 @@
         </div>
         <div>
           <select class="region" onchange="region(this)">
-            <option selected disabled>지역</option>
+            <option disabled>지역</option>
             <option value="대흥">대흥</option>
             <option value="연남" selected>연남</option>
             <option value="신촌">신촌</option>
@@ -399,20 +399,25 @@
                   </td>
                 </tr>
               </table>
-              <div class="map">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.8087943101705!2d126.92425790000001!3d37.559568399999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c98e84a249b35%3A0xfaa940c9500ecff3!2z7ISc7Jq47Yq567OE7IucIOuniO2PrOq1rCDrj5nqtZDroZwgMjIwLTc!5e0!3m2!1sko!2skr!4v1690016034676!5m2!1sko!2skr"
-                  width="600"
-                  height="450"
-                  style="border: 0"
-                  allowfullscreen=""
-                  loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"
-                ></iframe>
-                <div>서울 마포구 동교로 220-7 101호</div>
-              </div>
+              <table class="reviewBlog hidden">
+                <tr>
+                  <td>아직 등록된 리뷰가 없습니다 :(</td>
+                </tr>
+              </table>
             </div>
             <br />
+            <div class="map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.8087943101705!2d126.92425790000001!3d37.559568399999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c98e84a249b35%3A0xfaa940c9500ecff3!2z7ISc7Jq47Yq567OE7IucIOuniO2PrOq1rCDrj5nqtZDroZwgMjIwLTc!5e0!3m2!1sko!2skr!4v1690016034676!5m2!1sko!2skr"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+              <div>서울 마포구 동교로 220-7 101호</div>
+            </div>
           </div>
           <div class="rightDiv">
             <div class="tag">
@@ -536,8 +541,10 @@
     $('.review button').click(function (e) {
       if ($(e.currentTarget).text() == '방문자리뷰') {
         $('.reviewStar').removeClass('hidden')
+        $('.reviewBlog').addClass('hidden')
       } else {
         $('.reviewStar').addClass('hidden')
+        $('.reviewBlog').removeClass('hidden')
       }
     })
   </script>
