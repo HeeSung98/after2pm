@@ -60,11 +60,11 @@
           $(img).attr('src', arr[i].img)
           //이름 및 링크
           name = name + (i + 1)
-          $(name).html(arr[i].name)
-          $(name).click(function () {
-            console.log('postLink: ' + postLink)
-            window.open(postLink)
-          })
+          $(name).html(
+            '<a href="' + postLink + '" target="_blank">' + arr[i].name + '</a>'
+          )
+          console.log('postLink: ' + postLink)
+          $(name).click(function () {})
           $(function () {
             $(name).hover(
               function () {
@@ -391,7 +391,7 @@
                 <i class="bi" id="zzim1"> </i>
               </td>
               <td>이름</td>
-              <td id="name1">~~</td>
+              <td id="name1"><a href="" target="_blank" id="a1">~~</a></td>
             </tr>
             <tr>
               <td>별점</td>

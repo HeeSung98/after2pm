@@ -96,6 +96,7 @@
           if (nowDay < today) {
             // 지난날인 경우
             nowColumn.className = 'pastDay'
+            nowColumn.style.color = '#D3D3D3'
           } else if (
             nowDay.getFullYear() == today.getFullYear() &&
             nowDay.getMonth() == today.getMonth() &&

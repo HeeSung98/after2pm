@@ -423,9 +423,6 @@ h1 span:nth-child(8) {
   margin: 2.5px;
   text-align: center;
 }
-.second_page .pastDay {
-  color: lightgray;
-}
 
 .second_page .today {
   background-color: #f5d042;
