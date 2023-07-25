@@ -188,6 +188,7 @@ h1 span:nth-child(8) {
   text-align: center;
   justify-content: center;
   /* margin: 0 15px; */
+  width: 150px;
 }
 
 .modal_content02 .modal_content_part label {
@@ -218,6 +219,9 @@ h1 span:nth-child(8) {
   .modal_content01 .modal_content_part input {
     width: 15px;
     height: 15px;
+  }
+  .modal_content02 .modal_content_part > div {
+    width: 80px;
   }
   .modal_content02 .modal_content_part label {
     font-size: 15px;
