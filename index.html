@@ -260,6 +260,7 @@
 
         const close = () => {
           document.querySelector('.modal').classList.add('hidden')
+          reset_selected()
         }
 
         const next = () => {
@@ -319,6 +320,43 @@
                 $('#playType').removeClass('hidden')
               }
             } else alert('선택 해주세요')
+          }
+        }
+
+        // esc 누르면 모달 창 닫기
+        const isContain = document
+          .querySelector('.modal')
+          .classList.contains('hidden')
+
+        window.addEventListener('keyup', (e) => {
+          console.log(isContain)
+          if (isContain === true && e.key === 'Escape') {
+            document.querySelector('.modal').classList.add('hidden')
+            reset_selected()
+            order = 1
+            document
+              .querySelector('.modal_content01')
+              .classList.remove('hidden')
+            document.querySelector('.modal_content02').classList.add('hidden')
+            region(option)
+          }
+        })
+
+        // 닫으면 모달창 선택값 초기화
+
+        const reset_selected = function () {
+          var radio_id = [] //id 값을 넣을 배열
+          var radio = $('input[type=radio]') // 모든 라디오 접근
+          $.each(radio, function (key, value) {
+            radio_id.push($(value).attr('id')) // id 값만을 추출
+          })
+          radio_id = $.unique(radio_id.sort()).sort() //중복요소제거
+          var input_radio // 라디오 id로 접근하기 위해서
+          for (var i = 0; i < radio_id.length; i++) {
+            input_radio = $('input[id=' + radio_id[i] + ']')
+            $.each(input_radio, function (key, value) {
+              $(this).prop('checked', false)
+            })
           }
         }
 
