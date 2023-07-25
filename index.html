@@ -35,6 +35,8 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="./source/css/main.css" />
+    <!-- 데이터 로드 종료 -->
+
     <script>
       let order = 1
       let arr = []
@@ -94,7 +96,7 @@
         if (typeof el != 'string') {
           option = el.value
         }
-        // console.log(option)
+        console.log('option: ' + option)
 
         if (option == '대흥') {
           scrArr = [
@@ -233,111 +235,14 @@
               </div>
             </div>
           </div>
-
-          <!-- 세번째 모달창 한식 중식 일식 선택 -->
-          <div class="modal_content03 hidden">
-            <div class="modal_content_part"></div>
-          </div>
-
-          <!-- 네번째 모달창 개인 프랜차이즈 선택 -->
-          <div class="modal_content03 hidden">
-            <div class="modal_content_part"></div>
-          </div>
-
           <p>
             <button class="btn btn-primary" id="btnNext">다음</button>
           </p>
         </div>
       </div>
-      <!-- 첫번쨰 모달창 끝 -->
-      <script>
-        let select_region_result
-        let select_part_result
-
-        const open = () => {
-          document.querySelector('.modal').classList.remove('hidden')
-        }
-
-        const close = () => {
-          document.querySelector('.modal').classList.add('hidden')
-        }
-
-        const next = () => {
-          if (order == 1) {
-            // 선택된 값 없으면 넘어가지 않게 하기
-            var listRegion = $('input[name=select_region]').is(':checked')
-
-            option = $('input[name=select_region]:checked').val()
-            console.log(option)
-            region(option)
-
-            // region 선택 된 후에 region()함수 실행되게 하기
-            if (listRegion == true) {
-              input_region = $('input[name=select_region]:checked').val()
-              document.querySelector('.modal_content01').classList.add('hidden')
-              document
-                .querySelector('.modal_content02')
-                .classList.remove('hidden')
-              order++
-              // region 값을 지역 select에 전달
-              document
-                .getElementById('regionSelect')
-                .getElementsByClassName(listRegion)
-                .addClass('selected')
-            }
-            // region 미선택시 alert 출력
-            else alert('선택 해주세요')
-          } else if (order == 2) {
-            var listPart = $('input[name=select_part]').is(':checked')
-            if (listPart == true) {
-              // 첫번째 페이지 숨기고 두번째 페이지 보여주기
-              document.querySelector('.first_page').classList.add('hidden')
-              document.querySelector('.second_page').classList.remove('hidden')
-              // second로 넘어가게 선택된 정보가 넘어가게
-              $('input:checkbox[name=select_region]').each(function (index) {
-                if ($(this).is(':checked') == true) {
-                  // console.log($(this).val());
-                  select_region_result = $(this).val()
-                  // console.log(select_region_result);
-                }
-              })
-              $('input:radio[name=select_part]').each(function (index) {
-                if ($(this).is(':checked') == true) {
-                  // console.log($(this).val());
-                  select_part_result = $(this).val()
-                }
-              })
-
-              if (select_part_result == '식당') {
-                //   firstCategory = 1;
-                $('#restaurantType').removeClass('hidden')
-                $('#cafeType').addClass('hidden')
-                $('#playType').addClass('hidden')
-              } else if (select_part_result == '카페') {
-                //   firstCategory = 2;
-                $('#restaurantType').addClass('hidden')
-                $('#cafeType').removeClass('hidden')
-                $('#playType').addClass('hidden')
-              } else if (select_part_result == '놀거리') {
-                //   firstCategory = 3;
-                $('#restaurantType').addClass('hidden')
-                $('#cafeType').addClass('hidden')
-                $('#playType').removeClass('hidden')
-              }
-            } else alert('선택 해주세요')
-          }
-        }
-
-        document.querySelector('.openBtn').addEventListener('click', open)
-        document.querySelector('#btnClose').addEventListener('click', close)
-        document.querySelector('#btnNext').addEventListener('click', next)
-        document.querySelector('.bg').addEventListener('click', close)
-      </script>
-
-      <!-- 두번째 페이지 지역 선택 스크립트 -->
-      <script></script>
     </div>
 
+    <!-- 첫 번째 모달창 끝 -->
     <!-- 두번째 페이지 시작 -->
 
     <div class="second_page hidden">
@@ -353,13 +258,13 @@
           </h1>
         </div>
         <div>
-          <select class="region" onchange="region(this)" id="regionSelect">
+          <select class="region" onchange="region(this)" id="selectRegion">
             <option disabled>지역</option>
-            <option value="대흥">대흥</option>
-            <option value="연남">연남</option>
-            <option value="신촌">신촌</option>
-            <option value="이대">이대</option>
-            <option value="홍대">홍대</option>
+            <option id="select1" value="대흥">대흥</option>
+            <option id="select2" value="연남">연남</option>
+            <option id="select3" value="신촌">신촌</option>
+            <option id="select4" value="이대">이대</option>
+            <option id="select5" value="홍대">홍대</option>
           </select>
         </div>
 
@@ -576,6 +481,96 @@
   </body>
 
   <script>
+    // 모달창 동작 함수
+    let select_region_result
+    let select_part_result
+
+    const open = () => {
+      document.querySelector('.modal').classList.remove('hidden')
+    }
+
+    const close = () => {
+      document.querySelector('.modal').classList.add('hidden')
+    }
+
+    const next = () => {
+      // 첫 번째 모달
+      if (order == 1) {
+        // 선택된 값 없으면 넘어가지 않게 하기
+        var listRegion = $('input[name=select_region]').is(':checked')
+
+        option = $('input[name=select_region]:checked').val()
+        console.log(option)
+        region(option)
+
+        // region 선택 된 후에 region()함수 실행되게 하기
+        if (listRegion == true) {
+          inputRegion = $('input[name=select_region]:checked').val()
+          document.querySelector('.modal_content01').classList.add('hidden')
+          document.querySelector('.modal_content02').classList.remove('hidden')
+          order++
+          // region 값을 지역 select에 전달
+          for (i = 0; i < document.getElementById('selectRegion').length; i++) {
+            let selectId = '#select' + (i + 1)
+            let selectIdValue = $(selectId).val()
+            console.log('selectIdElementValue: ', selectIdValue)
+            if (selectIdValue == inputRegion) {
+              $(selectId).attr('selected', 'true')
+            }
+          }
+        }
+        // region 미선택시 alert 출력
+        else alert('선택 해주세요')
+      }
+      // 두 번째 모달
+      else if (order == 2) {
+        var listPart = $('input[name=select_part]').is(':checked')
+        if (listPart == true) {
+          // 첫번째 페이지 숨기고 두번째 페이지 보여주기
+          document.querySelector('.first_page').classList.add('hidden')
+          document.querySelector('.second_page').classList.remove('hidden')
+          // second로 넘어가게 선택된 정보가 넘어가게
+          $('input:checkbox[name=select_region]').each(function (index) {
+            if ($(this).is(':checked') == true) {
+              // console.log($(this).val());
+              select_region_result = $(this).val()
+              // console.log(select_region_result);
+            }
+          })
+          $('input:radio[name=select_part]').each(function (index) {
+            if ($(this).is(':checked') == true) {
+              // console.log($(this).val());
+              select_part_result = $(this).val()
+            }
+          })
+
+          if (select_part_result == '식당') {
+            //   firstCategory = 1;
+            $('#restaurantType').removeClass('hidden')
+            $('#cafeType').addClass('hidden')
+            $('#playType').addClass('hidden')
+          } else if (select_part_result == '카페') {
+            //   firstCategory = 2;
+            $('#restaurantType').addClass('hidden')
+            $('#cafeType').removeClass('hidden')
+            $('#playType').addClass('hidden')
+          } else if (select_part_result == '놀거리') {
+            //   firstCategory = 3;
+            $('#restaurantType').addClass('hidden')
+            $('#cafeType').addClass('hidden')
+            $('#playType').removeClass('hidden')
+          }
+        }
+        // category 미선택시 alert 출력
+        else alert('선택 해주세요')
+      }
+    }
+
+    document.querySelector('.openBtn').addEventListener('click', open)
+    document.querySelector('#btnClose').addEventListener('click', close)
+    document.querySelector('#btnNext').addEventListener('click', next)
+    document.querySelector('.bg').addEventListener('click', close)
+
     // 찜버튼
     $('.bi').click(function (e) {
       let zzim = e.currentTarget
