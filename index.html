@@ -271,6 +271,7 @@
             console.log(option)
             region(option)
 
+            // region 선택 된 후에 region()함수 실행되게 하기
             if (listRegion == true) {
               input_region = $('input[name=select_region]:checked').val()
               document.querySelector('.modal_content01').classList.add('hidden')
@@ -278,9 +279,13 @@
                 .querySelector('.modal_content02')
                 .classList.remove('hidden')
               order++
-
-              // region 선택 된 후에 region()함수 실행되게 하기
-            } else alert('선택 해주세요')
+              document
+                .getElementById('regionSelect')
+                .getElementsByClassName(listRegion)
+                .addClass('selected')
+            }
+            // region 미선택시 alert 출력
+            else alert('선택 해주세요')
           } else if (order == 2) {
             var listPart = $('input[name=select_part]').is(':checked')
             if (listPart == true) {
@@ -347,8 +352,8 @@
           </h1>
         </div>
         <div>
-          <select class="region" onchange="region(this)">
-            <option selected disabled>지역</option>
+          <select class="region" onchange="region(this)" id="regionSelect">
+            <option disabled>지역</option>
             <option value="대흥">대흥</option>
             <option value="연남">연남</option>
             <option value="신촌">신촌</option>
