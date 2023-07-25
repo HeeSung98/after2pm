@@ -240,6 +240,131 @@
           </p>
         </div>
       </div>
+      <!-- 첫번쨰 모달창 끝 -->
+      <script>
+        let select_region_result
+        let select_part_result
+
+        const open = () => {
+          document.querySelector('.modal').classList.remove('hidden')
+        }
+
+        const close = () => {
+          document.querySelector('.modal').classList.add('hidden')
+          reset_selected()
+        }
+
+        const next = () => {
+          if (order == 1) {
+            // 선택된 값 없으면 넘어가지 않게 하기
+            var listRegion = $('input[name=select_region]').is(':checked')
+
+            option = $('input[name=select_region]:checked').val()
+            console.log(option)
+            region(option)
+
+            // region 선택 된 후에 region()함수 실행되게 하기
+            if (listRegion == true) {
+              input_region = $('input[name=select_region]:checked').val()
+              document.querySelector('.modal_content01').classList.add('hidden')
+              document
+                .querySelector('.modal_content02')
+                .classList.remove('hidden')
+              order++
+              // region 값을 지역 select에 전달
+              document
+                .getElementById('regionSelect')
+                .getElementsByClassName(listRegion)
+                .addClass('selected')
+            }
+            // region 미선택시 alert 출력
+            else alert('선택 해주세요')
+          } else if (order == 2) {
+            var listPart = $('input[name=select_part]').is(':checked')
+            if (listPart == true) {
+              // 첫번째 페이지 숨기고 두번째 페이지 보여주기
+              document.querySelector('.first_page').classList.add('hidden')
+              document.querySelector('.second_page').classList.remove('hidden')
+              // second로 넘어가게 선택된 정보가 넘어가게
+              $('input:checkbox[name=select_region]').each(function (index) {
+                if ($(this).is(':checked') == true) {
+                  // console.log($(this).val());
+                  select_region_result = $(this).val()
+                  // console.log(select_region_result);
+                }
+              })
+              $('input:radio[name=select_part]').each(function (index) {
+                if ($(this).is(':checked') == true) {
+                  // console.log($(this).val());
+                  select_part_result = $(this).val()
+                }
+              })
+
+              if (select_part_result == '식당') {
+                //   firstCategory = 1;
+                $('#restaurantType').removeClass('hidden')
+                $('#cafeType').addClass('hidden')
+                $('#playType').addClass('hidden')
+              } else if (select_part_result == '카페') {
+                //   firstCategory = 2;
+                $('#restaurantType').addClass('hidden')
+                $('#cafeType').removeClass('hidden')
+                $('#playType').addClass('hidden')
+              } else if (select_part_result == '놀거리') {
+                //   firstCategory = 3;
+                $('#restaurantType').addClass('hidden')
+                $('#cafeType').addClass('hidden')
+                $('#playType').removeClass('hidden')
+              }
+            } else alert('선택 해주세요')
+          }
+        }
+
+        // esc 누르면 모달 창 닫기
+        const isContain = document
+          .querySelector('.modal')
+          .classList.contains('hidden')
+
+        window.addEventListener('keyup', (e) => {
+          console.log(isContain)
+          if (isContain === true && e.key === 'Escape') {
+            document.querySelector('.modal').classList.add('hidden')
+            reset_selected()
+            order = 1
+            document
+              .querySelector('.modal_content01')
+              .classList.remove('hidden')
+            document.querySelector('.modal_content02').classList.add('hidden')
+            // region(option)
+          }
+        })
+
+        // 닫으면 모달창 선택값 초기화
+
+        const reset_selected = function () {
+          var radio_id = [] //id 값을 넣을 배열
+          var radio = $('input[type=radio]') // 모든 라디오 접근
+          $.each(radio, function (key, value) {
+            radio_id.push($(value).attr('id')) // id 값만을 추출
+          })
+          radio_id = $.unique(radio_id.sort()).sort() //중복요소제거
+          var input_radio // 라디오 id로 접근하기 위해서
+          for (var i = 0; i < radio_id.length; i++) {
+            input_radio = $('input[id=' + radio_id[i] + ']')
+            $.each(input_radio, function (key, value) {
+              $(this).prop('checked', false)
+            })
+          }
+        }
+
+        document.querySelector('.openBtn').addEventListener('click', open)
+        document.querySelector('#btnClose').addEventListener('click', close)
+        document.querySelector('#btnNext').addEventListener('click', next)
+        document.querySelector('.bg').addEventListener('click', close)
+      </script>
+
+      <!-- 두번째 페이지 지역 선택 스크립트 -->
+      <script></script>
     </div>
 
     <!-- 첫 번째 모달창 끝 -->
