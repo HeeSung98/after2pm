@@ -529,7 +529,7 @@
           document.querySelector('.first_page').classList.add('hidden')
           document.querySelector('.second_page').classList.remove('hidden')
           // second로 넘어가게 선택된 정보가 넘어가게
-          $('input:checkbox[name=select_region]').each(function (index) {
+          $('input:radio[name=select_region]').each(function (index) {
             if ($(this).is(':checked') == true) {
               // console.log($(this).val());
               select_region_result = $(this).val()
